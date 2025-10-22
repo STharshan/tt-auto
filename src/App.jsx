@@ -14,10 +14,10 @@ function App() {
       <Navbar />
       <HeroSection />
       <PartnersCarousel />
+      <CreditSection />
       <ProcessSection />
       <ProductSection />
       <Testimonials />
-      <CreditSection />
     </>
   )
 }
