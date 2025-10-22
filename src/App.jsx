@@ -5,7 +5,9 @@ import PartnersCarousel from "./components/Partner"
 import ProductSection from "./components/Product"
 import ProcessSection from "./components/Service"
 import Testimonials from "./components/Testimonial"
-
+import ContactSection from "./components/ContactSection"
+import FooterSection from "./components/FooterSection"
+import MapSection from "./components/MapSection"
 
 function App() {
 
@@ -18,6 +20,9 @@ function App() {
       <ProcessSection />
       <ProductSection />
       <Testimonials />
+      <ContactSection />
+      <MapSection />
+      <FooterSection />
     </>
   )
 }
