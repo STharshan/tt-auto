@@ -54,35 +54,89 @@ export default function CarCarePackages() {
     ];
 
     const contactLinks = [
-        {
-            icon: <Phone className="h-6 w-6" />,
-            title: "+1-800-123-4567",
-            href: "tel:+1-800-123-4567"
-        },
-        {
-            icon: <Mail className="h-6 w-6" />,
-            title: "autofix@example.com",
-            href: "mailto:autofix@example.com"
-        },
-        {
-            icon: <MessageCircle className="h-6 w-6" />,
-            title: "Telegram Chat",
-            href: "https://web.telegram.org/a/"
-        },
-        {
-            icon: <MapPin className="h-6 w-6" />,
-            title: "Our Location",
-            href: "https://www.google.com/maps"
-        }
+        { icon: <Phone className="h-6 w-6" />, title: "+1-800-123-4567", href: "tel:+1-800-123-4567" },
+        { icon: <Mail className="h-6 w-6" />, title: "autofix@example.com", href: "mailto:autofix@example.com" },
+        { icon: <MessageCircle className="h-6 w-6" />, title: "Telegram Chat", href: "https://web.telegram.org/a/" },
+        { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://www.google.com/maps" }
     ];
 
     return (
-        <section className=" bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+        <section className="bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
+                {/* Swap order: text section first, packages second */}
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                    {/* Right Column - Contact Info */}
-                    <div className="lg:col-span-1 ">
-                        <div className="lg:sticky lg:top-8">
+                     <div className="lg:col-span-2 order-2 lg:order-2 space-y-6 max-w-lg mx-auto">
+
+                        {/* Premium Package */}
+                        <div className="border border-white/10 rounded-lg p-6 sm:p-8 bg-black/50 backdrop-blur-sm">
+                            <div className="flex items-center gap-4 mb-6">
+                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">PREMIUM</h6>
+                                <div className="h-3 w-3 bg-orange-500 rounded"></div>
+                                <h6 className="text-sm sm:text-base font-semibold">CARE PACKAGE</h6>
+                            </div>
+
+                            <div className="border border-white/10 rounded-lg p-4 mb-6 flex items-center justify-between">
+                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">PRICE:</h6>
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">$199</h3>
+                            </div>
+
+                            <div className="space-y-4 mb-6">
+                                {premiumFeatures.map((feature, index) => (
+                                    <div key={index} className="flex gap-4 border border-white/10 rounded-lg p-4 items-start">
+                                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-orange-500/20 flex items-center justify-center border border-orange-500/30">
+                                            <div className="text-orange-500">{feature.icon}</div>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-sm sm:text-base text-gray-300">
+                                                <span className="text-white font-semibold">{feature.title}</span> {feature.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/30">
+                                Purchase a package now
+                            </button>
+                        </div>
+
+                        {/* Basic Package */}
+                        <div className="border border-white/10 rounded-lg p-6 sm:p-8 bg-black/50 backdrop-blur-sm">
+                            <div className="flex items-center gap-4 mb-6">
+                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">BASIC</h6>
+                                <div className="h-3 w-3 bg-orange-500 rounded"></div>
+                                <h6 className="text-sm sm:text-base font-semibold">CARE PACKAGE</h6>
+                            </div>
+
+                            <div className="border border-white/10 rounded-lg p-4 mb-6 flex items-center justify-between">
+                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">PRICE:</h6>
+                                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">$99</h3>
+                            </div>
+
+                            <div className="space-y-4 mb-6">
+                                {basicFeatures.map((feature, index) => (
+                                    <div key={index} className="flex gap-4 border border-white/10 rounded-lg p-4 items-start">
+                                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/30">
+                                            <div className="text-red-500">{feature.icon}</div>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-sm sm:text-base text-gray-300">
+                                                <span className="text-white font-semibold">{feature.title}</span> {feature.description}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+
+                            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/30">
+                                Purchase a package now
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* LEFT Column - Contact / Heading */}
+                    <div className="lg:col-span-1 order-1 lg:order-1">
+                        <div className="lg:top-8">
                             {/* Title */}
                             <div className="mb-8">
                                 <div className="flex items-center gap-3 mb-4">
@@ -97,7 +151,7 @@ export default function CarCarePackages() {
                             </div>
 
                             {/* Contact Links */}
-                            <nav className="space-y-4 ">
+                            <nav className="space-y-4">
                                 {contactLinks.map((link, index) => (
                                     <a
                                         key={index}
@@ -120,84 +174,9 @@ export default function CarCarePackages() {
                             </nav>
                         </div>
                     </div>
-                    {/* Left Column - Packages */}
-                    <div className="lg:col-span-2 space-y-6  max-w-lg mx-auto">
-                        {/* Premium Package */}
-                        <div className="border border-white/10 rounded-lg p-6 sm:p-8 bg-black/50 backdrop-blur-sm">
-                            {/* Header */}
-                            <div className="flex items-center gap-4 mb-6">
-                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">PREMIUM</h6>
-                                <div className="h-3 w-3 bg-orange-500 rounded"></div>
-                                <h6 className="text-sm sm:text-base font-semibold">CARE PACKAGE</h6>
-                            </div>
 
-                            {/* Price */}
-                            <div className="border border-white/10 rounded-lg p-4 mb-6 flex items-center justify-between">
-                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">PRICE:</h6>
-                                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">$199</h3>
-                            </div>
-
-                            {/* Features */}
-                            <div className="space-y-4 mb-6">
-                                {premiumFeatures.map((feature, index) => (
-                                    <div key={index} className="flex gap-4 border border-white/10 rounded-lg p-4 items-start">
-                                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-orange-500/20 flex items-center justify-center border border-orange-500/30">
-                                            <div className="text-orange-500">{feature.icon}</div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <p className="text-sm sm:text-base text-gray-300">
-                                                <span className="text-white font-semibold">{feature.title}</span> {feature.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* CTA Button */}
-                            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/30">
-                                Purchase a package now
-                            </button>
-                        </div>
-
-                        {/* Basic Package */}
-                        <div className="border border-white/10 rounded-lg p-6 sm:p-8 bg-black/50 backdrop-blur-sm">
-                            {/* Header */}
-                            <div className="flex items-center gap-4 mb-6">
-                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">BASIC</h6>
-                                <div className="h-3 w-3 bg-orange-500 rounded"></div>
-                                <h6 className="text-sm sm:text-base font-semibold">CARE PACKAGE</h6>
-                            </div>
-
-                            {/* Price */}
-                            <div className="border border-white/10 rounded-lg p-4 mb-6 flex items-center justify-between">
-                                <h6 className="text-sm sm:text-base font-semibold text-gray-400">PRICE:</h6>
-                                <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold">$99</h3>
-                            </div>
-
-                            {/* Features */}
-                            <div className="space-y-4 mb-6">
-                                {basicFeatures.map((feature, index) => (
-                                    <div key={index} className="flex gap-4 border border-white/10 rounded-lg p-4 items-start">
-                                        <div className="flex-shrink-0 h-10 w-10 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/30">
-                                            <div className="text-red-500">{feature.icon}</div>
-                                        </div>
-                                        <div className="flex-1">
-                                            <p className="text-sm sm:text-base text-gray-300">
-                                                <span className="text-white font-semibold">{feature.title}</span> {feature.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-
-                            {/* CTA Button */}
-                            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/30">
-                                Purchase a package now
-                            </button>
-                        </div>
-                    </div>
-
-
+                    {/* RIGHT Column - Packages */}
+                   
                 </div>
             </div>
         </section>

@@ -6,17 +6,6 @@ export default function Navbar() {
 
   return (
     <header className="relative w-full z-50">
-      {/* Moving Arrow Background */}
-      <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none">
-        <div className="whitespace-nowrap animate-slide flex text-[#E23B0F]/30 text-6xl">
-          {Array(50)
-            .fill()
-            .map((_, i) => (
-              <FiArrowRight key={i} className="mx-5" />
-            ))}
-        </div>
-      </div>
-
       {/* Navbar content */}
       <div className="relative z-10 bg-transparent">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
