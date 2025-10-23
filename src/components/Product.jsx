@@ -26,11 +26,11 @@ export default function CarCarePackages() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-20 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-16">
+    <section className="bg-gradient-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
+      <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
         
         {/* LEFT COLUMN */}
-        <div className="lg:sticky lg:top-28 self-start space-y-10">
+        <div className="space-y-8 lg:sticky lg:top-24 self-start">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-0.5 w-12 bg-orange-500"></div>
@@ -38,16 +38,15 @@ export default function CarCarePackages() {
                 Discover Our Complete Car Care
               </h6>
             </div>
-            <h2 className="text-4xl md:text-5xl font-extrabold leading-tight text-white">
+            <h2 className="text-3xl sm:text-4xl font-extrabold leading-tight">
               Essential Service Packages
             </h2>
-            <p className="text-gray-400 mt-4 leading-relaxed">
-              Keep your car in top condition with our professional care packages. Whether it’s regular maintenance or premium upgrades — we’ve got you covered.
+            <p className="text-gray-400 mt-3 leading-relaxed">
+              Choose from our professionally designed car care packages to keep your vehicle running at its best.
             </p>
           </div>
 
-          {/* Contact Links */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {contactLinks.map((link, index) => (
               <a
                 key={index}
@@ -60,7 +59,7 @@ export default function CarCarePackages() {
                   {link.icon}
                 </div>
                 <div>
-                  <h6 className="text-base font-semibold group-hover:text-orange-500 transition-colors">
+                  <h6 className="text-sm sm:text-base font-semibold group-hover:text-orange-500 transition-colors">
                     {link.title}
                   </h6>
                 </div>
@@ -70,89 +69,71 @@ export default function CarCarePackages() {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div
-          className="max-h-[80vh] overflow-y-auto pr-2 space-y-12"
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-          }}
-        >
-          <style jsx>{`
-            div::-webkit-scrollbar {
-              display: none;
-            }
-          `}</style>
-
+        <div className="flex flex-col gap-10 mt-10 lg:mt-0 lg:overflow-y-auto lg:max-h-[80vh] pr-0 lg:pr-2">
           {/* PREMIUM PACKAGE */}
-          <div className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#141414] to-[#0b0b0b] backdrop-blur-lg p-8 hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.3)] transition-all duration-500">
-            <div className="flex items-center gap-4 mb-6">
+          <div className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
               <h6 className="text-sm font-semibold text-gray-400">PREMIUM</h6>
               <div className="h-3 w-3 bg-orange-500 rounded-full"></div>
               <h6 className="text-sm font-semibold">CARE PACKAGE</h6>
             </div>
 
-            <div className="border border-white/10 rounded-lg p-5 mb-8 flex items-center justify-between bg-[#111]">
+            <div className="border border-white/10 rounded-lg p-5 mb-6 flex flex-wrap items-center justify-between bg-[#111]">
               <h6 className="text-sm font-semibold text-gray-400">PRICE</h6>
-              <h3 className="text-5xl font-bold text-orange-500">$199</h3>
+              <h3 className="text-4xl sm:text-5xl font-bold text-orange-500">$199</h3>
             </div>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 mb-6">
               {premiumFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 border border-white/10 rounded-lg p-4 items-start hover:bg-white/5 transition-all duration-300"
+                  className="flex gap-4 border border-white/10 rounded-lg p-3 sm:p-4 items-start hover:bg-white/5 transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 h-10 w-10 rounded-full bg-orange-500/20 flex items-center justify-center border border-orange-500/30">
+                  <div className="flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-orange-500/20 flex items-center justify-center border border-orange-500/30">
                     <div className="text-orange-500">{feature.icon}</div>
                   </div>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    <span className="text-white font-semibold">
-                      {feature.title}
-                    </span>{" "}
-                    {feature.description}
+                    <span className="text-white font-semibold">{feature.title}</span> {feature.description}
                   </p>
                 </div>
               ))}
             </div>
 
-            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/40">
+            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/40 text-sm sm:text-base">
               Purchase Premium Package
             </button>
           </div>
 
           {/* BASIC PACKAGE */}
-          <div className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#121212] to-[#0b0b0b] backdrop-blur-lg p-8 hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.3)] transition-all duration-500">
-            <div className="flex items-center gap-4 mb-6">
+          <div className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500">
+            <div className="flex flex-wrap items-center gap-3 mb-6">
               <h6 className="text-sm font-semibold text-gray-400">BASIC</h6>
               <div className="h-3 w-3 bg-orange-500 rounded-full"></div>
               <h6 className="text-sm font-semibold">CARE PACKAGE</h6>
             </div>
 
-            <div className="border border-white/10 rounded-lg p-5 mb-8 flex items-center justify-between bg-[#111]">
+            <div className="border border-white/10 rounded-lg p-5 mb-6 flex flex-wrap items-center justify-between bg-[#111]">
               <h6 className="text-sm font-semibold text-gray-400">PRICE</h6>
-              <h3 className="text-5xl font-bold text-orange-500">$99</h3>
+              <h3 className="text-4xl sm:text-5xl font-bold text-orange-500">$99</h3>
             </div>
 
-            <div className="space-y-4 mb-8">
+            <div className="space-y-3 mb-6">
               {basicFeatures.map((feature, index) => (
                 <div
                   key={index}
-                  className="flex gap-4 border border-white/10 rounded-lg p-4 items-start hover:bg-white/5 transition-all duration-300"
+                  className="flex gap-4 border border-white/10 rounded-lg p-3 sm:p-4 items-start hover:bg-white/5 transition-all duration-300"
                 >
-                  <div className="flex-shrink-0 h-10 w-10 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/30">
+                  <div className="flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/30">
                     <div className="text-red-500">{feature.icon}</div>
                   </div>
                   <p className="text-gray-300 text-sm leading-relaxed">
-                    <span className="text-white font-semibold">
-                      {feature.title}
-                    </span>{" "}
-                    {feature.description}
+                    <span className="text-white font-semibold">{feature.title}</span> {feature.description}
                   </p>
                 </div>
               ))}
             </div>
 
-            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/40">
+            <button className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all border-2 border-orange-500 shadow-lg shadow-orange-500/40 text-sm sm:text-base">
               Purchase Basic Package
             </button>
           </div>
