@@ -18,9 +18,9 @@ export default function PartnersCarousel() {
   }, []);
 
   return (
-    <section className="w-full py-12">
+    <section className="w-full bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-12">
       <div className="text-center mb-6">
-        <h2 className="text-black text-xl font-semibold">Associations</h2>
+        <h2 className="text-white text-xl font-semibold">Associations</h2>
       </div>
 
       {/* Carousel container */}
@@ -33,8 +33,8 @@ export default function PartnersCarousel() {
               src={logo}
               alt={`Partner ${i + 1}`}
               className="partner-logo h-15 w-auto object-contain opacity-80 hover:opacity-100 transition"
-              data-aos="fade-up" // AOS animation when the logo scrolls into view
-              data-aos-delay={i * 100} // Stagger the animations for each logo
+              data-aos="fade-up"
+              data-aos-delay={i * 100}
             />
           ))}
         </div>
