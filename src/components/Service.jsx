@@ -45,7 +45,7 @@ export default function ServiceProcess() {
   return (
     <section className="bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        {/* LEFT SIDE (Fixed Info) */}
+        {/* LEFT SIDE (Fixed) */}
         <div className="lg:sticky lg:top-28 self-start">
           <motion.h6
             initial={{ opacity: 0, y: 20 }}
@@ -78,19 +78,12 @@ export default function ServiceProcess() {
           </motion.a>
         </div>
 
-        {/* RIGHT SIDE (Steps List) */}
+        {/* RIGHT SIDE (Animated Scroll, No Scrollbar) */}
         <div
-          className="
-            flex flex-col gap-6
-            max-h-[calc(100vh-180px)] 
-            lg:max-h-[75vh]
-            overflow-y-auto
-            hide-scrollbar
-            pr-1
-          "
+          className="h-[75vh] overflow-y-scroll pr-2 space-y-6"
           style={{
-            WebkitOverflowScrolling: "touch",
-            overscrollBehavior: "contain",
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
           }}
         >
           {steps.map((step, index) => (
@@ -105,7 +98,7 @@ export default function ServiceProcess() {
                 stiffness: 100,
               }}
               viewport={{ once: false, amount: 0.3 }}
-              className="relative overflow-hidden rounded-lg h-auto group border border-white/10 hover:border-[#ff4d24]/30 transition-all duration-500 shadow-md hover:shadow-[#ff4d2415]"
+              className="relative overflow-hidden rounded-lg h-70 group border border-white/10 hover:border-[#ff4d24]/30 transition-all duration-500 shadow-md hover:shadow-[#ff4d2415]"
             >
               {/* Background Image */}
               <motion.img
@@ -117,7 +110,7 @@ export default function ServiceProcess() {
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/90 group-hover:opacity-95 transition-all duration-500"></div>
 
-              {/* Text Content */}
+              {/* Content */}
               <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
                 <span className="bg-[#ff4d24] text-white font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm mb-3 shadow-md shadow-[#ff4d2420]">
                   {step.number}
@@ -125,24 +118,17 @@ export default function ServiceProcess() {
                 <h4 className="text-lg font-bold mb-2 group-hover:text-[#ff4d24] transition-colors duration-300">
                   {step.title}
                 </h4>
-                <p className="text-gray-300 text-sm leading-relaxed">{step.desc}</p>
+                <p className="text-gray-300 text-sm leading-relaxed">
+                  {step.desc}
+                </p>
               </div>
             </motion.div>
           ))}
 
-          {/* Hide scrollbar styling */}
+          {/* Hide scrollbar (for WebKit browsers) */}
           <style jsx>{`
-            .hide-scrollbar::-webkit-scrollbar {
+            div::-webkit-scrollbar {
               display: none;
-            }
-            .hide-scrollbar {
-              scrollbar-width: none;
-            }
-
-            @supports (height: 100dvh) {
-              .hide-scrollbar {
-                max-height: calc(100dvh - 200px);
-              }
             }
           `}</style>
         </div>
