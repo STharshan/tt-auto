@@ -72,9 +72,9 @@ export default function CarCarePackages() {
         {/* RIGHT COLUMN */}
         <div
           className="
-            flex flex-col gap-10 mt-10 lg:mt-0 
-            max-h-[calc(100vh-180px)] lg:max-h-[80vh]
-            overflow-y-auto lg:pr-2 
+            flex flex-col gap-10 mt-10 lg:mt-0
+            overflow-visible lg:overflow-y-auto
+            lg:max-h-[80vh] lg:pr-2
             hide-scrollbar
           "
           style={{
