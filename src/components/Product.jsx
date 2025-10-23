@@ -46,6 +46,7 @@ export default function CarCarePackages() {
             </p>
           </div>
 
+          {/* Contact Links */}
           <div className="space-y-3">
             {contactLinks.map((link, index) => (
               <a
@@ -69,7 +70,28 @@ export default function CarCarePackages() {
         </div>
 
         {/* RIGHT COLUMN */}
-        <div className="flex flex-col gap-10 mt-10 lg:mt-0 lg:overflow-y-auto lg:max-h-[80vh] pr-0 lg:pr-2">
+        <div
+          className="
+            flex flex-col gap-10 mt-10 lg:mt-0 
+            max-h-[calc(100vh-180px)] lg:max-h-[80vh]
+            overflow-y-auto lg:pr-2 
+            hide-scrollbar
+          "
+          style={{
+            WebkitOverflowScrolling: "touch",
+            overscrollBehavior: "contain",
+            scrollbarGutter: "stable",
+          }}
+        >
+          <style jsx>{`
+            .hide-scrollbar::-webkit-scrollbar {
+              display: none;
+            }
+            .hide-scrollbar {
+              scrollbar-width: none;
+            }
+          `}</style>
+
           {/* PREMIUM PACKAGE */}
           <div className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-orange-500/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500">
             <div className="flex flex-wrap items-center gap-3 mb-6">

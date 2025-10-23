@@ -20,11 +20,11 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-center h-full px-6 sm:px-10 md:px-16 lg:px-24 w-full space-y-6">
         {/* Logo */}
-        <div className="mb-4 sm:mb-6">
+        {/* <div className="mb-4 sm:mb-6">
           <span className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-wide">
             LogiNord
           </span>
-        </div>
+        </div> */}
 
         {/* Heading */}
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-4xl">
