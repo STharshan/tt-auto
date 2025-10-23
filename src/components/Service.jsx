@@ -1,24 +1,33 @@
 "use client";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
 export default function ServiceProcess() {
   const sectionRef = useRef(null);
   const listRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // detect mobile device (screen width < 768)
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile) return; // no scroll lock on mobile
+
     const section = sectionRef.current;
     const list = listRef.current;
     if (!section || !list) return;
 
-    // Function to check visibility of section
     const handleScroll = () => {
       const rect = section.getBoundingClientRect();
       const isVisible = rect.top <= 100 && rect.bottom > 100;
       const bottomReached =
         list.scrollTop + list.clientHeight >= list.scrollHeight - 5;
 
-      // Section visible, but cards not fully scrolled yet -> lock page
       if (isVisible && !bottomReached) {
         document.body.classList.add("stop-scroll");
       } else {
@@ -35,7 +44,7 @@ export default function ServiceProcess() {
       list.removeEventListener("scroll", handleScroll);
       document.body.classList.remove("stop-scroll");
     };
-  }, []);
+  }, [isMobile]);
 
   const steps = [
     {
@@ -78,7 +87,6 @@ export default function ServiceProcess() {
 
   return (
     <>
-      {/* Scroll lock CSS */}
       <style jsx global>{`
         body.stop-scroll {
           overflow: hidden;
@@ -124,10 +132,14 @@ export default function ServiceProcess() {
             </motion.a>
           </div>
 
-          {/* RIGHT SIDE - Scroll Area */}
+          {/* RIGHT SIDE */}
           <div
             ref={listRef}
-            className="h-[75vh] overflow-y-scroll pr-2 space-y-6 touch-pan-y"
+            className={`${
+              isMobile
+                ? "space-y-6" // normal flow on mobile
+                : "h-[75vh] overflow-y-scroll pr-2 space-y-6 touch-pan-y"
+            }`}
             style={{
               scrollbarWidth: "none",
               msOverflowStyle: "none",
@@ -169,11 +181,13 @@ export default function ServiceProcess() {
             ))}
 
             {/* Hide scrollbar */}
-            <style jsx>{`
-              div::-webkit-scrollbar {
-                display: none;
-              }
-            `}</style>
+            {!isMobile && (
+              <style jsx>{`
+                div::-webkit-scrollbar {
+                  display: none;
+                }
+              `}</style>
+            )}
           </div>
         </div>
       </section>
