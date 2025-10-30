@@ -4,7 +4,7 @@ import { FaCircleDot } from "react-icons/fa6";
 
 export default function HeroSection() {
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden">
+    <section id="home" className="relative w-full min-h-screen flex items-center justify-center text-white overflow-hidden">
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"

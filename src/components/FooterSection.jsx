@@ -18,11 +18,11 @@ export default function FooterSection() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#" className="hover:text-[#861918] transition">Home</a></li>
-              <li><a href="#" className="hover:text-[#861918] transition">Service</a></li>
-              <li><a href="#" className="hover:text-[#861918] transition">Products</a></li>
-              <li><a href="#" className="hover:text-[#861918] transition">About Us</a></li>
-              <li><a href="#" className="hover:text-[#861918] transition">Contact</a></li>
+              <li><a href="#home" className="hover:text-[#861918] transition">Home</a></li>
+              <li><a href="#about" className="hover:text-[#861918] transition">About Us</a></li>
+              <li><a href="#service" className="hover:text-[#861918] transition">Service</a></li>
+              <li><a href="#product" className="hover:text-[#861918] transition">Products</a></li>
+              <li><a href="#contact" className="hover:text-[#861918] transition">Contact</a></li>
             </ul>
           </div>
 
