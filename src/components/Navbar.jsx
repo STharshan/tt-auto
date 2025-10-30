@@ -40,14 +40,14 @@ export default function Navbar() {
           <a href="#about" className="hover:text-[#861918] transition">
             About Us
           </a>
-          <a href="#services" className="hover:text-[#861918] transition">
+          <a href="#service" className="hover:text-[#861918] transition">
             Services
           </a>
-          <a href="#fleet" className="hover:text-[#861918] transition">
-            Fleet
+          <a href="#product" className="hover:text-[#861918] transition">
+            Product
           </a>
-          <a href="#industries" className="hover:text-[#861918] transition">
-            Industries
+          <a href="#testimonials" className="hover:text-[#861918] transition">
+            Testimonials
           </a>
           <a href="#contact" className="hover:text-[#861918] transition">
             Contact Us
@@ -77,7 +77,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <div className={`${scrolled ? "text-black" : "text-white"} md:hidden`}>
           <button onClick={() => setIsOpen(!isOpen)}>
-            {isOpen ? <FiX size={26} /> : <FiMenu size={26} />}
+            {isOpen ? <FiX size={26} className="hover:text-[#861918]"/> : <FiMenu size={26} className="hover:text-[#861918]"/>}
           </button>
         </div>
       </div>
@@ -94,14 +94,14 @@ export default function Navbar() {
           <a href="#about" className="block hover:text-[#861918]">
             About Us
           </a>
-          <a href="#services" className="block hover:text-[#861918]">
+          <a href="#service" className="block hover:text-[#861918]">
             Services
           </a>
-          <a href="#fleet" className="block hover:text-[#861918]">
-            Fleet
+          <a href="#product" className="block hover:text-[#861918]">
+            Product
           </a>
-          <a href="#industries" className="block hover:text-[#861918]">
-            Industries
+          <a href="#testimonials" className="block hover:text-[#861918]">
+            Testimonials
           </a>
           <a href="#contact" className="block hover:text-[#861918]">
             Contact Us

@@ -23,8 +23,6 @@ export default function FooterSection() {
               <li><a href="#" className="hover:text-[#861918] transition">Products</a></li>
               <li><a href="#" className="hover:text-[#861918] transition">About Us</a></li>
               <li><a href="#" className="hover:text-[#861918] transition">Contact</a></li>
-              <li><a href="#" className="hover:text-[#861918] transition">Consumables Catalogue</a></li>
-              <li><a href="#" className="hover:text-[#861918] transition">Surcharge, Returns & Warranty</a></li>
             </ul>
           </div>
 

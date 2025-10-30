@@ -2,7 +2,7 @@ import React from "react";
 
 export default function CreditSection() {
   return (
-    <section className="w-full bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-16 px-6 md:px-12 lg:px-20 text-white">
+    <section id="about" className="scroll-m-10 w-full bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-16 px-6 md:px-12 lg:px-20 text-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
         {/* Left Image */}
         <div className="w-full">

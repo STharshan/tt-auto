@@ -95,6 +95,7 @@ export default function ServiceProcess() {
       `}</style>
 
       <section
+        id="service"
         ref={sectionRef}
         className="bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
       >

@@ -1,7 +1,7 @@
 // components/ContactSection.jsx
 export default function ContactSection() {
   return (
-    <section className="bg-black text-white py-20 px-6 lg:px-16 font-[Inter]">
+    <section id="contact" className="scroll-m-10 bg-black text-white py-20 px-6 lg:px-16 font-[Inter]">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Left Column - Contact Info */}
         <div>

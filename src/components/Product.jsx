@@ -26,7 +26,7 @@ export default function CarCarePackages() {
   ];
 
   return (
-    <section className="bg-gradient-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
+    <section id="product" className=" scroll-m-10 bg-gradient-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
         
         {/* LEFT COLUMN */}
