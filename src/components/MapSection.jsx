@@ -6,8 +6,7 @@ export default function MapSection() {
         <h2 className="text-3xl font-bold mb-6 text-[#861918] text-center">Find Us</h2>
         <iframe
           className="w-full h-80 rounded-2xl border-0"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2431.9961057680367!2d-1.217!3d52.772!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48775ea02d3f4e75%3A0x6b014efb7f5a91f4!2sTT%20Automotive!5e0!3m2!1sen!2suk!4v1637745049173"
-          allowFullScreen=""
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2413.298901779953!2d-1.2134985!3d52.78091810000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879e0b4e70cd545%3A0x2a6d4a6a94f488a9!2sT%20T%20Automotive!5e0!3m2!1sen!2slk!4v1761843360759!5m2!1sen!2slk" 
           loading="lazy"
         ></iframe>
       </div>

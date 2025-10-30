@@ -6,19 +6,31 @@ export default function ContactSection() {
         {/* Left Column - Contact Info */}
         <div>
           <h2 className="text-4xl font-bold mb-6 text-[#861918]">Get In Touch</h2>
-          <ul className="space-y-4 text-gray-300 text-sm">
+          <ul className="space-y-4 text-gray-300">
             <li>
-              <span className="font-semibold text-white">General inquiries:</span> 01509 633300
+              <span className="font-semibold text-white">General inquiries:</span>{" "}
+              <a href="tel:+441509633300" className="hover:underline text-[#861918]">01509 633300</a>
             </li>
             <li>
-              <span className="font-semibold text-white">Email:</span> info@ttauto.co.uk
+              <span className="font-semibold text-white">Email:</span>{" "}
+              <a href="mailto:info@ttauto.co.uk" className="hover:underline text-[#861918]">info@ttauto.co.uk</a>
             </li>
             <li>
-              <span className="font-semibold text-white">Website:</span> www.ttauto.co.uk
+              <span className="font-semibold text-white">Website:</span>{" "}
+              <a href="https://www.ttauto.co.uk" target="_blank" rel="noopener noreferrer" className="hover:underline text-[#861918]">
+                www.ttauto.co.uk
+              </a>
             </li>
             <li>
-              <span className="font-semibold text-white">Address:</span> Unit 6, Royal Way, Off Belton Road,  
-              Loughborough, Leicestershire, LE11 5XR
+              <span className="font-semibold text-white">Address:</span>{" "}
+              <a
+                href="https://maps.app.goo.gl/VGiSQzQgnAgJodiy6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-[#861918]"
+              >
+                Unit 6, Royal Way, Off Belton Road, Loughborough, Leicestershire, LE11 5XR
+              </a>
             </li>
             <li>
               <span className="font-semibold text-white">Opening Hours:</span> 8:30 AM – 5:00 PM (Mon–Fri)

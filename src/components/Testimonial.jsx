@@ -3,32 +3,28 @@ import React from "react";
 
 const testimonials = [
   {
-    name: "Jason Stew",
-    role: "Toyota Tacoma Owner",
-    image: "/avatar1.jpg",
+    name: "Grace Burton",
+    role: "a week ago",
     quote:
-      "For numerous years, my family and I have placed our complete trust in John's Auto Repair for the care and repair of our vehicles.",
+      "We had my boyfriend's diesel injectors done on his car. The service was fabulous. Everything was explained well and the price broken down to be easier to understand what each bit was costing. It was done quickly and efficiently. Thank you especially to Joe and Dave I believe their names were :)",
   },
   {
-    name: "John Smith",
-    role: "Honda CR-V Owner",
-    image: "/avatar2.jpg",
+    name: "Eric Lo",
+    role: "7 months ago",
     quote:
-      "I've trusted this team for years. They solved an electrical issue no other shop could fix. Always professional, reliable, and friendly — I won't go anywhere else.",
+      "First time bring my VW for checking of fault code. David diagnosed the problems in my 14 years old car with several issues and solved it all in reasonable time and cost. It is a fantastic experience with this professional team. Thank you so much!",
   },
   {
-    name: "Emily Rodriguez",
-    role: "Porsche Panamera Owner",
-    image: "/avatar3.jpg",
+    name: "Trevor Barnacle",
+    role: "4 months ago",
     quote:
-      "Exceptional service. They replaced my sedan's brakes and now it drives like new — smooth, quiet stops. Great attention to detail and super professional throughout the process.",
+      "Had a nightmare with several garages mis diagnosing the issue with my mercedes Vito. After 20 minutes with TT Automotive they found the fault and was repaired the same day. Fantastic service and price. I've finally found a garage in which I can trust.",
   },
   {
-    name: "Michael Johnson",
-    role: "Ford F-150",
-    image: "/avatar4.jpg",
+    name: "Steven Sandell",
+    role: "a month ago",
     quote:
-      "My truck had engine trouble and they diagnosed it fast. Clear communication, solid repairs, and now it runs like new. I'm definitely sticking with them.",
+      "Great garage sorted my faulty injector out promptly and at a good price, jamie was very helpful especially with explaining the ins and outs what was going to happen. Many thanks tt",
   },
 ];
 
@@ -37,12 +33,8 @@ export default function Testimonials() {
     <section id="testimonials" className="scroll-m-5 bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-4 md:px-8 lg:px-16 text-white">
       {/* Heading */}
       <div className="text-center mb-12">
-        <p className="text-sm text-[#861918] tracking-widest uppercase">
-          Testimonials
-        </p>
-        <h2 className="text-3xl md:text-4xl font-extrabold mt-2">
-          What Our Clients Say
-        </h2>
+        <p className="text-sm text-[#861918] tracking-widest uppercase">Testimonials</p>
+        <h2 className="text-3xl md:text-4xl font-extrabold mt-2">What Our Clients Say</h2>
       </div>
 
       {/* Content */}
@@ -71,11 +63,11 @@ export default function Testimonials() {
               </p>
 
               <div className="flex items-center mt-4">
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-12 h-12 rounded-full object-cover mr-3 border border-[#ff4d24]/20"
-                />
+                {/* Circle with first letter */}
+                <div className="w-12 h-12 rounded-full bg-[#861918]/40 flex items-center justify-center mr-3 border border-[#ff4d24]/20 text-white font-semibold text-lg">
+                  {t.name.charAt(0)}
+                </div>
+
                 <div>
                   <p className="font-semibold text-white">{t.name}</p>
                   <p className="text-sm text-gray-400">{t.role}</p>
@@ -89,7 +81,7 @@ export default function Testimonials() {
       {/* Google Link */}
       <div className="text-right mt-10">
         <a
-          href="https://www.google.com"
+          href="https://www.google.com/search?sca_esv=dc724815bbf34a06&rlz=1C1KNTJ_enLK1089LK1089&sxsrf=AE3TifNd1iPErvhtDdDjWX0naV9F24D4_Q:1761842786248&si=AMgyJEuzsz2NflaaWzrzdpjxXXRaJ2hfdMsbe_mSWso6src8s6AKuefx5H1RVdZN9nU4KIhhbK1R5UFliYmD5J9C2W_kUD3CyX6ngbOInFx8LkvfuULV3FF3FtOUgfD0mstxLXTWt_sD&q=T+T+Automotive+Reviews&sa=X&ved=2ahUKEwiKrbLrr8yQAxV_ia8BHZN7F30Q0bkNegQIMRAE&biw=1366&bih=633&dpr=1"
           target="_blank"
           rel="noopener noreferrer"
           className="text-[#861918] font-semibold hover:underline tracking-wide"
