@@ -21,10 +21,9 @@ export default function CarCarePackages() {
 
   // Contact links
   const contactLinks = [
-    { icon: <Phone className="h-6 w-6" />, title: "+1-800-123-4567", href: "tel:+1-800-123-4567" },
-    { icon: <Mail className="h-6 w-6" />, title: "autofix@example.com", href: "mailto:autofix@example.com" },
-    { icon: <MessageCircle className="h-6 w-6" />, title: "Telegram Chat", href: "https://web.telegram.org/a/" },
-    { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://www.google.com/maps" },
+    { icon: <Phone className="h-6 w-6" />, title: "01509 633300", href: "tel:01509 633300" },
+    { icon: <Mail className="h-6 w-6" />, title: "info@ttauto.co.uk", href: "mailto:info@ttauto.co.uk" },
+    { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://maps.app.goo.gl/VGiSQzQgnAgJodiy6" },
   ];
 
   // Package data

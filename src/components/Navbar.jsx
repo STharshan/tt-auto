@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FiMenu, FiX, FiArrowRight } from "react-icons/fi";
+import { HashLink } from "react-router-hash-link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,24 +35,24 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-8 font-semibold">
-          <a href="#home" className="hover:text-[#861918] transition">
+          <HashLink to="/#home" className="hover:text-[#861918] transition">
             Home
-          </a>
-          <a href="#about" className="hover:text-[#861918] transition">
+          </HashLink>
+          <HashLink to="/#about" className="hover:text-[#861918] transition">
             About Us
-          </a>
-          <a href="#service" className="hover:text-[#861918] transition">
+          </HashLink>
+          <HashLink to="/#service" className="hover:text-[#861918] transition">
             Services
-          </a>
-          <a href="#product" className="hover:text-[#861918] transition">
+          </HashLink>
+          <HashLink to="/#product" className="hover:text-[#861918] transition">
             Product
-          </a>
-          <a href="#testimonials" className="hover:text-[#861918] transition">
+          </HashLink>
+          <HashLink to="/#testimonials" className="hover:text-[#861918] transition">
             Testimonials
-          </a>
-          <a href="#contact" className="hover:text-[#861918] transition">
+          </HashLink>
+          <HashLink to="/#contact" className="hover:text-[#861918] transition">
             Contact Us
-          </a>
+          </HashLink>
         </nav>
 
         {/* Desktop Button */}
@@ -88,24 +89,24 @@ export default function Navbar() {
           className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-white text-black" : "bg-black/80 text-white"
             }`}
         >
-          <a href="#home" className="block hover:text-[#861918]">
+          <HashLink to="/#home" className="block hover:text-[#861918]">
             Home
-          </a>
-          <a href="#about" className="block hover:text-[#861918]">
+          </HashLink>
+          <HashLink to="/#about" className="block hover:text-[#861918]">
             About Us
-          </a>
-          <a href="#service" className="block hover:text-[#861918]">
+          </HashLink>
+          <HashLink to="/#service" className="block hover:text-[#861918]">
             Services
-          </a>
-          <a href="#product" className="block hover:text-[#861918]">
+          </HashLink>
+          <HashLink to="/#product" className="block hover:text-[#861918]">
             Product
-          </a>
-          <a href="#testimonials" className="block hover:text-[#861918]">
+          </HashLink>
+          <HashLink to="/#testimonials" className="block hover:text-[#861918]">
             Testimonials
-          </a>
-          <a href="#contact" className="block hover:text-[#861918]">
+          </HashLink>
+          <HashLink to="/#contact" className="block hover:text-[#861918]">
             Contact Us
-          </a>
+          </HashLink>
           <div className="hidden md:flex items-center group">
             <button className="border border-[#861918] rounded-full px-6  py-2  text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]">
               Get a Quote

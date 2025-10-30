@@ -33,8 +33,18 @@ export default function FooterSection() {
               <li><span className="text-white font-semibold">Company Reg:</span> 1153016</li>
               <li><span className="text-white font-semibold">VAT Reg:</span> 115 5821 84</li>
               <li><span className="text-white font-semibold">Opening Hours:</span> 8:30 AM – 5:00 PM (Mon–Fri)</li>
-              <li><span className="text-white font-semibold">Phone:</span> 01509 633300</li>
-              <li><span className="text-white font-semibold">Email:</span> info@ttauto.co.uk</li>
+              <li>
+                <span className="text-white font-semibold">Phone:</span>{" "}
+                <a href="tel:+441509633300" className="hover:underline hover:text-[#861918]">
+                  01509 633300
+                </a>
+              </li>
+              <li>
+                <span className="text-white font-semibold">Email:</span>{" "}
+                <a href="mailto:info@ttauto.co.uk" className="hover:underline hover:text-[#861918]">
+                  info@ttauto.co.uk
+                </a>
+              </li>
             </ul>
           </div>
         </div>
@@ -49,14 +59,14 @@ export default function FooterSection() {
           {/* Left: Terms & Privacy */}
           <div className="flex gap-4 text-sm">
             <a
-              to="/terms"
+              href="/terms"
               className="text-gray-400 hover:text-[#861918] transition duration-300"
             >
               Terms & Conditions
             </a>
             <span className="text-gray-500">|</span>
             <a
-              to="/privacy"
+              href="/privacy"
               className="text-gray-400 hover:text-[#861918] transition duration-300"
             >
               Privacy Policy
@@ -77,6 +87,6 @@ export default function FooterSection() {
           </p>
         </div>
       </div>
-    </footer >
+    </footer>
   );
 }

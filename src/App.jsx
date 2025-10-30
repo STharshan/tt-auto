@@ -1,30 +1,26 @@
-import CreditSection from "./components/CreditSection"
-import HeroSection from "./components/HeroSection"
-import Navbar from "./components/Navbar"
-import PartnersCarousel from "./components/Partner"
-import ProductSection from "./components/Product"
-import ProcessSection from "./components/Service"
-import Testimonials from "./components/Testimonial"
-import ContactSection from "./components/ContactSection"
-import FooterSection from "./components/FooterSection"
-import MapSection from "./components/MapSection"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import TermsConditions from "./components/Term";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import GDPRConsent from "./components/GDPRButton";
+import ScrollToTop from "./components/ScrollToTop";
+import Home from "./page.jsx/Home";
+import Footer from "./components/FooterSection";
 
 function App() {
-
   return (
-    <>
+    <Router>
+      <ScrollToTop />
       <Navbar />
-      <HeroSection />
-      <PartnersCarousel />
-      <CreditSection />
-      <ProcessSection />
-      <ProductSection />
-      <Testimonials />
-      <ContactSection />
-      <MapSection />
-      <FooterSection />
-    </>
-  )
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/terms" element={<TermsConditions />} />
+        <Route path="/privacy" element={<PrivacyPolicy />} />
+      </Routes>
+      <Footer />
+      <GDPRConsent />
+    </Router>
+  );
 }
 
-export default App
+export default App;
