@@ -3,6 +3,7 @@ import React from "react";
 import { Check, X, Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 
 export default function CarCarePackages() {
+  // Feature data
   const premiumFeatures = [
     { icon: <Check className="h-5 w-5" />, title: "Engine Diagnostic:", description: "Advanced diagnostics to identify and address potential issues." },
     { icon: <Check className="h-5 w-5" />, title: "Alignment Check:", description: "Ensure wheels are properly aligned for optimal handling." },
@@ -18,6 +19,7 @@ export default function CarCarePackages() {
     { icon: <X className="h-5 w-5" />, title: "Fluid Top-Off:", description: "Refill essential fluids, including windshield washer, brake, and coolant." },
   ];
 
+  // Contact links
   const contactLinks = [
     { icon: <Phone className="h-6 w-6" />, title: "+1-800-123-4567", href: "tel:+1-800-123-4567" },
     { icon: <Mail className="h-6 w-6" />, title: "autofix@example.com", href: "mailto:autofix@example.com" },
@@ -25,10 +27,32 @@ export default function CarCarePackages() {
     { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://www.google.com/maps" },
   ];
 
+  // Package data
+  const packages = [
+    {
+      type: "PREMIUM",
+      price: "$199",
+      features: premiumFeatures,
+      btnText: "Purchase Premium Package",
+      iconColor: "text-[#861918]",
+      bgColor: "bg-[#861918]/20",
+      borderColor: "border-[#861918]/30",
+    },
+    {
+      type: "BASIC",
+      price: "$99",
+      features: basicFeatures,
+      btnText: "Purchase Basic Package",
+      iconColor: "text-red-500",
+      bgColor: "bg-red-500/20",
+      borderColor: "border-red-500/30",
+    },
+  ];
+
   return (
-    <section id="product" className=" scroll-m-10 bg-gradient-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
+    <section id="product" className="scroll-m-10 bg-gradient-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
-        
+
         {/* LEFT COLUMN */}
         <div className="space-y-8 lg:sticky lg:top-24 self-start">
           <div>
@@ -71,17 +95,8 @@ export default function CarCarePackages() {
 
         {/* RIGHT COLUMN */}
         <div
-          className="
-            flex flex-col gap-10 mt-10 lg:mt-0
-            overflow-visible lg:overflow-y-auto
-            lg:max-h-[80vh] lg:pr-2
-            hide-scrollbar
-          "
-          style={{
-            WebkitOverflowScrolling: "touch",
-            overscrollBehavior: "contain",
-            scrollbarGutter: "stable",
-          }}
+          className="flex flex-col gap-10 mt-10 lg:mt-0 overflow-visible lg:overflow-y-auto lg:max-h-[80vh] lg:pr-2 hide-scrollbar"
+          style={{ WebkitOverflowScrolling: "touch", overscrollBehavior: "contain", scrollbarGutter: "stable" }}
         >
           <style jsx>{`
             .hide-scrollbar::-webkit-scrollbar {
@@ -92,73 +107,44 @@ export default function CarCarePackages() {
             }
           `}</style>
 
-          {/* PREMIUM PACKAGE */}
-          <div className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-[#861918]/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500">
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <h6 className="text-sm font-semibold text-gray-400">PREMIUM</h6>
-              <div className="h-3 w-3 bg-[#861918] rounded-full"></div>
-              <h6 className="text-sm font-semibold">CARE PACKAGE</h6>
-            </div>
+          {/* Packages */}
+          {packages.map((pkg, idx) => (
+            <div
+              key={idx}
+              className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-[#861918]/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500"
+            >
+              <div className="flex flex-wrap items-center gap-3 mb-6">
+                <h6 className="text-sm font-semibold text-gray-400">{pkg.type}</h6>
+                <div className="h-3 w-3 bg-[#861918] rounded-full"></div>
+                <h6 className="text-sm font-semibold">CARE PACKAGE</h6>
+              </div>
 
-            <div className="border border-white/10 rounded-lg p-5 mb-6 flex flex-wrap items-center justify-between bg-[#111]">
-              <h6 className="text-sm font-semibold text-gray-400">PRICE</h6>
-              <h3 className="text-4xl sm:text-5xl font-bold text-[#861918]">$199</h3>
-            </div>
+              <div className="border border-white/10 rounded-lg p-5 mb-6 flex flex-wrap items-center justify-between bg-[#111]">
+                <h6 className="text-sm font-semibold text-gray-400">PRICE</h6>
+                <h3 className="text-4xl sm:text-5xl font-bold text-[#861918]">{pkg.price}</h3>
+              </div>
 
-            <div className="space-y-3 mb-6">
-              {premiumFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 border border-white/10 rounded-lg p-3 sm:p-4 items-start hover:bg-white/5 transition-all duration-300"
-                >
-                  <div className="flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-[#861918]/20 flex items-center justify-center border border-[#861918]/30">
-                    <div className="text-[#861918]">{feature.icon}</div>
+              <div className="space-y-3 mb-6">
+                {pkg.features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="flex gap-4 border border-white/10 rounded-lg p-3 sm:p-4 items-start hover:bg-white/5 transition-all duration-300"
+                  >
+                    <div className={`flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-full ${pkg.bgColor} flex items-center justify-center ${pkg.borderColor}`}>
+                      <div className={pkg.iconColor}>{feature.icon}</div>
+                    </div>
+                    <p className="text-gray-300 text-sm leading-relaxed">
+                      <span className="text-white font-semibold">{feature.title}</span> {feature.description}
+                    </p>
                   </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    <span className="text-white font-semibold">{feature.title}</span> {feature.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              <button className="w-full bg-[#861918] hover:bg-[#070981] text-white font-semibold py-3 rounded-full transition-all border-2 border-[#861918] shadow-lg shadow-[#861918]/40 text-sm sm:text-base">
+                {pkg.btnText}
+              </button>
             </div>
-
-            <button className="w-full bg-[#861918] hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition-all border-2 border-[#861918] shadow-lg shadow-[#861918]/40 text-sm sm:text-base">
-              Purchase Premium Package
-            </button>
-          </div>
-
-          {/* BASIC PACKAGE */}
-          <div className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-[#861918]/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500">
-            <div className="flex flex-wrap items-center gap-3 mb-6">
-              <h6 className="text-sm font-semibold text-gray-400">BASIC</h6>
-              <div className="h-3 w-3 bg-[#861918] rounded-full"></div>
-              <h6 className="text-sm font-semibold">CARE PACKAGE</h6>
-            </div>
-
-            <div className="border border-white/10 rounded-lg p-5 mb-6 flex flex-wrap items-center justify-between bg-[#111]">
-              <h6 className="text-sm font-semibold text-gray-400">PRICE</h6>
-              <h3 className="text-4xl sm:text-5xl font-bold text-[#861918]">$99</h3>
-            </div>
-
-            <div className="space-y-3 mb-6">
-              {basicFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex gap-4 border border-white/10 rounded-lg p-3 sm:p-4 items-start hover:bg-white/5 transition-all duration-300"
-                >
-                  <div className="flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-full bg-red-500/20 flex items-center justify-center border border-red-500/30">
-                    <div className="text-red-500">{feature.icon}</div>
-                  </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    <span className="text-white font-semibold">{feature.title}</span> {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <button className="w-full bg-[#861918] hover:bg-[#070981] text-white font-semibold py-3 rounded-full transition-all border-2 border-[#861918] hover:border-none shadow-lg shadow-[#861918]/40 text-sm sm:text-base">
-              Purchase Basic Package
-            </button>
-          </div>
+          ))}
         </div>
       </div>
     </section>

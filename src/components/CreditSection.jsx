@@ -21,17 +21,13 @@ export default function CreditSection() {
           </h2>
 
           <p className="text-lg md:text-xl font-medium mb-6 text-gray-100">
-            Get pre-approved in minutes and let our finance team get you the
-            best rate from our top lenders.
+           Catering for both national and local customers from our headquarters in Loughborough, Leicestershire, we can offer unparalleled expertise and range when it comes to diesel systems. This is the reason why we’ve built up a customer base of over 5,000 independent garages, diesel workshops, motor factors, electrical specialists and fleet companies.
           </p>
 
           <p className="text-gray-400 leading-relaxed">
-            Our extensive experience in the industry has enabled us to cultivate
-            valuable relationships that we leverage to your advantage. This
-            includes our partnerships with trusted lenders, guaranteeing you the
-            most competitive rates available. Apply now through our fully secure
-            credit application and kickstart your journey to a newer, more
-            luxurious car today.
+         
+
+One of just 28 Authorized Bosch Diesel Centers in the UK, we are also backed by a variety of other OE manufacturers including Delphi, Denso, Stanadyne, VDO and Zexel. Working closely with them enables us to stay at the forefront of diesel injection technology.
           </p>
         </div>
       </div>

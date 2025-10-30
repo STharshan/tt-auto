@@ -21,10 +21,10 @@ export default function HeroSection() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 flex flex-col justify-center space-y-8 py-24 sm:py-32">
         {/* Heading */}
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-4xl">
-          Your Freight, delivered{" "}
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-xl">
+          Diesel System Specialist{" "}
           <br className="hidden sm:block" />
-          with <span className="text-[#861918]">Precision.</span>
+         
         </h1>
 
         {/* Subheading + Button Row */}
@@ -35,10 +35,9 @@ export default function HeroSection() {
               <span className="text-[#861918] text-lg sm:text-xl">
                 <FaCircleDot />
               </span>
-              Across Europe and the US
+              The UK’s largest independent
             </p>
-            <p>Reliable transport. Real-time tracking.</p>
-            <p>Tailored logistics for your business.</p>
+             <span className="text-[#861918]">diesel engine specialist </span>
           </div>
 
           {/* Buttons */}

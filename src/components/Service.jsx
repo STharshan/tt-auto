@@ -49,39 +49,27 @@ export default function ServiceProcess() {
   const steps = [
     {
       number: "01",
-      title: "Book an Appointment",
-      desc: "At Autofix, we streamline the car service process to ensure a hassle-free experience. The journey begins with booking an appointment, where you select a convenient time and date.",
+      title: "Repair Service",
+      desc: "If your customer is cost-conscious and prepared to wait a few days, then repair might be a preferred option over remanufacture, which offers the benefit of quick turnaround and assured long term reliability, although at a higher cost. We repair thousands of components every year, using OE equipment, software, genuine parts and trained engineers, so our work is of the highest quality.",
       img: "https://framerusercontent.com/images/jf5Edk6UnnAYbFaVz0pd2pfgwM.jpg",
     },
     {
       number: "02",
-      title: "Choose Your Service",
-      desc: "Select your preferred service type from our comprehensive list — whether it’s a full inspection, oil change, or repair.",
+      title: "Distribution",
+      desc: "Our full range not only includes products relevant to our specialism – diesel fuel injection – but also a variety of other parts, including braking system components, ancillary items such as fuel filters and electrical supplies, such as starter motors and alternators.",
       img: "https://framerusercontent.com/images/CHxiZJgmHuz1HyaOqLrjkyXfuWk.jpg",
     },
     {
       number: "03",
-      title: "Confirm Your Request",
-      desc: "Review your choices and confirm your appointment for a seamless experience.",
+      title: "Remanufacturing Service",
+      desc: "Remanufacturing is accurately defined as bringing product back to its original specification through a combination of genuine spares, approved test equipment, trained personnel and relevant software. It demands a high level of investment in technology and training, but allows us to offer cost effective product that’s as good as new, delivered next day, complete with a comprehensive 12 month warranty.",
       img: "https://framerusercontent.com/images/6S1PRaCBleEPYp8RUipsLXq38.jpg",
     },
     {
       number: "04",
-      title: "Drop Off Your Vehicle",
-      desc: "Arrive at our service centre at your scheduled time and we’ll handle the rest.",
+      title: "Diesel Vehicle Workshop",
+      desc: "Endorsed by all major OE brands including Bosch, Delphi, Denso, Stanadyne, VDO and Zexel, we have direct access to the leading manufacturers, including their technical updates, official repair programs and spare parts. Our local customers therefore benefit from having a specialist wholesaler nearby, plus a fast and efficient diesel fuel injection workshop service. We never compromise on quality or service.",
       img: "https://framerusercontent.com/images/K3xd8CXmyvy3Mw1k6EowpoToeQ.jpg",
-    },
-    {
-      number: "05",
-      title: "Service and Repair",
-      desc: "Our expert technicians perform the required services using quality parts and care.",
-      img: "https://framerusercontent.com/images/oLRD2PRr1Q5k9XTG8WIF3IuoeI.jpg",
-    },
-    {
-      number: "06",
-      title: "Review and Pick Up",
-      desc: "Inspect your vehicle and drive away with confidence — service complete!",
-      img: "https://framerusercontent.com/images/i8EyTJe1RV5Jo4o4vXJAaKZoqM.jpg",
     },
   ];
 
