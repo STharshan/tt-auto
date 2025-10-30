@@ -106,7 +106,7 @@ export default function ServiceProcess() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               viewport={{ once: true }}
-              className="text-orange-500 uppercase tracking-widest mb-3 text-sm font-semibold"
+              className="text-[#861918] uppercase tracking-widest mb-3 text-sm font-semibold"
             >
               Your Vehicle’s Service Adventure
             </motion.h6>
@@ -126,7 +126,7 @@ export default function ServiceProcess() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               transition={{ type: "spring", stiffness: 200 }}
-              className="inline-block bg-[#ff4d24] hover:bg-[#ff3b0f] text-white font-semibold px-6 py-3 rounded-md shadow-md transition duration-300"
+              className="inline-block bg-[#861918] hover:bg-[#070981] text-white font-semibold px-6 py-3 rounded-md shadow-md transition duration-300"
             >
               Best Services
             </motion.a>
@@ -167,10 +167,10 @@ export default function ServiceProcess() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/90 group-hover:opacity-95 transition-all duration-500"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
-                  <span className="bg-[#ff4d24] text-white font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm mb-3 shadow-md shadow-[#ff4d2420]">
+                  <span className="bg-[#861918] text-white font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm mb-3 shadow-md shadow-[#ff4d2420]">
                     {step.number}
                   </span>
-                  <h4 className="text-lg font-bold mb-2 group-hover:text-[#ff4d24] transition-colors duration-300">
+                  <h4 className="text-lg font-bold mb-2 group-hover:text-[#861918] transition-colors duration-300">
                     {step.title}
                   </h4>
                   <p className="text-gray-300 text-sm leading-relaxed">

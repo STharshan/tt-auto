@@ -37,7 +37,7 @@ export default function Testimonials() {
     <section className="bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-4 md:px-8 lg:px-16 text-white">
       {/* Heading */}
       <div className="text-center mb-12">
-        <p className="text-sm text-orange-500 tracking-widest uppercase">
+        <p className="text-sm text-[#861918] tracking-widest uppercase">
           Testimonials
         </p>
         <h2 className="text-3xl md:text-4xl font-extrabold mt-2">
@@ -64,7 +64,7 @@ export default function Testimonials() {
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-[#111]/70 backdrop-blur-sm border border-white/10 p-6 rounded-xl shadow-md hover:border-[#ff4d24]/40 transition-all duration-500 group"
+              className="bg-[#111]/70 backdrop-blur-sm border border-white/10 p-6 rounded-xl shadow-md hover:border-[#861918] transition-all duration-500 group"
             >
               <p className="text-gray-300 mb-4 leading-relaxed italic group-hover:text-gray-100 transition-colors">
                 “{t.quote}”
@@ -92,7 +92,7 @@ export default function Testimonials() {
           href="https://www.google.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-[#ff4d24] font-semibold hover:underline tracking-wide"
+          className="text-[#861918] font-semibold hover:underline tracking-wide"
         >
           View on Google
         </a>
