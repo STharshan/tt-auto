@@ -85,7 +85,7 @@ export default function ServiceProcess() {
       <section
         id="service"
         ref={sectionRef}
-        className="bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
+        className="bg-linear-to-br from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
       >
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* LEFT SIDE */}
@@ -154,7 +154,7 @@ export default function ServiceProcess() {
                   alt={step.title}
                   className="w-full h-56 object-cover scale-110 group-hover:scale-100 transition-transform duration-700 ease-out"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/60 to-black/90 group-hover:opacity-95 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/60 to-black/90 group-hover:opacity-95 transition-all duration-500"></div>
                 <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
                   <span className="bg-[#861918] text-white font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm mb-3 shadow-md shadow-[#ff4d2420]">
                     {step.number}

@@ -49,7 +49,7 @@ export default function CarCarePackages() {
   ];
 
   return (
-    <section id="product" className="scroll-m-10 bg-gradient-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
+    <section id="product" className="scroll-m-10 bg-linear-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
 
         {/* LEFT COLUMN */}
@@ -110,7 +110,7 @@ export default function CarCarePackages() {
           {packages.map((pkg, idx) => (
             <div
               key={idx}
-              className="border border-white/10 rounded-2xl bg-gradient-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-[#861918]/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500"
+              className="border border-white/10 rounded-2xl bg-linear-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-[#861918]/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500"
             >
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <h6 className="text-sm font-semibold text-gray-400">{pkg.type}</h6>
@@ -129,7 +129,7 @@ export default function CarCarePackages() {
                     key={index}
                     className="flex gap-4 border border-white/10 rounded-lg p-3 sm:p-4 items-start hover:bg-white/5 transition-all duration-300"
                   >
-                    <div className={`flex-shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-full ${pkg.bgColor} flex items-center justify-center ${pkg.borderColor}`}>
+                    <div className={`shrink-0 h-9 w-9 sm:h-10 sm:w-10 rounded-full ${pkg.bgColor} flex items-center justify-center ${pkg.borderColor}`}>
                       <div className={pkg.iconColor}>{feature.icon}</div>
                     </div>
                     <p className="text-gray-300 text-sm leading-relaxed">

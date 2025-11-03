@@ -30,7 +30,7 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="scroll-m-5 bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-4 md:px-8 lg:px-16 text-white">
+    <section id="testimonials" className="scroll-m-5 bg-linear-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-4 md:px-8 lg:px-16 text-white">
       {/* Heading */}
       <div className="text-center mb-12">
         <p className="text-sm text-[#861918] tracking-widest uppercase">Testimonials</p>
