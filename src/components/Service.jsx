@@ -1,167 +1,145 @@
 "use client";
-import React, { useRef, useLayoutEffect, useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useState } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+const services = [
+  {
+    id: 1,
+    title: "Repair Service",
+    subtitle:
+      "If your customer is cost-conscious and prepared to wait a few days, then repair might be a preferred option.",
+    image:
+      "https://framerusercontent.com/images/jf5Edk6UnnAYbFaVz0pd2pfgwM.jpg",
+  },
+  {
+    id: 2,
+    title: "Distribution",
+    subtitle:
+      "Our full range not only includes products relevant to our specialism – diesel fuel injection.",
+    image:
+      "https://framerusercontent.com/images/CHxiZJgmHuz1HyaOqLrjkyXfuWk.jpg",
+  },
+  {
+    id: 3,
+    title: "Remanufacturing Service",
+    subtitle:
+      "Remanufacturing is accurately defined as bringing product back to its original specification.",
+    image:
+      "https://framerusercontent.com/images/6S1PRaCBleEPYp8RUipsLXq38.jpg",
+  },
+  {
+    id: 4,
+    title: "Diesel Vehicle Workshop",
+    subtitle:
+      "Endorsed by all major OE brands including Bosch, Delphi, Denso, Stanadyne, VDO and Zexel.",
+    image:
+      "https://framerusercontent.com/images/K3xd8CXmyvy3Mw1k6EowpoToeQ.jpg",
+  },
+];
 
-export default function ServiceProcess() {
-  const sectionRef = useRef(null);
-  const cardsRef = useRef([]);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  useLayoutEffect(() => {
-    if (isMobile) return;
-
-    const ctx = gsap.context(() => {
-      const cards = cardsRef.current;
-
-      gsap.fromTo(
-        cards,
-        { y: 80, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1,
-          ease: "power3.out",
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 80%",
-            end: "bottom 10%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, [isMobile]);
-
-  const steps = [
-    {
-      number: "01",
-      title: "Repair Service",
-      desc: "If your customer is cost-conscious and prepared to wait a few days, then repair might be a preferred option...",
-      img: "https://framerusercontent.com/images/jf5Edk6UnnAYbFaVz0pd2pfgwM.jpg",
-    },
-    {
-      number: "02",
-      title: "Distribution",
-      desc: "Our full range not only includes products relevant to our specialism – diesel fuel injection...",
-      img: "https://framerusercontent.com/images/CHxiZJgmHuz1HyaOqLrjkyXfuWk.jpg",
-    },
-    {
-      number: "03",
-      title: "Remanufacturing Service",
-      desc: "Remanufacturing is accurately defined as bringing product back to its original specification...",
-      img: "https://framerusercontent.com/images/6S1PRaCBleEPYp8RUipsLXq38.jpg",
-    },
-    {
-      number: "04",
-      title: "Diesel Vehicle Workshop",
-      desc: "Endorsed by all major OE brands including Bosch, Delphi, Denso, Stanadyne, VDO and Zexel...",
-      img: "https://framerusercontent.com/images/K3xd8CXmyvy3Mw1k6EowpoToeQ.jpg",
-    },
-  ];
+const ServiceSection = () => {
+  const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <section
       id="service"
-      ref={sectionRef}
-      className="bg-linear-to-br from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-20 px-6 md:px-12 lg:px-20 overflow-hidden"
+      className="relative bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-6 md:px-12 font-['Poppins'] text-white border-t border-[#1A1A1A]"
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-        {/* LEFT SIDE */}
-        <div className="lg:sticky lg:top-28 self-start">
-          <motion.h6
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-[#861918] uppercase tracking-widest mb-3 text-sm font-semibold"
-          >
+      {/* 🔥 Red glow accents */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-[#861918]/15 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-[#ff4d24]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+      </div>
+
+      {/* Layout wrapper */}
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
+        {/* Left Text */}
+        <div className="self-start lg:sticky lg:top-24 lg:h-fit">
+          <h6 className="text-[#861918] uppercase tracking-widest mb-3 text-sm font-semibold">
             Your Vehicle’s Service Adventure
-          </motion.h6>
+          </h6>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight"
-          >
-            Drive Through Our Service Process
-          </motion.h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight uppercase text-white">
+            Drive Through{" "}
+            <span className="bg-gradient-to-r from-[#ff4d24] to-[#861918] bg-clip-text text-transparent">
+              Our Service Process
+            </span>
+          </h2>
 
-          <motion.a
-            href="/services"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.97 }}
-            transition={{ type: "spring", stiffness: 200 }}
-            className="inline-block bg-[#861918] hover:bg-[#070981] text-white font-semibold px-6 py-3 rounded-md shadow-md transition duration-300"
-          >
+          <p className="mt-5 text-gray-400 max-w-md leading-relaxed text-sm sm:text-base">
+            Discover our comprehensive vehicle services — from expert diesel
+            repairs to remanufacturing and diagnostics. Every process is handled
+            with precision, quality, and genuine passion for automotive
+            excellence.
+          </p>
+
+          <button className="mt-8 bg-[#861918] text-white font-semibold px-6 py-3 rounded-md uppercase hover:bg-[#ff4d24] hover:shadow-[0_0_25px_rgba(255,77,36,0.4)] transition-all text-sm sm:text-base">
             Best Services
-          </motion.a>
+          </button>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div
-          className={`${
-            isMobile
-              ? "space-y-6"
-              : "h-[75vh] overflow-y-scroll pr-2 space-y-6 touch-pan-y"
-          }`}
-          style={{
-            scrollbarWidth: "none",
-            msOverflowStyle: "none",
-            overscrollBehavior: "contain",
-          }}
-        >
-          {steps.map((step, index) => (
+        {/* Right Services List */}
+        <div className="flex flex-col gap-8 relative">
+          {services.map((service) => (
             <div
-              key={step.number}
-              ref={(el) => (cardsRef.current[index] = el)}
-              className="relative overflow-hidden rounded-lg h-70 group border border-white/10 hover:border-[#ff4d24]/30 transition-all duration-500 shadow-md hover:shadow-[#ff4d2415]"
+              key={service.id}
+              className="flex flex-col sm:flex-row sm:justify-between sm:items-center transition-all duration-300 ease-out border-b border-[#2a2a2a] pb-6"
+              onMouseEnter={() => setHoveredId(service.id)}
+              onMouseLeave={() => setHoveredId(null)}
             >
-              <img
-                src={step.img}
-                alt={step.title}
-                className="w-full h-56 object-cover scale-110 group-hover:scale-100 transition-transform duration-700 ease-out"
-              />
-              <div className="absolute inset-0 bg-linear-to-b from-transparent via-black/60 to-black/90 group-hover:opacity-95 transition-all duration-500"></div>
-              <div className="absolute inset-0 flex flex-col justify-end p-6 z-10">
-                <span className="bg-[#861918] text-white font-bold rounded-full w-8 h-8 flex items-center justify-center text-sm mb-3 shadow-md shadow-[#ff4d2420]">
-                  {step.number}
-                </span>
-                <h4 className="text-lg font-bold mb-2 group-hover:text-[#861918] transition-colors duration-300">
-                  {step.title}
-                </h4>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {step.desc}
+              {/* Text */}
+              <div>
+                <h3
+                  className={`text-[20px] sm:text-[22px] md:text-[24px] font-semibold uppercase tracking-wide transition-colors duration-300 ${
+                    hoveredId === service.id
+                      ? "text-[#ff4d24]"
+                      : "text-[#EAEAEA]"
+                  }`}
+                >
+                  <span
+                    className={`mr-2 sm:mr-3 text-[22px] sm:text-[26px] md:text-[28px] font-bold transition-colors ${
+                      hoveredId === service.id
+                        ? "text-[#861918]"
+                        : "text-[#555555]"
+                    }`}
+                  >
+                    {service.id.toString().padStart(2, "0")}
+                  </span>
+                  {service.title}
+                </h3>
+                <p
+                  className={`uppercase font-semibold text-xs sm:text-sm mt-1 transition-colors ${
+                    hoveredId === service.id
+                      ? "text-[#ff4d24]"
+                      : "text-[#888888]"
+                  }`}
+                >
+                  {service.subtitle}
                 </p>
+              </div>
+
+              {/* Image */}
+              <div className="w-full sm:w-[280px] h-40 sm:h-[170px] mt-4 sm:mt-0 relative overflow-hidden rounded-md [clip-path:polygon(10%_0,100%_0,90%_100%,0%_100%)] shadow-[0_0_15px_rgba(255,77,36,0.1)]">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className={`absolute w-full h-full object-cover transition-all duration-500 ease-out transform ${
+                    hoveredId === service.id
+                      ? "opacity-100 translate-x-0 scale-100"
+                      : "opacity-0 translate-x-5 scale-95"
+                  }`}
+                />
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br from-transparent via-[#ff4d24]/10 to-transparent transition-opacity duration-500 ${
+                    hoveredId === service.id ? "opacity-40" : "opacity-0"
+                  }`}
+                ></div>
               </div>
             </div>
           ))}
-
-          {/* Hide scrollbar */}
-          {!isMobile && (
-            <style jsx>{`
-              div::-webkit-scrollbar {
-                display: none;
-              }
-            `}</style>
-          )}
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default ServiceSection;
