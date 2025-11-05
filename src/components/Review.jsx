@@ -83,7 +83,7 @@ export default function Review() {
       </div>
       {/* Heading */}
       <div className="relative z-10 text-center pt-32 pb-8">
-        <h2 className="text-4xl md:text-5xl font-semibold text-orange-300">
+        <h2 className="text-4xl md:text-5xl font-semibold text-[#861918]">
           Hear it from our clients
         </h2>
       </div>
