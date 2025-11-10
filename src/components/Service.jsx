@@ -1,145 +1,132 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const services = [
-  {
-    id: 1,
-    title: "Repair Service",
-    subtitle:
-      "If your customer is cost-conscious and prepared to wait a few days, then repair might be a preferred option.",
-    image:
-      "https://framerusercontent.com/images/jf5Edk6UnnAYbFaVz0pd2pfgwM.jpg",
-  },
-  {
-    id: 2,
-    title: "Distribution",
-    subtitle:
-      "Our full range not only includes products relevant to our specialism – diesel fuel injection.",
-    image:
-      "https://framerusercontent.com/images/CHxiZJgmHuz1HyaOqLrjkyXfuWk.jpg",
-  },
-  {
-    id: 3,
-    title: "Remanufacturing Service",
-    subtitle:
-      "Remanufacturing is accurately defined as bringing product back to its original specification.",
-    image:
-      "https://framerusercontent.com/images/6S1PRaCBleEPYp8RUipsLXq38.jpg",
-  },
-  {
-    id: 4,
-    title: "Diesel Vehicle Workshop",
-    subtitle:
-      "Endorsed by all major OE brands including Bosch, Delphi, Denso, Stanadyne, VDO and Zexel.",
-    image:
-      "https://framerusercontent.com/images/K3xd8CXmyvy3Mw1k6EowpoToeQ.jpg",
-  },
-];
-
-const ServiceSection = () => {
-  const [hoveredId, setHoveredId] = useState(null);
-
+export default function AutomotiveServicesSection() {
   return (
-    <section
-      id="service"
-      className="relative bg-linear-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-6 md:px-12 font-['Poppins'] text-white border-t border-[#1A1A1A]"
-    >
-      {/* 🔥 Red glow accents */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-linear-to-br from-[#861918]/15 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-linear-to-tl from-[#ff4d24]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+    <section className="relative bg-black text-white py-28 overflow-hidden flex flex-col items-center justify-center">
+      {/* ===== Background Layers ===== */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Top angled red panels */}
+        <div className="absolute top-0 left-0 w-[65%] h-[420px] bg-linear-to-tr from-[#1a0000] via-[#0a0000] to-transparent rounded-tr-[140px]" />
+        <div className="absolute top-0 right-0 w-[65%] h-[420px] bg-linear-to-tl from-[#1a0000] via-[#0a0000] to-transparent rounded-tl-[140px]" />
+
+        {/* Red glows */}
+        <div className="absolute top-[-150px] left-[-150px] w-[800px] h-[800px] bg-linear-to-br from-red-700/25 to-red-900/15 blur-[180px] rounded-full" />
+        <div className="absolute bottom-[-200px] right-[-150px] w-[700px] h-[700px] bg-linear-to-tr from-red-600/20 to-black/30 blur-[160px] rounded-full" />
       </div>
 
-      {/* Layout wrapper */}
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 items-start">
-        {/* Left Text */}
-        <div className="self-start lg:sticky lg:top-24 lg:h-fit">
-          <h6 className="text-[#861918] uppercase tracking-widest mb-3 text-sm font-semibold">
-            Your Vehicle’s Service Adventure
-          </h6>
+      {/* ===== Section Header ===== */}
+      <div className="relative z-10 text-center max-w-4xl mb-20 px-6">
+        <h1 className="text-5xl md:text-6xl font-bold mb-2 leading-tight bg-linear-to-r from-red-500 via-red-300 to-red-500 bg-clip-text text-transparent">
+          Our Automotive Services
+        </h1>
+        <h2 className="text-5xl md:text-6xl font-semibold text-gray-400 mb-6">
+          Expert Care For Every Vehicle
+        </h2>
+        <p className="text-gray-400 text-lg leading-relaxed mb-12">
+          Explore our range of car services designed to keep your vehicle performing safely and efficiently.
+        </p>
 
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight uppercase text-white">
-            Drive Through{" "}
-            <span className="bg-linear-to-r from-[#ff4d24] to-[#861918] bg-clip-text text-transparent">
-              Our Service Process
-            </span>
-          </h2>
+        <button className="px-10 py-3 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-lg rounded-xl border-[3px] border-white/15 shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300">
+          View About Landin
+        </button>
+      </div>
 
-          <p className="mt-5 text-gray-400 max-w-md leading-relaxed text-sm sm:text-base">
-            Discover our comprehensive vehicle services — from expert diesel
-            repairs to remanufacturing and diagnostics. Every process is handled
-            with precision, quality, and genuine passion for automotive
-            excellence.
-          </p>
+      {/* ===== Cards Section ===== */}
+      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full px-6">
+        <ServiceCard
+          path="/services/mot"
+          iconBg="from-red-500 to-orange-600"
+          icon="🧾"
+          tag="PRO"
+          title="MOT Testing"
+          subtitle="Road Safety & Compliance"
+          body="DVSA-approved inspections ensuring your car meets safety and emission standards."
+        />
 
-          <button className="mt-8 bg-[#861918] text-white font-semibold px-6 py-3 rounded-md uppercase hover:bg-[#ff4d24] hover:shadow-[0_0_25px_rgba(255,77,36,0.4)] transition-all text-sm sm:text-base">
-            Best Services
-          </button>
-        </div>
+        <ServiceCard
+          path="/services/brake"
+          iconBg="from-orange-600 to-red-700"
+          icon="🛞"
+          tag="NEW"
+          title="Brake Services"
+          subtitle="Precision Brake Repair"
+          body="We inspect, repair, and replace brakes using OEM-grade parts for maximum performance."
+        />
 
-        {/* Right Services List */}
-        <div className="flex flex-col gap-8 relative">
-          {services.map((service) => (
-            <div
-              key={service.id}
-              className="flex flex-col sm:flex-row sm:justify-between sm:items-center transition-all duration-300 ease-out border-b border-[#2a2a2a] pb-6"
-              onMouseEnter={() => setHoveredId(service.id)}
-              onMouseLeave={() => setHoveredId(null)}
-            >
-              {/* Text */}
-              <div>
-                <h3
-                  className={`text-[20px] sm:text-[22px] md:text-[24px] font-semibold uppercase tracking-wide transition-colors duration-300 ${
-                    hoveredId === service.id
-                      ? "text-[#ff4d24]"
-                      : "text-[#EAEAEA]"
-                  }`}
-                >
-                  <span
-                    className={`mr-2 sm:mr-3 text-[22px] sm:text-[26px] md:text-[28px] font-bold transition-colors ${
-                      hoveredId === service.id
-                        ? "text-[#861918]"
-                        : "text-[#555555]"
-                    }`}
-                  >
-                    {service.id.toString().padStart(2, "0")}
-                  </span>
-                  {service.title}
-                </h3>
-                <p
-                  className={`uppercase font-semibold text-xs sm:text-sm mt-1 transition-colors ${
-                    hoveredId === service.id
-                      ? "text-[#ff4d24]"
-                      : "text-[#888888]"
-                  }`}
-                >
-                  {service.subtitle}
-                </p>
-              </div>
+        <ServiceCard
+          path="/services/time-belts"
+          iconBg="from-rose-500 to-red-700"
+          icon="⏱"
+          tag="NEW"
+          title="Timing Belts"
+          subtitle="Reliable Performance"
+          body="Keep your engine running perfectly with expert timing belt inspection and replacement."
+        />
 
-              {/* Image */}
-              <div className="w-full sm:w-[280px] h-40 sm:h-[170px] mt-4 sm:mt-0 relative overflow-hidden rounded-md [clip-path:polygon(10%_0,100%_0,90%_100%,0%_100%)] shadow-[0_0_15px_rgba(255,77,36,0.1)]">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className={`absolute w-full h-full object-cover transition-all duration-500 ease-out transform ${
-                    hoveredId === service.id
-                      ? "opacity-100 translate-x-0 scale-100"
-                      : "opacity-0 translate-x-5 scale-95"
-                  }`}
-                />
-                <div
-                  className={`absolute inset-0 bg-linear-to-br from-transparent via-[#ff4d24]/10 to-transparent transition-opacity duration-500 ${
-                    hoveredId === service.id ? "opacity-40" : "opacity-0"
-                  }`}
-                ></div>
-              </div>
-            </div>
-          ))}
-        </div>
+        <ServiceCard
+          path="/services/batteries"
+          iconBg="from-red-400 to-red-600"
+          icon="🔋"
+          tag="PRO"
+          title="Batteries"
+          subtitle="Power & Reliability"
+          body="Premium batteries and diagnostic testing to ensure consistent power and smooth starts."
+        />
+
+        <ServiceCard
+          path="/services/suspension"
+          iconBg="from-red-700 to-black"
+          icon="🧱"
+          tag="HOT"
+          title="Suspension"
+          subtitle="Ride Comfort & Control"
+          body="Smooth handling, improved control, and comfort with expert suspension service."
+        />
+
+        <ServiceCard
+          path="/services/customisation"
+          iconBg="from-red-600 to-rose-800"
+          icon="🚗"
+          tag="NEW"
+          title="Customisation"
+          subtitle="Performance & Style"
+          body="Transform your car with bespoke design, styling, and performance enhancements."
+        />
       </div>
     </section>
   );
-};
+}
 
-export default ServiceSection;
+/* ===== Service Card Component ===== */
+function ServiceCard({ path, iconBg, icon, tag, title, subtitle, body }) {
+  return (
+    <Link
+      to={path}
+      className="group relative block rounded-3xl border border-white/10 bg-[rgba(255,255,255,0.03)] backdrop-blur-sm p-10 shadow-[0_10px_60px_rgba(0,0,0,0.7)] hover:-translate-y-1 transition-transform duration-300"
+    >
+      {/* Red underline glow */}
+      <div className="absolute -top-px left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-red-500 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+
+      {/* Icon & Tag */}
+      <div className="flex items-center justify-between mb-6">
+        <div className="w-16 h-16 rounded-full bg-linear-to-br from-[#1f1f1f] to-[#0d0d0d] flex items-center justify-center">
+          <div
+            className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-linear-to-br ${iconBg}`}
+          >
+            {icon}
+          </div>
+        </div>
+        <span className="text-[11px] font-semibold px-3 py-1 rounded-md bg-linear-to-r from-red-600 to-red-800 border border-white/20 shadow-[0_0_10px_rgba(255,0,0,0.5)]">
+          {tag}
+        </span>
+      </div>
+
+      <h3 className="text-2xl font-semibold mb-1">{title}</h3>
+      <p className="text-sm text-white/60 mb-4">{subtitle}</p>
+      <div className="h-px bg-linear-to-r from-transparent via-white/20 to-transparent mb-4" />
+      <p className="text-base text-white/70 leading-relaxed">{body}</p>
+    </Link>
+  );
+}
