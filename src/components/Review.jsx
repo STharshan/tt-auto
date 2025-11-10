@@ -5,76 +5,75 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Review() {
-
   const sectionRef = useRef(null);
+  const cardsContainerRef = useRef(null);
   const cardsRef = useRef([]);
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       const cards = cardsRef.current;
-      gsap.set(cards, {
-        yPercent: -50,
-        opacity: 0,
-      });
-      gsap.set(cards[0], {
-        yPercent: 0,
-        opacity: 1,
-      });
+
+      // initial states
+      gsap.set(cards, { yPercent: 30, opacity: 0 });
+      gsap.set(cards[0], { yPercent: 0, opacity: 1 });
+
+      // timeline for card reveal
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "+=" + cards.length * 500,
+          trigger: cardsContainerRef.current,
+          start: "top 80%",
+          end: "+=" + cards.length * 400,
           scrub: 1.5,
-          pin: true,
-          anticipatePin: 1,
         },
       });
+
+      // Animate each card one by one
       cards.forEach((card, i) => {
         if (i === 0) return;
-        tl.to(cards[i], { opacity: 1, yPercent: 0, duration: 1 }, i);
+        tl.to(cards[i], { opacity: 1, yPercent: 0, duration: 1 }, i * 0.5);
       });
     }, sectionRef);
+
     return () => ctx.revert();
   }, []);
 
- const testimonials = [
-  {
-    title: "Excellent Service & Fair Prices",
-    text: "TT Autos sorted out my car issues (Hyundai i30), excellent customer service, fair prices, really pleased overall. They were recommended to me by a family member, and now I recommend them to others. Now I know where to go in the future. Thank you so much.",
-    name: "Asma",
-    initials: "A",
-    bg: "#BCFFBB",
-  },
-  {
-    title: "Amazing Garage",
-    text: "Used them for a few years now. Bailed me out multiple times and always upfront with costs and very fair. Family-run business and always feel welcomed by everyone. Keep up the good work lads.",
-    name: "Amar Mohammed",
-    initials: "AM",
-    bg: "#BBD2FF",
-  },
-  {
-    title: "Highly Recommended",
-    text: "Had a spoiler fitted on my Mk 7.5 Golf R. Excellent service — these guys really know what they're doing. They also helped with an issue I was having with my F1 light. This garage is going to become my regular.",
-    name: "Asma Omar",
-    initials: "AO",
-    bg: "#F5FFBB",
-  },
-  {
-    title: "Fast & Reasonably Priced",
-    text: "I took my car in today to replace my exhaust and they completed the work in less than two hours with a great result. Very reasonably priced and they fitted me in the next day!",
-    name: "Rav Heer",
-    initials: "RH",
-    bg: "#FFBBF0",
-  }
- 
-];
+  const testimonials = [
+    {
+      title: "Excellent Service & Fair Prices",
+      text: "TT Autos sorted out my car issues (Hyundai i30), excellent customer service, fair prices, really pleased overall. They were recommended to me by a family member, and now I recommend them to others. Now I know where to go in the future. Thank you so much.",
+      name: "Asma",
+      initials: "A",
+      bg: "#BCFFBB",
+    },
+    {
+      title: "Amazing Garage",
+      text: "Used them for a few years now. Bailed me out multiple times and always upfront with costs and very fair. Family-run business and always feel welcomed by everyone. Keep up the good work lads.",
+      name: "Amar Mohammed",
+      initials: "AM",
+      bg: "#BBD2FF",
+    },
+    {
+      title: "Highly Recommended",
+      text: "Had a spoiler fitted on my Mk 7.5 Golf R. Excellent service — these guys really know what they're doing. They also helped with an issue I was having with my F1 light. This garage is going to become my regular.",
+      name: "Asma Omar",
+      initials: "AO",
+      bg: "#F5FFBB",
+    },
+    {
+      title: "Fast & Reasonably Priced",
+      text: "I took my car in today to replace my exhaust and they completed the work in less than two hours with a great result. Very reasonably priced and they fitted me in the next day!",
+      name: "Rav Heer",
+      initials: "RH",
+      bg: "#FFBBF0",
+    },
+  ];
 
   return (
     <section
       ref={sectionRef}
-      className="relative h-[200vh] bg-black text-white overflow-hidden"
+      className="relative bg-black text-white overflow-hidden"
     >
-      {/* :white_check_mark: Jeton Background */}
+      {/* === Background image scrolls normally === */}
       <div className="absolute inset-0">
         <img
           src="https://www.jeton.com/_ipx/f_webp&q_80&w_3400/cms/b7c674ecd0ee69b2eca20443cac6272c550ed396-4000x2667.jpg"
@@ -83,20 +82,25 @@ export default function Review() {
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
-      {/* Heading */}
-      <div className="relative z-10 text-center pt-32 pb-8">
+
+      {/* === Heading === */}
+      <div className="relative z-10 text-center pt-32 pb-12">
         <h2 className="text-4xl md:text-5xl font-semibold text-[#861918]">
           Hear it from our clients
         </h2>
       </div>
-      {/* Stack Container */}
-      <div className="relative z-10 max-w-xl mx-auto flex flex-col items-center justify-start h-[80vh]">
+
+      {/* === Cards container === */}
+      <div
+        ref={cardsContainerRef}
+        className="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-8 pb-32"
+      >
         {testimonials.map((item, i) => (
           <div
             key={i}
             ref={(el) => (cardsRef.current[i] = el)}
-            className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 shadow-[0_0_20px_rgba(0,0,0,0.3)]
-                       p-6 md:p-8 mb-6 opacity-0 transform translate-y-[-50%]"
+            className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
+                       shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
           >
             <p className="text-lg md:text-xl font-semibold mb-3">{item.title}</p>
             <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
