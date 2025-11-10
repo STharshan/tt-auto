@@ -9,7 +9,7 @@ export default function ContactSection() {
           <ul className="space-y-4 text-gray-300">
             <li>
               <span className="font-semibold text-white">General inquiries:</span>{" "}
-              <a href="tel:+441509633300" className="hover:underline text-[#861918]">01509 633300</a>
+              <a href="tel:+447976246720" className="hover:underline text-[#861918]">+44 7976 246720</a>
             </li>
             <li>
               <span className="font-semibold text-white">Email:</span>{" "}
@@ -29,11 +29,11 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="hover:underline text-[#861918]"
               >
-                Unit 6, Royal Way, Off Belton Road, Loughborough, Leicestershire, LE11 5XR
+             34 Rowsley St, Leicester LE5 5JJ, United Kingdom
               </a>
             </li>
             <li>
-              <span className="font-semibold text-white">Opening Hours:</span> 8:30 AM – 5:00 PM (Mon–Fri)
+              <span className="font-semibold text-white">Opening Hours:</span> 9:00 AM – 5:00 PM (Mon–Fri)
             </li>
           </ul>
         </div>
