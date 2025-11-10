@@ -42,12 +42,12 @@ const ServiceSection = () => {
   return (
     <section
       id="service"
-      className="relative bg-gradient-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-6 md:px-12 font-['Poppins'] text-white border-t border-[#1A1A1A]"
+      className="relative bg-linear-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-20 px-6 md:px-12 font-['Poppins'] text-white border-t border-[#1A1A1A]"
     >
       {/* 🔥 Red glow accents */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-to-br from-[#861918]/15 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gradient-to-tl from-[#ff4d24]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
+        <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-linear-to-br from-[#861918]/15 to-transparent blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/3"></div>
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-linear-to-tl from-[#ff4d24]/10 to-transparent blur-[160px] rounded-full translate-x-1/3 translate-y-1/3"></div>
       </div>
 
       {/* Layout wrapper */}
@@ -60,7 +60,7 @@ const ServiceSection = () => {
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight uppercase text-white">
             Drive Through{" "}
-            <span className="bg-gradient-to-r from-[#ff4d24] to-[#861918] bg-clip-text text-transparent">
+            <span className="bg-linear-to-r from-[#ff4d24] to-[#861918] bg-clip-text text-transparent">
               Our Service Process
             </span>
           </h2>
@@ -129,7 +129,7 @@ const ServiceSection = () => {
                   }`}
                 />
                 <div
-                  className={`absolute inset-0 bg-gradient-to-br from-transparent via-[#ff4d24]/10 to-transparent transition-opacity duration-500 ${
+                  className={`absolute inset-0 bg-linear-to-br from-transparent via-[#ff4d24]/10 to-transparent transition-opacity duration-500 ${
                     hoveredId === service.id ? "opacity-40" : "opacity-0"
                   }`}
                 ></div>
