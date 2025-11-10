@@ -1,153 +1,180 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function AutomotiveServicesSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation speed
+      once: false, // trigger on both scroll up/down
+      offset: 100, // distance to start animation
+      easing: "ease-in-out",
+    });
+  }, []);
+
   return (
     <section className="relative bg-black text-white py-28 overflow-hidden flex flex-col items-center justify-center">
       {/* ===== Background Layers ===== */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Top angled red panels */}
         <div className="absolute top-0 left-0 w-[65%] h-[420px] bg-linear-to-tr from-[#1a0000] via-[#0a0000] to-transparent rounded-tr-[140px]" />
         <div className="absolute top-0 right-0 w-[65%] h-[420px] bg-linear-to-tl from-[#1a0000] via-[#0a0000] to-transparent rounded-tl-[140px]" />
-
-        {/* Red glows */}
         <div className="absolute top-[-150px] left-[-150px] w-[800px] h-[800px] bg-linear-to-br from-red-700/25 to-red-900/15 blur-[180px] rounded-full" />
         <div className="absolute bottom-[-200px] right-[-150px] w-[700px] h-[700px] bg-linear-to-tr from-red-600/20 to-black/30 blur-[160px] rounded-full" />
       </div>
 
       {/* ===== Section Header ===== */}
-      <div className="relative z-10 text-center max-w-4xl mb-20 px-6">
-        <h1 className="text-5xl md:text-6xl font-bold mb-2 leading-tight bg-linear-to-r from-red-500 via-red-300 to-red-500 bg-clip-text text-transparent">
+      <div
+        className="relative z-10 text-center max-w-4xl mb-20 px-6"
+        data-aos="fade-up"
+      >
+        <h1
+          className="text-5xl md:text-6xl font-bold mb-2 leading-tight bg-linear-to-r from-red-500 via-red-300 to-red-500 bg-clip-text text-transparent"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           Our Automotive Services
         </h1>
-        <h2 className="text-5xl md:text-6xl font-semibold text-gray-400 mb-6">
+        <h2
+          className="text-5xl md:text-6xl font-semibold text-gray-400 mb-6"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           Expert Care For Every Vehicle
         </h2>
-        <p className="text-gray-400 text-lg leading-relaxed mb-12">
-          Explore our range of car services designed to keep your vehicle performing safely and efficiently.
+        <p
+          className="text-gray-400 text-lg leading-relaxed mb-12"
+          data-aos="fade-up"
+          data-aos-delay="300"
+        >
+          Explore our range of car services designed to keep your vehicle
+          performing safely and efficiently.
         </p>
 
-        <button className="px-10 py-3 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-lg rounded-xl border-[3px] border-white/15 shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300">
+        <button
+          className="px-10 py-3 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-lg rounded-xl border-[3px] border-white/15 shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300"
+          data-aos="zoom-in"
+          data-aos-delay="400"
+        >
           View About Landing
         </button>
       </div>
 
       {/* ===== Cards Section ===== */}
-      <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full px-6">
-        {/* === 1 === */}
-        <ServiceCard
-          path="/services/mot"
-          iconBg="from-red-500 to-orange-600"
-          icon="🧾"
-          tag="PRO"
-          title="MOT Testing"
-          subtitle="Road Safety & Compliance"
-          body="DVSA-approved inspections ensuring your car meets safety and emission standards."
-        />
-
-        {/* === 2 === */}
-        <ServiceCard
-          path="/services/brake"
-          iconBg="from-orange-600 to-red-700"
-          icon="🛞"
-          tag="NEW"
-          title="Brake Services"
-          subtitle="Precision Brake Repair"
-          body="We inspect, repair, and replace brakes using OEM-grade parts for maximum performance."
-        />
-
-        {/* === 3 === */}
-        <ServiceCard
-          path="/services/time-belts"
-          iconBg="from-rose-500 to-red-700"
-          icon="⏱"
-          tag="NEW"
-          title="Timing Belts"
-          subtitle="Reliable Performance"
-          body="Keep your engine running perfectly with expert timing belt inspection and replacement."
-        />
-
-        {/* === 4 === */}
-        <ServiceCard
-          path="/services/batteries"
-          iconBg="from-red-400 to-red-600"
-          icon="🔋"
-          tag="PRO"
-          title="Batteries"
-          subtitle="Power & Reliability"
-          body="Premium batteries and diagnostic testing to ensure consistent power and smooth starts."
-        />
-
-        {/* === 5 === */}
-        <ServiceCard
-          path="/services/suspension"
-          iconBg="from-red-700 to-black"
-          icon="🧱"
-          tag="HOT"
-          title="Suspension"
-          subtitle="Ride Comfort & Control"
-          body="Smooth handling, improved control, and comfort with expert suspension service."
-        />
-
-        {/* === 6 === */}
-        <ServiceCard
-          path="/services/servicing"
-          iconBg="from-red-500 to-orange-700"
-          icon="⚙️"
-          tag="TOP"
-          title="Servicing"
-          subtitle="Full Vehicle Maintenance"
-          body="Comprehensive vehicle servicing using quality parts and manufacturer-approved checks."
-        />
-
-        {/* === 7 === */}
-        <ServiceCard
-          path="/services/clutches"
-          iconBg="from-orange-700 to-red-700"
-          icon="🧰"
-          tag="PRO"
-          title="Clutches"
-          subtitle="Smooth Gear Transition"
-          body="Expert clutch replacement and repairs to ensure reliable power transmission."
-        />
-
-        {/* === 8 === */}
-        <ServiceCard
-          path="/services/diagnostics"
-          iconBg="from-rose-600 to-red-700"
-          icon="💻"
-          tag="TECH"
-          title="Diagnostics"
-          subtitle="Smart Problem Detection"
-          body="Advanced computer diagnostics to identify issues before they become major problems."
-        />
-
-        {/* === 9 === */}
-        <ServiceCard
-          path="/services/aircon"
-          iconBg="from-red-600 to-red-900"
-          icon="❄️"
-          tag="FRESH"
-          title="Air Conditioning"
-          subtitle="Cooling & Efficiency"
-          body="Stay cool all year round with our expert air conditioning recharge and repair services."
-        />
-
-        {/* === 10 === */}
-        <ServiceCard
-          path="/services/customisation"
-          iconBg="from-red-600 to-rose-800"
-          icon="🚗"
-          tag="NEW"
-          title="Customisation"
-          subtitle="Performance & Style"
-          body="Transform your car with bespoke design, styling, and performance enhancements."
-        />
+      <div
+        className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full px-6"
+        data-aos="fade-up"
+        data-aos-delay="500"
+      >
+        {cards.map((card, i) => (
+          <div
+            key={i}
+            data-aos="zoom-in-up"
+            data-aos-delay={100 * i}
+            data-aos-anchor-placement="top-bottom"
+          >
+            <ServiceCard {...card} />
+          </div>
+        ))}
       </div>
     </section>
   );
 }
+
+/* ===== Card Data (to keep clean) ===== */
+const cards = [
+  {
+    path: "/services/mot",
+    iconBg: "from-red-500 to-orange-600",
+    icon: "🧾",
+    tag: "PRO",
+    title: "MOT Testing",
+    subtitle: "Road Safety & Compliance",
+    body: "DVSA-approved inspections ensuring your car meets safety and emission standards.",
+  },
+  {
+    path: "/services/brake",
+    iconBg: "from-orange-600 to-red-700",
+    icon: "🛞",
+    tag: "NEW",
+    title: "Brake Services",
+    subtitle: "Precision Brake Repair",
+    body: "We inspect, repair, and replace brakes using OEM-grade parts for maximum performance.",
+  },
+  {
+    path: "/services/time-belts",
+    iconBg: "from-rose-500 to-red-700",
+    icon: "⏱",
+    tag: "NEW",
+    title: "Timing Belts",
+    subtitle: "Reliable Performance",
+    body: "Keep your engine running perfectly with expert timing belt inspection and replacement.",
+  },
+  {
+    path: "/services/batteries",
+    iconBg: "from-red-400 to-red-600",
+    icon: "🔋",
+    tag: "PRO",
+    title: "Batteries",
+    subtitle: "Power & Reliability",
+    body: "Premium batteries and diagnostic testing to ensure consistent power and smooth starts.",
+  },
+  {
+    path: "/services/suspension",
+    iconBg: "from-red-700 to-black",
+    icon: "🧱",
+    tag: "HOT",
+    title: "Suspension",
+    subtitle: "Ride Comfort & Control",
+    body: "Smooth handling, improved control, and comfort with expert suspension service.",
+  },
+  {
+    path: "/services/servicing",
+    iconBg: "from-red-500 to-orange-700",
+    icon: "⚙️",
+    tag: "TOP",
+    title: "Servicing",
+    subtitle: "Full Vehicle Maintenance",
+    body: "Comprehensive vehicle servicing using quality parts and manufacturer-approved checks.",
+  },
+  {
+    path: "/services/clutches",
+    iconBg: "from-orange-700 to-red-700",
+    icon: "🧰",
+    tag: "PRO",
+    title: "Clutches",
+    subtitle: "Smooth Gear Transition",
+    body: "Expert clutch replacement and repairs to ensure reliable power transmission.",
+  },
+  {
+    path: "/services/diagnostics",
+    iconBg: "from-rose-600 to-red-700",
+    icon: "💻",
+    tag: "TECH",
+    title: "Diagnostics",
+    subtitle: "Smart Problem Detection",
+    body: "Advanced computer diagnostics to identify issues before they become major problems.",
+  },
+  {
+    path: "/services/aircon",
+    iconBg: "from-red-600 to-red-900",
+    icon: "❄️",
+    tag: "FRESH",
+    title: "Air Conditioning",
+    subtitle: "Cooling & Efficiency",
+    body: "Stay cool all year round with our expert air conditioning recharge and repair services.",
+  },
+  {
+    path: "/services/customisation",
+    iconBg: "from-red-600 to-rose-800",
+    icon: "🚗",
+    tag: "NEW",
+    title: "Customisation",
+    subtitle: "Performance & Style",
+    body: "Transform your car with bespoke design, styling, and performance enhancements.",
+  },
+];
 
 /* ===== Service Card Component ===== */
 function ServiceCard({ path, iconBg, icon, tag, title, subtitle, body }) {

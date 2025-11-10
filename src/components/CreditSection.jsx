@@ -1,11 +1,33 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function CreditSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation duration (ms)
+      once: false, // keeps animating up & down scroll
+      offset: 100, // distance from trigger point
+      easing: "ease-in-out", // smooth motion
+    });
+  }, []);
+
   return (
-    <section id="about" className="scroll-m-10 w-full bg-linear-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-16 px-6 md:px-12 lg:px-20 text-white">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+    <section
+      id="about"
+      className="scroll-m-10 w-full bg-linear-to-br from-black via-[#0b0b0b] to-[#1a1a1a] py-16 px-6 md:px-12 lg:px-20 text-white overflow-hidden"
+    >
+      <div
+        className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
+        data-aos="fade-up"
+      >
         {/* Left Image */}
-        <div className="w-full">
+        <div
+          className="w-full"
+          data-aos="fade-right"
+          data-aos-delay="200"
+        >
           <img
             src="/image.png"
             alt="Car interior"
@@ -14,23 +36,39 @@ export default function CreditSection() {
         </div>
 
         {/* Right Text Section */}
-        <div>
+        <div
+          className="space-y-4"
+          data-aos="fade-left"
+          data-aos-delay="300"
+        >
           <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
             About Us
           </h2>
 
           <p className="text-lg md:text-xl font-medium mb-6 text-gray-100">
-           Driven by passion and powered by generations of expertise.
+            Driven by passion and powered by generations of expertise.
           </p>
 
           <p className="text-gray-400 leading-relaxed">
-            Based in Leicester, our family-run business spans two generations, combining decades of hands-on experience with modern automotive innovation. From small local garages to high-performance specialists across the Midlands, we’re trusted for our <strong>outstanding quality, reliability, and precision.</strong>
+            Based in Leicester, our family-run business spans two generations,
+            combining decades of hands-on experience with modern automotive
+            innovation. From small local garages to high-performance specialists
+            across the Midlands, we’re trusted for our{" "}
+            <strong>outstanding quality, reliability, and precision.</strong>
           </p>
-           <p className="text-gray-400 leading-relaxed mt-3">
-            Our team is committed to delivering the same level of care and attention — whether it’s a routine service or complex performance work. Over the years, we’ve built our reputation through <strong>honesty, craftsmanship, and long-term partnerships</strong> with customers who value genuine expertise.
+
+          <p className="text-gray-400 leading-relaxed mt-3">
+            Our team is committed to delivering the same level of care and
+            attention — whether it’s a routine service or complex performance
+            work. Over the years, we’ve built our reputation through{" "}
+            <strong>honesty, craftsmanship, and long-term partnerships</strong>{" "}
+            with customers who value genuine expertise.
           </p>
-           <p className="text-gray-400 leading-relaxed mt-3">
-           At the heart of everything we do is a simple goal: <strong>to keep every vehicle performing at its best </strong> - no matter the make, model, or challenge.
+
+          <p className="text-gray-400 leading-relaxed mt-3">
+            At the heart of everything we do is a simple goal:{" "}
+            <strong>to keep every vehicle performing at its best</strong> — no
+            matter the make, model, or challenge.
           </p>
         </div>
       </div>
