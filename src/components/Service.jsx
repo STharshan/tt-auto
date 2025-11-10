@@ -29,12 +29,13 @@ export default function AutomotiveServicesSection() {
         </p>
 
         <button className="px-10 py-3 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-lg rounded-xl border-[3px] border-white/15 shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300">
-          View About Landin
+          View About Landing
         </button>
       </div>
 
       {/* ===== Cards Section ===== */}
       <div className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full px-6">
+        {/* === 1 === */}
         <ServiceCard
           path="/services/mot"
           iconBg="from-red-500 to-orange-600"
@@ -45,6 +46,7 @@ export default function AutomotiveServicesSection() {
           body="DVSA-approved inspections ensuring your car meets safety and emission standards."
         />
 
+        {/* === 2 === */}
         <ServiceCard
           path="/services/brake"
           iconBg="from-orange-600 to-red-700"
@@ -55,6 +57,7 @@ export default function AutomotiveServicesSection() {
           body="We inspect, repair, and replace brakes using OEM-grade parts for maximum performance."
         />
 
+        {/* === 3 === */}
         <ServiceCard
           path="/services/time-belts"
           iconBg="from-rose-500 to-red-700"
@@ -65,6 +68,7 @@ export default function AutomotiveServicesSection() {
           body="Keep your engine running perfectly with expert timing belt inspection and replacement."
         />
 
+        {/* === 4 === */}
         <ServiceCard
           path="/services/batteries"
           iconBg="from-red-400 to-red-600"
@@ -75,6 +79,7 @@ export default function AutomotiveServicesSection() {
           body="Premium batteries and diagnostic testing to ensure consistent power and smooth starts."
         />
 
+        {/* === 5 === */}
         <ServiceCard
           path="/services/suspension"
           iconBg="from-red-700 to-black"
@@ -85,6 +90,51 @@ export default function AutomotiveServicesSection() {
           body="Smooth handling, improved control, and comfort with expert suspension service."
         />
 
+        {/* === 6 === */}
+        <ServiceCard
+          path="/services/servicing"
+          iconBg="from-red-500 to-orange-700"
+          icon="⚙️"
+          tag="TOP"
+          title="Servicing"
+          subtitle="Full Vehicle Maintenance"
+          body="Comprehensive vehicle servicing using quality parts and manufacturer-approved checks."
+        />
+
+        {/* === 7 === */}
+        <ServiceCard
+          path="/services/clutches"
+          iconBg="from-orange-700 to-red-700"
+          icon="🧰"
+          tag="PRO"
+          title="Clutches"
+          subtitle="Smooth Gear Transition"
+          body="Expert clutch replacement and repairs to ensure reliable power transmission."
+        />
+
+        {/* === 8 === */}
+        <ServiceCard
+          path="/services/diagnostics"
+          iconBg="from-rose-600 to-red-700"
+          icon="💻"
+          tag="TECH"
+          title="Diagnostics"
+          subtitle="Smart Problem Detection"
+          body="Advanced computer diagnostics to identify issues before they become major problems."
+        />
+
+        {/* === 9 === */}
+        <ServiceCard
+          path="/services/aircon"
+          iconBg="from-red-600 to-red-900"
+          icon="❄️"
+          tag="FRESH"
+          title="Air Conditioning"
+          subtitle="Cooling & Efficiency"
+          body="Stay cool all year round with our expert air conditioning recharge and repair services."
+        />
+
+        {/* === 10 === */}
         <ServiceCard
           path="/services/customisation"
           iconBg="from-red-600 to-rose-800"
