@@ -8,6 +8,7 @@ import Home from "./page.jsx/Home";
 import Footer from "./components/FooterSection";
 import Mot from "./page.jsx/Services/Mot";
 import Brake from "./page.jsx/Services/Brake";
+import TimeBelts from "./page.jsx/Services/TimeBelts";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/services/mot" element={<Mot />} />  
         <Route path="/services/brake" element={<Brake />} />
+        <Route path="/services/time-belts" element={<TimeBelts />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>

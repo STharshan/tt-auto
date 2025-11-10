@@ -10,7 +10,6 @@ const Mot = () => {
             <HeroSection />
             <AboutSection />
             <ProblemSection />
-           
             <FAQSection />
         </div>
     )
