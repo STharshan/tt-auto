@@ -6,6 +6,8 @@ import GDPRConsent from "./components/GDPRButton";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./page.jsx/Home";
 import Footer from "./components/FooterSection";
+import Mot from "./page.jsx/Services/Mot";
+import Brake from "./page.jsx/Services/Brake";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/services/mot" element={<Mot />} />  
+        <Route path="/services/brake" element={<Brake />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
