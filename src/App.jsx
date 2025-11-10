@@ -13,6 +13,7 @@ import Batteries from "./page/Services/Batteries";
 import Suspension from "./page/Services/Suspension";
 import Servicing  from "./page/Services/Servicing";
 import Clutches from "./page/Services/Clutches";
+import Diagnostics from "./page/Services/Diagnostics";
 function App() {
   return (
     <Router>
@@ -27,6 +28,7 @@ function App() {
         <Route path="services/suspension" element={<Suspension />} />
         <Route path="services/Servicing" element={<Servicing />} />
         <Route path="/services/clutches" element={<Clutches />} />
+        <Route path="services/diagnostics" element={<Diagnostics />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
