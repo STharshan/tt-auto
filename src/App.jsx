@@ -11,7 +11,7 @@ import Brake from "./page/Services/Brake";
 import TimeBelts from "./page/Services/TimeBelts";
 import Batteries from "./page/Services/Batteries";
 import Suspension from "./page/Services/Suspension";
-
+import Servicing  from "./page/Services/Servicing";
 function App() {
   return (
     <Router>
@@ -24,6 +24,7 @@ function App() {
         <Route path="/services/time-belts" element={<TimeBelts />} />
         <Route path="/services/batteries" element={<Batteries  />} />
         <Route path="services/suspension" element={<Suspension />} />
+        <Route path="services/Servicing" element={<Servicing />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
