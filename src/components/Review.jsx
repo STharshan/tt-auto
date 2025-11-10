@@ -37,36 +37,38 @@ export default function Review() {
     return () => ctx.revert();
   }, []);
 
-  const testimonials = [
-    {
-      title: "Recommended",
-      text: "Very happy with the app. Does what it says, simple payments and transactions. Quick account verification and withdrawals. 24/7 support available.",
-      name: "Vamsi K.",
-      initials: "VK",
-      bg: "#BCFFBB",
-    },
-    {
-      title: "Awesome app very user friendly",
-      text: "Would highly recommend Jeton to my friends.",
-      name: "Leonie A.",
-      initials: "LA",
-      bg: "#BBD2FF",
-    },
-    {
-      title: "The best payment solution for German customers",
-      text: "I've been a Jeton user for a few years! The support was always great and I'm always able to make my payments to the websites I want with no problem.",
-      name: "Karl R.",
-      initials: "KR",
-      bg: "#F5FFBB",
-    },
-    {
-      title: "Easy and Fast",
-      text: "Great app for fast and easy transfers. I have been using Jeton for a while now without any problem. I have recently started using their Jeton Card for my everyday purchases too.",
-      name: "Dennis P.",
-      initials: "DP",
-      bg: "#FFBBF0",
-    },
-  ];
+ const testimonials = [
+  {
+    title: "Excellent Service & Fair Prices",
+    text: "TT Autos sorted out my car issues (Hyundai i30), excellent customer service, fair prices, really pleased overall. They were recommended to me by a family member, and now I recommend them to others. Now I know where to go in the future. Thank you so much.",
+    name: "Asma",
+    initials: "A",
+    bg: "#BCFFBB",
+  },
+  {
+    title: "Amazing Garage",
+    text: "Used them for a few years now. Bailed me out multiple times and always upfront with costs and very fair. Family-run business and always feel welcomed by everyone. Keep up the good work lads.",
+    name: "Amar Mohammed",
+    initials: "AM",
+    bg: "#BBD2FF",
+  },
+  {
+    title: "Highly Recommended",
+    text: "Had a spoiler fitted on my Mk 7.5 Golf R. Excellent service — these guys really know what they're doing. They also helped with an issue I was having with my F1 light. This garage is going to become my regular.",
+    name: "Asma Omar",
+    initials: "AO",
+    bg: "#F5FFBB",
+  },
+  {
+    title: "Fast & Reasonably Priced",
+    text: "I took my car in today to replace my exhaust and they completed the work in less than two hours with a great result. Very reasonably priced and they fitted me in the next day!",
+    name: "Rav Heer",
+    initials: "RH",
+    bg: "#FFBBF0",
+  }
+ 
+];
+
   return (
     <section
       ref={sectionRef}
