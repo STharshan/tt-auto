@@ -20,10 +20,17 @@ export default function GallerySection() {
     { type: "video", src: "v2.mp4", text: "Electrical Systems" },
     { type: "video", src: "v3.mp4", text: "Auto Repair" },
     { type: "video", src: "v4.mp4", text: "Testing & Tools" },
+     
    
   
  
     { type: "image", src: "v5.jpeg", text: "Diagnostic Equipment" },
+    { type: "video", src: "v6.mp4", text: "Engine Diagnostics" },
+    { type: "video", src: "v7.mp4", text: "Electrical Systems" },
+    { type: "video", src: "v8.mp4", text: "Auto Repair" },
+    { type: "video", src: "v9.mp4", text: "Testing & Tools" },
+     { type: "video", src: "v10.mp4", text: "Testing & Tools" },
+   
    
   ];
 
