@@ -9,7 +9,7 @@ export default function ProblemSection() {
         {/* Video 1 */}
         <div className="rounded-2xl border border-gray-700 overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
           <video
-            src="/video1.mp4"
+            src="/mot.mp4"
             autoPlay
             muted
             loop
@@ -21,7 +21,7 @@ export default function ProblemSection() {
         {/* Video 2 */}
         <div className="rounded-2xl border border-gray-700 overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
           <video
-            src="/video2.mp4"
+            src="/mot1.mp4"
             autoPlay
             muted
             loop
@@ -47,7 +47,7 @@ export default function ProblemSection() {
           <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
             Site and Service Improvement{" "}
             <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
-              REAL
+              ttauto
             </span>
           </h3>
           <p className="text-gray-300 leading-relaxed">
