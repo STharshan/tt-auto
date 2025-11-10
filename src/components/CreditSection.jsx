@@ -16,18 +16,21 @@ export default function CreditSection() {
         {/* Right Text Section */}
         <div>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight">
-            We help you{" "}
-            <span className="text-[#861918] font-bold">get credit.</span>
+            About Us
           </h2>
 
           <p className="text-lg md:text-xl font-medium mb-6 text-gray-100">
-           Catering for both national and local customers from our headquarters in Loughborough, Leicestershire, we can offer unparalleled expertise and range when it comes to diesel systems. This is the reason why we’ve built up a customer base of over 5,000 independent garages, diesel workshops, motor factors, electrical specialists and fleet companies.
+           Driven by passion and powered by generations of expertise.
           </p>
 
           <p className="text-gray-400 leading-relaxed">
-         
-
-One of just 28 Authorized Bosch Diesel Centers in the UK, we are also backed by a variety of other OE manufacturers including Delphi, Denso, Stanadyne, VDO and Zexel. Working closely with them enables us to stay at the forefront of diesel injection technology.
+            Based in Leicester, our family-run business spans two generations, combining decades of hands-on experience with modern automotive innovation. From small local garages to high-performance specialists across the Midlands, we’re trusted for our outstanding quality, reliability, and precision.
+          </p>
+           <p className="text-gray-400 leading-relaxed mt-3">
+            Our team is committed to delivering the same level of care and attention — whether it’s a routine service or complex performance work. Over the years, we’ve built our reputation through honesty, craftsmanship, and long-term partnerships with customers who value genuine expertise.
+          </p>
+           <p className="text-gray-400 leading-relaxed mt-3">
+           At the heart of everything we do is a simple goal: <strong>to keep every vehicle performing at its best </strong> - no matter the make, model, or challenge.
           </p>
         </div>
       </div>
