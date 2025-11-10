@@ -14,6 +14,8 @@ import Suspension from "./page/Services/Suspension";
 import Servicing  from "./page/Services/Servicing";
 import Clutches from "./page/Services/Clutches";
 import Diagnostics from "./page/Services/Diagnostics";
+import Aircon from "./page/Services/Aircon";
+import Customisation from "./page/Services/Customisation";
 function App() {
   return (
     <Router>
@@ -29,6 +31,8 @@ function App() {
         <Route path="services/Servicing" element={<Servicing />} />
         <Route path="/services/clutches" element={<Clutches />} />
         <Route path="services/diagnostics" element={<Diagnostics />} />
+       <Route path="services/aircon" element={<Aircon />} />
+       <Route path="services/customisation" element={<Customisation />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
       </Routes>
