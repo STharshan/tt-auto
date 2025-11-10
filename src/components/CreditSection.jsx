@@ -27,7 +27,7 @@ export default function CreditSection() {
             Based in Leicester, our family-run business spans two generations, combining decades of hands-on experience with modern automotive innovation. From small local garages to high-performance specialists across the Midlands, we’re trusted for our outstanding quality, reliability, and precision.
           </p>
            <p className="text-gray-400 leading-relaxed mt-3">
-            Our team is committed to delivering the same level of care and attention — whether it’s a routine service or complex performance work. Over the years, we’ve built our reputation through honesty, craftsmanship, and long-term partnerships with customers who value genuine expertise.
+            Our team is committed to delivering the same level of care and attention — whether it’s a routine service or complex performance work. Over the years, we’ve built our reputation through <strong>honesty, craftsmanship, and long-term partnerships</strong> with customers who value genuine expertise.
           </p>
            <p className="text-gray-400 leading-relaxed mt-3">
            At the heart of everything we do is a simple goal: <strong>to keep every vehicle performing at its best </strong> - no matter the make, model, or challenge.
