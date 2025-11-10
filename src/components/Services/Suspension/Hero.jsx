@@ -53,19 +53,19 @@ export default function HeroSection() {
           {/* Title */}
           <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
             <span className="block bg-linear-to-r from-white to-gray-400 bg-clip-text text-transparent">
-              Timing Belts
+              Suspension
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-Replacement and inspection to prevent costly engine damage and maintain performance.
+            Full suspension assessment and repairs for smoother handling and improved comfort.
           </p>
 
           {/* Tags */}
           <div className="flex gap-4 pt-4">
             <div className="px-5 py-2 bg-linear-to-t from-[#0055ff33] to-[#9999991a] border border-white/10 rounded-lg backdrop-blur-sm">
-              <p className="text-white text-sm font-medium">Timing Belts</p>
+              <p className="text-white text-sm font-medium">Suspension</p>
             </div>
             <div className="px-5 py-2 bg-linear-to-t from-[#0055ff33] to-[#9999991a] border border-white/10 rounded-lg backdrop-blur-sm">
               <p className="text-white text-sm font-medium">Service</p>
@@ -86,14 +86,14 @@ Replacement and inspection to prevent costly engine damage and maintain performa
           <div className="space-y-6 relative z-10">
             <div>
               <p className="text-white/60 text-sm">Services</p>
-              <h4 className="text-xl font-semibold">Timing Belt Replacement</h4>
+              <h4 className="text-xl font-semibold">Suspension Repair & Alignment</h4>
             </div>
 
             <div className="h-px bg-white/10"></div>
 
             <div>
               <p className="text-white/60 text-sm">Category</p>
-              <h4 className="text-xl font-semibold">Engine Care & Maintenance</h4>
+              <h4 className="text-xl font-semibold">Chassis & Comfort</h4>
             </div>
 
             <div className="h-px bg-white/10"></div>
@@ -101,7 +101,7 @@ Replacement and inspection to prevent costly engine damage and maintain performa
             <div>
               <p className="text-white/60 text-sm">Client</p>
               <h4 className="text-xl font-semibold">
-                Petrol & Diesel Vehicles
+                All Vehicle Types
               </h4>
             </div>
 

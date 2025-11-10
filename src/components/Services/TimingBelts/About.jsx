@@ -18,13 +18,11 @@ export default function AboutSection() {
       {/* Text Section */}
       <div className="max-w-4xl text-center md:text-left">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-          Analysis – Performance and Responsiveness
+          Analysis – Precision and Prevention
         </h2>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-          We prioritize optimal performance and seamless responsiveness across all devices.
-          Our approach ensures fast loading times and smooth navigation, providing an
-          excellent user experience on both desktop and mobile.
+         We replace worn timing belts and tensioners using manufacturer-approved intervals and OE-quality components. Our goal is to protect your engine from serious internal damage while maintaining perfect timing accuracy.
         </p>
 
         {/* Subsection: Performance */}
@@ -32,22 +30,19 @@ export default function AboutSection() {
           <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
             Performance{" "}
             <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
-              REAL
+              TT Auto
             </span>
           </h3>
 
           <ul className="text-gray-300 leading-relaxed list-disc list-inside space-y-1">
             <li>
-              <span className="font-medium">Fast Loading Speed:</span> We optimize images,
-              scripts, and resources to ensure quick load times.
+               Timing belt replacement specialists in Leicester and Midlands.
             </li>
             <li>
-              <span className="font-medium">Optimized Code:</span> Clean and efficient coding
-              practices keep our apps lightweight and minimize unnecessary elements.
+              Manufacturer-spec belts, pulleys, and tensioners used.
             </li>
             <li>
-              <span className="font-medium">Scalability:</span> Our performance-focused design
-              ensures your website scales across bandwidth tiers.
+              Prevents major engine failure and performance loss.
             </li>
           </ul>
         </div>
@@ -56,11 +51,7 @@ export default function AboutSection() {
         <div className="text-left">
           <h3 className="text-lg font-semibold mb-2">Responsiveness</h3>
           <p className="text-gray-300 leading-relaxed">
-            Responsiveness is key to delivering an exceptional user experience across all
-            devices. We ensure that your website adjusts seamlessly to any screen size,
-            from mobile phones to desktops, providing a consistent and intuitive interface.
-            With fluid layouts and optimized navigation, users will enjoy smooth interactions
-            no matter how they access your site.
+           Our precise installation ensures smooth power delivery, quiet operation, and long-term reliability across all engine types.
           </p>
         </div>
       </div>

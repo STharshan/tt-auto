@@ -9,7 +9,7 @@ export default function ProblemSection() {
         {/* Video 1 */}
         <div className="relative rounded-2xl border border-gray-700 overflow-hidden bg-[#0f0f0f] shadow-[0_0_40px_-10px_rgba(0,0,0,0.6)] aspect-video">
           <video
-            src="/timing1.mp4"
+            src="/suspention1.mp4"
             autoPlay
             muted
             loop
@@ -21,7 +21,7 @@ export default function ProblemSection() {
         {/* Video 2 */}
         <div className="relative rounded-2xl border border-gray-700 overflow-hidden bg-[#0f0f0f] shadow-[0_0_40px_-10px_rgba(0,0,0,0.6)] aspect-video">
           <video
-            src="/timing2.mp4"
+            src="/suspention2.mp4"
             autoPlay
             muted
             loop
@@ -35,18 +35,18 @@ export default function ProblemSection() {
       <div className="max-w-4xl text-center md:text-left space-y-6">
         <div className="text-left">
           <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-            Timing Belts{" "}
+           Suspension{" "}
             <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
               TT Auto
             </span>
           </h3>
 
           <p className="text-gray-300 leading-relaxed">
-       A worn timing belt can cause major engine damage if not replaced on time. Our timing belt replacement service in Leicester ensures your engine runs smoothly and reliably. We follow manufacturer intervals and fit only high-quality belts, pulleys, and tensioners for complete peace of mind.
+           A healthy suspension system makes every drive smoother, safer, and more controlled. At our Leicester workshop, we offer <strong> suspension repair and replacement services </strong> that restore handling, comfort, and stability. Our experts check shocks, springs, and linkages for wear or leaks using advanced testing equipment.
           </p>
 
           <p className="text-gray-300 leading-relaxed mt-4">
-           Our team checks for wear, cracks, and alignment issues that could compromise your vehicle’s timing. Whether petrol or diesel, we provide <strong>timing belt inspections and replacements </strong> to help you avoid costly repairs and keep your car performing at its best.
+           We fix everything from uneven tyre wear to noisy suspension joints with high-quality parts. Whether you need a full overhaul or minor adjustment, our <strong>Midlands suspension specialists </strong> ensure your car feels balanced, comfortable, and safe on every road.
           </p>
         </div>
       </div>
