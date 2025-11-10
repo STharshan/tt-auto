@@ -11,7 +11,7 @@ const Mot = () => {
             <HeroSection />
             <AboutSection />
             <ProblemSection />
-            <SolutionSection />
+           
             <FAQSection />
         </div>
     )
