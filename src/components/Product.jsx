@@ -5,18 +5,29 @@ import { Check, X, Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 export default function CarCarePackages() {
   // Feature data
   const premiumFeatures = [
-    { icon: <Check className="h-5 w-5" />, title: "Engine Diagnostic:", description: "Advanced diagnostics to identify and address potential issues." },
-    { icon: <Check className="h-5 w-5" />, title: "Alignment Check:", description: "Ensure wheels are properly aligned for optimal handling." },
-    { icon: <Check className="h-5 w-5" />, title: "Air Filter Replacement:", description: "Replace engine air filter for improved performance." },
-    { icon: <Check className="h-5 w-5" />, title: "AC System Check:", description: "Inspect and test the air conditioning system for optimal cooling." },
-    { icon: <Check className="h-5 w-5" />, title: "Interior Vacuum:", description: "Thorough vacuuming of the interior to keep your car clean and fresh." },
+    { icon: <Check className="h-5 w-5" />, title: "Oil Filter Replacement:", description: "Replace old oil filter to maintain engine efficiency." },
+    { icon: <Check className="h-5 w-5" />, title: "Fluid Top-Ups:", description: "Screen wash, coolant, and essential levels refilled." },
+    { icon: <Check className="h-5 w-5" />, title: "Brake Fluid & System Check:", description: "Ensure braking performance and safety." },
+    { icon: <Check className="h-5 w-5" />, title: "Steering Fluid Inspection:", description: "Check and maintain correct steering fluid levels." },
+    { icon: <Check className="h-5 w-5" />, title: "Full Vehicle Health Check:", description: "Comprehensive inspection for early issue detection." },
+    { icon: <Check className="h-5 w-5" />, title: "Engine Bay Clean:", description: "Professional cleaning to keep your engine area spotless." },
+    { icon: <Check className="h-5 w-5" />, title: "Tyre Pressure Adjustment:", description: "Correct tyre pressure for optimal safety and fuel economy." },
   ];
 
   const basicFeatures = [
-    { icon: <X className="h-5 w-5" />, title: "Oil Change:", description: "Replace old oil with high-quality synthetic oil to ensure your engine runs smoothly." },
-    { icon: <X className="h-5 w-5" />, title: "Tire Rotation:", description: "Rotate tires to promote even wear and extend tire life." },
-    { icon: <X className="h-5 w-5" />, title: "Brake Inspection:", description: "Comprehensive check of brake pads, rotors, and fluid to ensure safety." },
-    { icon: <X className="h-5 w-5" />, title: "Fluid Top-Off:", description: "Refill essential fluids, including windshield washer, brake, and coolant." },
+    { icon: <X className="h-5 w-5" />, title: "Everything Included in the Interim Service:", description: "All checks, top-ups, and cleaning services from the Interim Package." },
+    {
+      icon: <X className="h-5 w-5" />,
+      title: "Comprehensive Filter Replacement:",
+      description: (
+        <>
+          Petrol Vehicles: Engine oil filter, air filter, cabin/pollen filter, and spark plugs replaced. <br />
+          Diesel Vehicles: Engine oil filter, air filter, cabin/pollen filter, and fuel filter replaced.
+        </>
+      )
+    },
+    { icon: <X className="h-5 w-5" />, title: "Engine Oil Change:", description: "Fresh, high-grade engine oil for smoother performance and longer engine life." },
+    { icon: <X className="h-5 w-5" />, title: "Fluid Top-Ups:", description: "All key fluids replenished — brake fluid, steering fluid, screen wash, and coolant — ensuring optimal performance and safety." },
   ];
 
   // Contact links
@@ -29,19 +40,19 @@ export default function CarCarePackages() {
   // Package data
   const packages = [
     {
-      type: "PREMIUM",
-      price: "$199",
+      type: "INTERIM SERVICE",
+      price: "£90",
       features: premiumFeatures,
-      btnText: "Purchase Premium Package",
+      btnText: "Book Interim Service",
       iconColor: "text-[#861918]",
       bgColor: "bg-[#861918]/20",
       borderColor: "border-[#861918]/30",
     },
     {
-      type: "BASIC",
-      price: "$99",
+      type: "FULL SERVICE",
+      price: "£140",
       features: basicFeatures,
-      btnText: "Purchase Basic Package",
+      btnText: "Book Full Service",
       iconColor: "text-red-500",
       bgColor: "bg-red-500/20",
       borderColor: "border-red-500/30",
@@ -114,12 +125,12 @@ export default function CarCarePackages() {
             >
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <h6 className="text-sm font-semibold text-gray-400">{pkg.type}</h6>
-                <div className="h-3 w-3 bg-[#861918] rounded-full"></div>
-                <h6 className="text-sm font-semibold">CARE PACKAGE</h6>
+                {/* <div className="h-3 w-3 bg-[#861918] rounded-full"></div> */}
+                {/* <h6 className="text-sm font-semibold">CARE PACKAGE</h6> */}
               </div>
 
               <div className="border border-white/10 rounded-lg p-5 mb-6 flex flex-wrap items-center justify-between bg-[#111]">
-                <h6 className="text-sm font-semibold text-gray-400">PRICE</h6>
+                <h6 className="text-sm font-semibold text-gray-400">PRICES STARTING FROM</h6>
                 <h3 className="text-4xl sm:text-5xl font-bold text-[#861918]">{pkg.price}</h3>
               </div>
 
