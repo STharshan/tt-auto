@@ -1,10 +1,27 @@
-// components/ContactSection.jsx
+"use client";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 export default function ContactSection() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // animation speed
+      once: true, // animate only once
+      offset: 100, // trigger offset
+    });
+  }, []);
+
   return (
-    <section id="contact" className="scroll-m-10 bg-black text-white py-20 px-6 lg:px-16 font-[Inter]">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+    <section
+      id="contact"
+      className="scroll-m-10 bg-black text-white py-20 px-6 lg:px-16 font-[Inter]"
+    >
+      <div
+        className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10"
+      >
         {/* Left Column - Contact Info */}
-        <div>
+        <div data-aos="fade-right">
           <h2 className="text-4xl font-bold mb-6 text-[#861918]">Get In Touch</h2>
           <ul className="space-y-4 text-gray-300">
             <li>
@@ -17,7 +34,12 @@ export default function ContactSection() {
             </li>
             <li>
               <span className="font-semibold text-white">Website:</span>{" "}
-              <a href="https://www.ttauto.co.uk" target="_blank" rel="noopener noreferrer" className="hover:underline text-[#861918]">
+              <a
+                href="https://www.ttauto.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-[#861918]"
+              >
                 www.ttauto.co.uk
               </a>
             </li>
@@ -29,17 +51,21 @@ export default function ContactSection() {
                 rel="noopener noreferrer"
                 className="hover:underline text-[#861918]"
               >
-             34 Rowsley St, Leicester LE5 5JJ, United Kingdom
+                34 Rowsley St, Leicester LE5 5JJ, United Kingdom
               </a>
             </li>
             <li>
-              <span className="font-semibold text-white">Opening Hours:</span> 9:00 AM – 5:00 PM (Mon–Fri)
+              <span className="font-semibold text-white">Opening Hours:</span>{" "}
+              9:00 AM – 5:00 PM (Mon–Fri)
             </li>
           </ul>
         </div>
 
         {/* Right Column - Contact Form */}
-        <form className="bg-[#111] p-8 rounded-2xl shadow-lg">
+        <form
+          className="bg-[#111] p-8 rounded-2xl shadow-lg"
+          data-aos="fade-left"
+        >
           <h3 className="text-2xl font-semibold mb-6">Contact Form</h3>
           <div className="space-y-4">
             <input
