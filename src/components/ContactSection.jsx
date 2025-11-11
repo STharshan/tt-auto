@@ -46,12 +46,12 @@ export default function ContactSection() {
             <li>
               <span className="font-semibold text-white">Address:</span>{" "}
               <a
-                href="https://maps.app.goo.gl/VGiSQzQgnAgJodiy6"
+                href="https://www.google.com/maps/dir//34+Rowsley+St,+Leicester+LE5+5JJ,+United+Kingdom/@52.6264902,-1.1898754,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x48776146e6f563e9:0x205103aac7960b1d!2m2!1d-1.1074655!2d52.6265152?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline text-[#861918]"
               >
-                34 Rowsley St, Leicester LE5 5JJ, United Kingdom
+               T T Autos Leicester Ltd, 34 Rowsley St, Leicester LE5 5JJ, United Kingdom
               </a>
             </li>
             <li>
