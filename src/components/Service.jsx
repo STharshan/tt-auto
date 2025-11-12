@@ -69,13 +69,17 @@ export default function AutomotiveServicesSection() {
           performing safely and efficiently.
         </p>
 
-        <button
-          className="px-10 py-3 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-lg rounded-xl border-[3px] border-white/15 shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300"
+        {/* === Updated: Call Button === */}
+        <a
+          href="tel:+447976246720"
+          className="inline-block px-10 py-3 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 
+                     text-white font-medium text-lg rounded-xl border-[3px] border-white/15 
+                     shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300"
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-          View About Landing
-        </button>
+           Get in Touch
+        </a>
       </div>
 
       {/* === Cards === */}
