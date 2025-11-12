@@ -15,9 +15,9 @@ export default function CarCarePackages() {
   ];
 
   const basicFeatures = [
-    { icon: <X className="h-5 w-5" />, title: "Everything Included in the Interim Service:", description: "All checks, top-ups, and cleaning services from the Interim Package." },
+    { icon: <Check className="h-5 w-5" />, title: "Everything Included in the Interim Service:", description: "All checks, top-ups, and cleaning services from the Interim Package." },
     {
-      icon: <X className="h-5 w-5" />,
+      icon: <Check className="h-5 w-5" />,
       title: "Comprehensive Filter Replacement:",
       description: (
         <>
@@ -26,8 +26,8 @@ export default function CarCarePackages() {
         </>
       )
     },
-    { icon: <X className="h-5 w-5" />, title: "Engine Oil Change:", description: "Fresh, high-grade engine oil for smoother performance and longer engine life." },
-    { icon: <X className="h-5 w-5" />, title: "Fluid Top-Ups:", description: "All key fluids replenished — brake fluid, steering fluid, screen wash, and coolant — ensuring optimal performance and safety." },
+    { icon: <Check className="h-5 w-5" />, title: "Engine Oil Change:", description: "Fresh, high-grade engine oil for smoother performance and longer engine life." },
+    { icon: <Check className="h-5 w-5" />, title: "Fluid Top-Ups:", description: "All key fluids replenished — brake fluid, steering fluid, screen wash, and coolant — ensuring optimal performance and safety." },
   ];
 
   // Contact links
@@ -60,7 +60,7 @@ export default function CarCarePackages() {
   ];
 
   return (
-    <section id="product" className="scroll-m-10 bg-linear-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
+    <section id="package" className="scroll-m-10 bg-linear-to-b from-black via-[#0b0b0b] to-[#1a1a1a] text-white py-16 px-4 sm:px-6 lg:px-12">
       <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
 
         {/* LEFT COLUMN */}

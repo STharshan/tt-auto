@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Diagnostics-specific FAQs
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "What is a vehicle diagnostic test?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "A diagnostic test uses specialist computer equipment to read data from your car’s onboard computer. It helps identify faults in systems such as the engine, transmission, brakes, and sensors, allowing us to pinpoint issues quickly and accurately.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "When should I get a diagnostic test done?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "You should book a diagnostic test if you see a warning light on your dashboard, notice unusual performance, or experience starting, idling, or fuel economy problems. Regular diagnostics can also help catch potential faults before they turn into costly repairs.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "What does a diagnostic check include?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "Our diagnostics service includes scanning the vehicle’s ECU (Engine Control Unit), reading and interpreting error codes, and providing a detailed report on any faults detected. We also advise on the best repair or reset options for long-term reliability.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "How long does a diagnostic test take?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "A standard diagnostic test usually takes around 30–60 minutes. For complex electrical or intermittent issues, we may need extra time for a full investigation, but we’ll always keep you informed.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "Can you fix the issues found during diagnostics?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "Yes. Once the fault is identified, our technicians can carry out the necessary repairs or part replacements using high-quality components. We can often resolve the issue the same day, depending on the nature of the fault.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "Do you offer diagnostics for all vehicle makes and models?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "Absolutely. We use the latest multi-brand diagnostic tools, compatible with most modern vehicles, including petrol, diesel, and hybrid systems. Whether it’s a family car or performance vehicle, we can accurately diagnose and repair it.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              Vehicle Diagnostics FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,12 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Learn how our advanced diagnostics help identify and fix faults
+              quickly, keeping your vehicle reliable and efficient.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +101,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

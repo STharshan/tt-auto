@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ MOT-specific FAQs (with the new question added)
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "What is an MOT test?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "An MOT (Ministry of Transport) test is an annual inspection required by law to ensure your vehicle meets road safety and environmental standards. It checks key components such as brakes, lights, tyres, suspension, and emissions.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "When is my car due for its MOT?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "Your MOT is due every 12 months from the date of your last test. You can check your MOT expiry date on your latest certificate or via the official DVLA MOT checker online. It’s best to book your MOT up to a month before it expires.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "How long does an MOT take?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "A standard MOT test usually takes around 45–60 minutes. If repairs are needed, we’ll let you know before starting any additional work and can often handle minor fixes the same day.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "What happens if my car fails its MOT?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "If your vehicle fails, you’ll receive a VT30 certificate listing the reasons. You can have the repairs done with us and get a free retest within 10 working days, ensuring your vehicle is safe and road-legal again.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "Can I drive my car without an MOT?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "No — driving without a valid MOT certificate is illegal (except when driving to a pre-booked MOT appointment). You could face a fine of up to £1,000 and your insurance may be invalid.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "Do you offer MOT and servicing together?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "Yes. Many customers choose to combine their MOT with a full or interim service, saving time and money while ensuring the vehicle runs smoothly all year round.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              MOT Testing FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,12 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Everything you need to know about MOT testing — from when your car
+              is due to what happens if it fails.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +101,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

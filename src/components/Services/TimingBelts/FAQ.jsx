@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Timing Belt FAQs
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "What does a timing belt do?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "The timing belt synchronises the engine’s camshaft and crankshaft, ensuring the valves and pistons move in perfect timing. If it fails, it can cause severe engine damage, making timely replacement crucial.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "How often should I replace my timing belt?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "Most manufacturers recommend replacing the timing belt every 60,000 to 100,000 miles or every 5 to 7 years, whichever comes first. Always refer to your vehicle’s service manual or ask us to check the recommended interval for your car.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "What are the signs of a worn or failing timing belt?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "Common symptoms include ticking noises from the engine, difficulty starting, engine misfires, or visible cracks or fraying on the belt. However, timing belts can fail without warning, so preventative replacement is always safest.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "What happens if my timing belt breaks while driving?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "A snapped timing belt can cause serious engine damage, including bent valves, damaged pistons, and even a complete engine rebuild. Replacing the belt on schedule avoids costly repairs and keeps your engine running smoothly.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "What’s included in a timing belt replacement?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "Our timing belt service includes removing the old belt, installing a new belt and tensioner, and checking pulleys and water pump (often replaced at the same time for reliability). We use manufacturer-approved parts to ensure long-term performance.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "How long does it take to replace a timing belt?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "Depending on the vehicle, a timing belt replacement usually takes 3 to 5 hours. We’ll confirm the exact time and cost before starting any work, ensuring transparency and peace of mind.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              Timing Belt FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,12 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Learn when and why to replace your timing belt to keep your engine
+              running smoothly and avoid costly damage.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +101,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

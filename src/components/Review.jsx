@@ -71,7 +71,7 @@ export default function Review() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black text-white overflow-hidden"
+      className="relative bg-black text-white overflow-hidden" id="testimonials"
     >
       {/* === Background image scrolls normally === */}
       <div className="absolute inset-0">

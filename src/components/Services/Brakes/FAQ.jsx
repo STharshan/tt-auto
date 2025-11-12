@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Brake-specific FAQs
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "How do I know if my brakes need servicing?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "Common signs include squealing or grinding noises, a soft or spongy brake pedal, vibrations when braking, or your car pulling to one side. If you notice any of these, it’s best to have your brakes checked immediately for safety.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "How often should I have my brakes checked?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "We recommend a brake inspection at least once a year or every 10,000–12,000 miles. However, driving habits, road conditions, and vehicle type can affect wear — regular checks help prevent costly repairs.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "What does a brake service include?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "A full brake service includes inspection of brake pads, discs, calipers, fluid, and lines. We clean components, check fluid levels, and replace worn parts to ensure maximum stopping power and safety.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "What’s the difference between brake pads and brake discs?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "Brake pads press against the brake discs (rotors) to slow your car down. Both wear out over time — pads usually need replacing first, while discs last longer but also require periodic replacement for optimal performance.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "How long do brake pads last?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "Brake pads typically last between 25,000–50,000 miles, depending on your driving style and vehicle type. Urban driving with frequent braking can cause faster wear, so regular inspections are key.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "Do you offer same-day brake repairs?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "Yes. In most cases, we can perform same-day brake pad or disc replacements. We keep a range of high-quality parts in stock, ensuring your vehicle is safe and back on the road quickly.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              Brake Service FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,12 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Learn everything you need to know about our brake inspections,
+              repairs, and maintenance to keep your car safe on the road.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +101,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

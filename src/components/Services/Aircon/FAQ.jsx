@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Air Conditioning FAQs
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "Why does my car’s air conditioning need servicing?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "Over time, your air con system can lose refrigerant gas and accumulate bacteria or moisture, reducing its cooling performance. Regular servicing ensures efficient cooling, clean air, and proper lubrication of system components.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "How often should I service my car’s air conditioning?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "We recommend an air con service every 18 to 24 months. Regular maintenance prevents bad odours, maintains fuel efficiency, and keeps your system running smoothly — especially before summer months.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "What’s included in an air conditioning service?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "Our air con service includes system pressure testing, leak detection, re-gassing (recharging refrigerant), cleaning filters, and checking compressor performance. We also perform an antibacterial clean to eliminate odours and improve air quality.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "Why isn’t my air conditioning blowing cold air?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "This is often caused by low refrigerant levels, blocked filters, or a faulty compressor. A diagnostic test can quickly identify the issue — most problems are easily fixed with a re-gas or minor repair.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "Can using air conditioning increase fuel consumption?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "Slightly, yes — but a well-maintained system runs efficiently and keeps the impact minimal. Neglected systems, however, force the compressor to work harder, increasing fuel use and wear on engine components.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "Do you offer air con re-gas and repairs for all vehicles?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "Yes. We provide re-gassing and repairs for all makes and models, including R134a and R1234yf gas systems used in newer cars. Our trained technicians ensure the system is recharged safely and performs at its best.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              Air Conditioning FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,12 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Stay cool and comfortable all year round — here’s everything you
+              need to know about our air conditioning servicing and repairs.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +101,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

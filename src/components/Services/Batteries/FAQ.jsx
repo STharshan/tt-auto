@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Battery-specific FAQs
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "How do I know if my car battery needs replacing?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "Common signs include slow engine cranking, dim headlights, electrical issues, or the battery warning light on your dashboard. If your car struggles to start, it’s best to get the battery tested before it fails completely.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "How long does a car battery last?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "Most car batteries last around 3 to 5 years, depending on driving habits, weather, and vehicle use. Regular short trips or long periods without driving can shorten the lifespan.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "Can you test my car battery health?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "Yes. We provide a free or low-cost battery health check, measuring voltage, cold-cranking amps, and charging performance to determine whether your battery needs a recharge or replacement.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "What’s included in your battery replacement service?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "Our service includes removing the old battery, installing a new, high-performance unit, cleaning terminals, and testing the charging system to ensure everything runs smoothly before you drive away.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "Can a weak battery affect other parts of my car?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "Yes — a failing battery can cause electronic faults, dashboard errors, and alternator strain. Replacing it early prevents breakdowns and protects your vehicle’s electrical system.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "Do you offer mobile battery replacement or emergency starts?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "Absolutely. If your battery dies, we can come to you for a jump start or on-site replacement, getting you back on the road safely and quickly.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              Battery Service FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,12 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Everything you need to know about car battery testing, replacement,
+              and maintenance to keep your vehicle powered reliably.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +101,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

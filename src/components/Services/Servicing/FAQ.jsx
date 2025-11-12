@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Servicing-specific FAQs
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "Why is regular car servicing important?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "Regular servicing keeps your vehicle safe, reliable, and fuel-efficient. It helps identify issues early, extends engine life, and ensures your car continues to perform at its best — saving you money on costly repairs down the line.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "How often should I service my car?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "Most vehicles should be serviced every 12 months or 10,000 miles, whichever comes first. For high-mileage or performance vehicles, we recommend interim services every 6 months to maintain top performance and reliability.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "What’s included in a car service?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "A standard service includes engine oil and filter change, fluid top-ups, brake and tyre checks, battery testing, and a comprehensive vehicle health inspection. Full or major services cover additional parts like air filters, spark plugs, and cabin filters.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "What’s the difference between an interim and full service?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "An interim service covers the essentials — ideal for drivers covering lots of miles between annual services. A full service is more detailed, ensuring all critical components are inspected, cleaned, and replaced where required.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "Will servicing improve my fuel efficiency?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "Yes — clean oil, new filters, and properly tuned parts mean your engine runs more smoothly and efficiently, helping reduce fuel consumption and emissions.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "Can you service my car without affecting the manufacturer warranty?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "Absolutely. We follow manufacturer-approved schedules and use OEM-quality parts, ensuring your warranty remains valid and your service history stays up to date for resale value.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              Car Servicing FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,13 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Learn how regular servicing helps maintain your vehicle’s
+              performance, safety, and efficiency while protecting your
+              investment.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +102,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

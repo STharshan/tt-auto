@@ -4,6 +4,20 @@ import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
+// ✅ Lucide icons
+import {
+  FileCheck2,       // MOT
+  Disc,             // Brakes
+  Clock,            // Timing Belts
+  Battery,          // Batteries
+  ActivitySquare,   // Suspension
+  Settings,         // Servicing
+  Cable,            // Clutches
+  Cpu,              // Diagnostics
+  Snowflake,        // Aircon
+  Car,              // Customisation
+} from "lucide-react";
+
 export default function AutomotiveServicesSection() {
   useEffect(() => {
     AOS.init({
@@ -15,13 +29,14 @@ export default function AutomotiveServicesSection() {
   }, []);
 
   return (
-    <section className="relative bg-black text-white py-28 overflow-hidden flex flex-col items-center justify-center">
+    <section
+      className="relative bg-black text-white py-28 overflow-hidden flex flex-col items-center justify-center"
+      id="service"
+    >
       {/* === Background Layers === */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* angled upper panels */}
         <div className="absolute top-0 left-0 w-[65%] h-[420px] bg-gradient-to-tr from-[#1a0000] via-[#0a0000] to-transparent rounded-tr-[140px]" />
         <div className="absolute top-0 right-0 w-[65%] h-[420px] bg-gradient-to-tl from-[#1a0000] via-[#0a0000] to-transparent rounded-tl-[140px]" />
-        {/* ambient glows */}
         <div className="absolute top-[-150px] left-[-150px] w-[800px] h-[800px] bg-gradient-to-br from-red-700/25 to-red-900/15 blur-[180px] rounded-full" />
         <div className="absolute bottom-[-200px] right-[-150px] w-[700px] h-[700px] bg-gradient-to-tr from-red-600/20 to-black/30 blur-[160px] rounded-full" />
       </div>
@@ -84,13 +99,13 @@ export default function AutomotiveServicesSection() {
   );
 }
 
-/* === Card Data === */
+/* === Card Data (with icons) === */
 const cards = [
   {
     path: "/services/mot",
     iconBg: "from-red-500 to-orange-600",
-    icon: "🧾",
-    tag: "PRO",
+    icon: <FileCheck2 size={28} />,
+    tag: "Compliance",
     title: "MOT Testing",
     subtitle: "Road Safety & Compliance",
     body: "DVSA-approved inspections ensuring your car meets safety and emission standards.",
@@ -98,8 +113,8 @@ const cards = [
   {
     path: "/services/brake",
     iconBg: "from-orange-600 to-red-700",
-    icon: "🛞",
-    tag: "NEW",
+    icon: <Disc size={28} />,
+    tag: "Precision",
     title: "Brake Services",
     subtitle: "Precision Brake Repair",
     body: "We inspect, repair, and replace brakes using OEM-grade parts for maximum performance.",
@@ -107,8 +122,8 @@ const cards = [
   {
     path: "/services/time-belts",
     iconBg: "from-rose-500 to-red-700",
-    icon: "⏱",
-    tag: "NEW",
+    icon: <Clock size={28} />,
+    tag: "Reliable",
     title: "Timing Belts",
     subtitle: "Reliable Performance",
     body: "Keep your engine running perfectly with expert timing belt inspection and replacement.",
@@ -116,8 +131,8 @@ const cards = [
   {
     path: "/services/batteries",
     iconBg: "from-red-400 to-red-600",
-    icon: "🔋",
-    tag: "PRO",
+    icon: <Battery size={28} />,
+    tag: "Power",
     title: "Batteries",
     subtitle: "Power & Reliability",
     body: "Premium batteries and diagnostic testing to ensure consistent power and smooth starts.",
@@ -125,8 +140,8 @@ const cards = [
   {
     path: "/services/suspension",
     iconBg: "from-red-700 to-black",
-    icon: "🧱",
-    tag: "HOT",
+    icon: <ActivitySquare size={28} />,
+    tag: "Comfort",
     title: "Suspension",
     subtitle: "Ride Comfort & Control",
     body: "Smooth handling, improved control, and comfort with expert suspension service.",
@@ -134,8 +149,8 @@ const cards = [
   {
     path: "/services/servicing",
     iconBg: "from-red-500 to-orange-700",
-    icon: "⚙️",
-    tag: "TOP",
+    icon: <Settings size={28} />,
+    tag: "Maintenance",
     title: "Servicing",
     subtitle: "Full Vehicle Maintenance",
     body: "Comprehensive vehicle servicing using quality parts and manufacturer-approved checks.",
@@ -143,8 +158,8 @@ const cards = [
   {
     path: "/services/clutches",
     iconBg: "from-orange-700 to-red-700",
-    icon: "🧰",
-    tag: "PRO",
+    icon: <Cable size={28} />,
+    tag: "Transition",
     title: "Clutches",
     subtitle: "Smooth Gear Transition",
     body: "Expert clutch replacement and repairs to ensure reliable power transmission.",
@@ -152,7 +167,7 @@ const cards = [
   {
     path: "/services/diagnostics",
     iconBg: "from-rose-600 to-red-700",
-    icon: "💻",
+    icon: <Cpu size={28} />,
     tag: "TECH",
     title: "Diagnostics",
     subtitle: "Smart Problem Detection",
@@ -161,7 +176,7 @@ const cards = [
   {
     path: "/services/aircon",
     iconBg: "from-red-600 to-red-900",
-    icon: "❄️",
+    icon: <Snowflake size={28} />,
     tag: "FRESH",
     title: "Air Conditioning",
     subtitle: "Cooling & Efficiency",
@@ -170,7 +185,7 @@ const cards = [
   {
     path: "/services/customisation",
     iconBg: "from-red-600 to-rose-800",
-    icon: "🚗",
+    icon: <Car size={28} />,
     tag: "NEW",
     title: "Customisation",
     subtitle: "Performance & Style",

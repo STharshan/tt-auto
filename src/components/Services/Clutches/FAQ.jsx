@@ -5,36 +5,37 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
+  // ✅ Clutch-specific FAQs
   const faqs = [
     {
-      question: "What do I need to get started?",
+      question: "How do I know if my clutch needs replacing?",
       answer:
-        "To get started, simply share your project details and goals with us. We'll guide you through the process and provide the tools and support needed to bring your vision to life.",
+        "Common warning signs include slipping gears, difficulty changing gears, a burning smell, or a high biting point on the pedal. You might also notice unusual noises or vibration when pressing the clutch pedal. If you experience any of these, it’s best to have your clutch inspected promptly.",
     },
     {
-      question: "What kind of customization is available?",
+      question: "How long should a clutch last?",
       answer:
-        "We offer extensive customization options including design modifications, feature additions, and complete branding adjustments to match your specific requirements.",
+        "A clutch typically lasts between 50,000 and 100,000 miles, depending on driving style, vehicle type, and usage. Frequent stop-start driving or towing can shorten its lifespan.",
     },
     {
-      question: "How easy is it to edit for beginners?",
+      question: "What’s included in a clutch replacement?",
       answer:
-        "Our platform is designed with beginners in mind. We provide intuitive interfaces, step-by-step guides, and comprehensive documentation to make editing straightforward and accessible.",
+        "Our clutch replacement service includes removing the old clutch, installing a new clutch plate, pressure plate, and release bearing, and checking the flywheel and hydraulics. All components are tested to ensure smooth performance before returning your vehicle.",
     },
     {
-      question: "Let me know more about moneyback guarantee?",
+      question: "Can I still drive with a worn clutch?",
       answer:
-        "We offer a satisfaction guarantee. If you're not completely satisfied with your purchase, you can request a refund within the specified period as outlined in our terms and conditions.",
+        "Driving with a worn clutch can cause further transmission damage and unsafe gear changes. If you notice any slipping or unusual pedal feel, it’s best to get it checked immediately to avoid a complete clutch failure.",
     },
     {
-      question: "Do I need to know how to code?",
+      question: "How long does it take to replace a clutch?",
       answer:
-        "No coding knowledge is required! Our user-friendly interface allows you to create and customize without writing a single line of code. However, if you do know how to code, advanced customization options are available.",
+        "A clutch replacement generally takes between 3 to 6 hours, depending on the make and model of the vehicle. We’ll always provide a clear time and cost estimate before starting any work.",
     },
     {
-      question: "What will I get after purchasing the template?",
+      question: "Do you use genuine or aftermarket clutch parts?",
       answer:
-        "After purchase, you'll receive immediate access to all template files, comprehensive documentation, lifetime updates, and dedicated customer support to help you get started.",
+        "We use OEM-quality or manufacturer-approved parts for all clutch repairs and replacements. This ensures reliability, smooth gear shifts, and full compatibility with your vehicle.",
     },
   ];
 
@@ -46,11 +47,11 @@ export default function FAQSection() {
     <div className="min-h-screen bg-black text-white px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
-          {/* Left Column - Header */}
+          {/* === Left Column: Header === */}
           <div className="lg:pr-8">
             <button className="inline-flex items-center gap-2 text-gray-400 text-sm mb-6 hover:text-white transition-colors">
               <span className="w-1.5 h-1.5 bg-gray-400 rounded-full"></span>
-              How We Work?
+              Clutch Service FAQs
             </button>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
@@ -59,12 +60,12 @@ export default function FAQSection() {
             </h1>
 
             <p className="mt-6 text-gray-400 text-base sm:text-lg leading-relaxed max-w-md">
-              Have questions? Our FAQ section has you covered with quick answers
-              to the most common inquiries.
+              Everything you need to know about clutch maintenance, repair, and
+              replacement — helping you drive smoothly and safely.
             </p>
           </div>
 
-          {/* Right Column - FAQ Items */}
+          {/* === Right Column: FAQ Items === */}
           <div className="space-y-4">
             {faqs.map((faq, index) => {
               const contentRef = useRef(null);
@@ -100,10 +101,8 @@ export default function FAQSection() {
                   </button>
 
                   <div
-                    style={{
-                      maxHeight: `${height}px`,
-                    }}
-                    className={`transition-all duration-500 ease-in-out overflow-hidden`}
+                    style={{ maxHeight: `${height}px` }}
+                    className="transition-all duration-500 ease-in-out overflow-hidden"
                   >
                     <div
                       ref={contentRef}

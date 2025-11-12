@@ -1,5 +1,6 @@
 // components/FooterSection.jsx
-import { Instagram, Music2 } from "lucide-react"; // Music2 resembles the TikTok icon
+import { Instagram } from "lucide-react";
+import { FaTiktok } from "react-icons/fa"; // ✅ TikTok icon
 
 export default function FooterSection() {
   return (
@@ -26,14 +27,14 @@ export default function FooterSection() {
               >
                 <Instagram size={20} />
               </a>
-              {/* <a
+              <a
                 href="https://www.tiktok.com/@ttautos"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition"
               >
-                <Music2 size={20} />
-              </a> */}
+                <FaTiktok size={20} />
+              </a>
             </div>
           </div>
 

@@ -4,13 +4,15 @@ import "aos/dist/aos.css"; // Import AOS styles
 
 export default function PartnersCarousel() {
   const logos = [
-    "/l1.png",
-    "/l2.png",
-    "/l3.png",
-    "/l4.png",
-    "/l5.png",
-    "/l6.png",
-    "/l7.png",
+    "/logo-white.png",
+    "/logo-white.png",
+    "/logo-white.png",
+    "/logo-white.png",
+    "/logo-white.png",
+    "/logo-white.png",
+
+    "/logo-white.png",
+    "/logo-white.png",
   ];
 
   useEffect(() => {
