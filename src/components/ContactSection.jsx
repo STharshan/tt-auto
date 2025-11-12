@@ -54,7 +54,7 @@ Please follow up with this customer.`;
             <li>
               <span className="font-semibold text-white">Email:</span>{" "}
               <a href="mailto:info@ttauto.co.uk" className="hover:underline text-[#861918]">
-                info@ttauto.co.uk
+                info@sample.co.uk
               </a>
             </li>
             <li>
@@ -65,7 +65,7 @@ Please follow up with this customer.`;
                 rel="noopener noreferrer"
                 className="hover:underline text-[#861918]"
               >
-                www.ttauto.co.uk
+                www.sample.co.uk
               </a>
             </li>
             <li>

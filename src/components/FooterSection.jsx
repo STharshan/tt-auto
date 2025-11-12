@@ -54,19 +54,19 @@ export default function FooterSection() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Business Info</h3>
             <ul className="text-sm space-y-2">
-              <li><span className="text-white font-semibold">Company Reg:</span> 1153016</li>
-              <li><span className="text-white font-semibold">VAT Reg:</span> 115 5821 84</li>
-              <li><span className="text-white font-semibold">Opening Hours:</span> 8:30 AM – 5:00 PM (Mon–Fri)</li>
+              {/* <li><span className="text-white font-semibold">Company Reg:</span> 1153016</li>
+              <li><span className="text-white font-semibold">VAT Reg:</span> 115 5821 84</li> */}
+              <li><span className="text-white font-semibold">Opening Hours:</span> 9:00 AM – 5:00 PM (Mon–Fri)</li>
               <li>
                 <span className="text-white font-semibold">Phone:</span>{" "}
-                <a href="tel:+441509633300" className="hover:underline hover:text-[#861918]">
-                  01509 633300
+                <a href="tel:+447976246720" className="hover:underline hover:text-[#861918]">
+                  +44 7976 246720
                 </a>
               </li>
               <li>
                 <span className="text-white font-semibold">Email:</span>{" "}
                 <a href="mailto:info@ttauto.co.uk" className="hover:underline hover:text-[#861918]">
-                  info@ttauto.co.uk
+                  info@sample.co.uk
                 </a>
               </li>
             </ul>
