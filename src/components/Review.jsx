@@ -76,7 +76,7 @@ export default function Review() {
       {/* === Background image scrolls normally === */}
       <div className="absolute inset-0">
         <img
-          src="https://www.jeton.com/_ipx/f_webp&q_80&w_3400/cms/b7c674ecd0ee69b2eca20443cac6272c550ed396-4000x2667.jpg"
+          src="review.png"
           alt="Hear it from our clients"
           className="w-full h-full object-cover"
         />
