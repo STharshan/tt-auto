@@ -7,11 +7,19 @@ import { FaCircleDot } from "react-icons/fa6";
 export default function HeroSection() {
   useEffect(() => {
     AOS.init({
-      duration: 1000, // animation duration (ms)
-      once: false, // animation triggers every scroll
-      offset: 100, // trigger point
+      duration: 1000,
+      once: false,
+      offset: 100,
     });
   }, []);
+
+  // ✅ Smooth Scroll Function
+  const scrollToServices = () => {
+    const serviceSection = document.getElementById("service");
+    if (serviceSection) {
+      serviceSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <section
@@ -73,13 +81,19 @@ export default function HeroSection() {
             data-aos="fade-left"
             data-aos-delay="600"
           >
-            {/* Primary Button */}
-            <button className="border border-[#861918] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]">
+            {/* Primary Button → Scrolls to Services */}
+            <button
+              onClick={scrollToServices}
+              className="border border-[#861918] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]"
+            >
               Know Our Services
             </button>
 
             {/* Circle Button */}
-            <button className="w-10 sm:w-12 h-10 sm:h-12 border border-[#861918] rounded-full transform group-hover:translate-x-1.5 flex items-center justify-center backdrop-blur-md transition-all duration-300 group-hover:bg-[#861918] relative overflow-hidden ml-2">
+            <button
+              onClick={scrollToServices}
+              className="w-10 sm:w-12 h-10 sm:h-12 border border-[#861918] rounded-full transform group-hover:translate-x-1.5 flex items-center justify-center backdrop-blur-md transition-all duration-300 group-hover:bg-[#861918] relative overflow-hidden ml-2"
+            >
               <img
                 src="/icon.svg"
                 alt="arrow"
