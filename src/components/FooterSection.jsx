@@ -4,16 +4,16 @@ import { FaTiktok } from "react-icons/fa"; // ✅ TikTok icon
 
 export default function FooterSection() {
   return (
-    <footer className="bg-[#0B0B0B] text-gray-400 py-4 font-[Inter]">
+    <footer className="bg-[#0B0B0B] text-gray-400 py-4">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         {/* Top Row */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-gray-700 pb-8 mb-8">
           {/* Column 1 */}
           <div>
-            <h2 className="text-2xl font-bold text-white mb-3">TT Automotive</h2>
-            <p className="text-sm leading-relaxed text-gray-400 mb-4">
+            <h2 className="text-2xl font-bold text-white mb-3">TT Autos Leicester LTD</h2>
+            <p className="text-gray-400 mb-4">
               Your one-stop-shop for{" "}
-              <span className="text-[#861918]">Choice, Value, Efficiency</span>, and <br />
+              <span className="text-[#861918]">Choice, Value, Efficiency</span>, and
               Technical Expertise. Next day delivery, genuine spares, and professional service.
             </p>
 
@@ -56,16 +56,16 @@ export default function FooterSection() {
             <ul className="text-sm space-y-2">
               {/* <li><span className="text-white font-semibold">Company Reg:</span> 1153016</li>
               <li><span className="text-white font-semibold">VAT Reg:</span> 115 5821 84</li> */}
-              <li><span className="text-white font-semibold">Opening Hours:</span> 9:00 AM – 5:00 PM (Mon–Fri)</li>
+              <li><span className="text-white font-semibold">Opening Hours:</span><span className="text-lg"> 9:00 AM – 5:00 PM (Mon–Fri)</span> </li>
               <li>
                 <span className="text-white font-semibold">Phone:</span>{" "}
-                <a href="tel:+447976246720" className="hover:underline hover:text-[#861918]">
+                <a href="tel:+447976246720" className="hover:underline text-lg hover:text-[#861918]">
                   +44 7976 246720
                 </a>
               </li>
               <li>
                 <span className="text-white font-semibold">Email:</span>{" "}
-                <a href="mailto:info@ttauto.co.uk" className="hover:underline hover:text-[#861918]">
+                <a href="mailto:info@ttauto.co.uk" className="hover:underline text-lg hover:text-[#861918]">
                   info@sample.co.uk
                 </a>
               </li>
