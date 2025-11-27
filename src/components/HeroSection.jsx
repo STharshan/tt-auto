@@ -24,7 +24,7 @@ export default function HeroSection() {
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-xl">
           Diesel System Specialist{" "}
           <br className="hidden sm:block" />
-         
+
         </h1>
 
         {/* Subheading + Button Row */}
@@ -37,15 +37,17 @@ export default function HeroSection() {
               </span>
               The UK’s largest independent
             </p>
-             <span className="text-[#861918]">diesel engine specialist </span>
+            <span className="text-[#861918]">diesel engine specialist </span>
           </div>
 
           {/* Buttons */}
           <div className="group flex items-center shrink-0">
             {/* Primary Button */}
-            <button className="border border-[#861918] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]">
-              Know Our Services
-            </button>
+            <a href="tel:+447976246720">
+              <button className="border border-[#861918] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]">
+                +44 7976 246720
+              </button>
+            </a>
 
             {/* Circle Button */}
             <button className="w-10 sm:w-12 h-10 sm:h-12 border border-[#861918] rounded-full transform  group-hover:translate-x-1.5 flex items-center justify-center backdrop-blur-md transition-all duration-300 group-hover:bg-[#861918] relative overflow-hidden">

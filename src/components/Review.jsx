@@ -13,11 +13,9 @@ export default function Review() {
     const ctx = gsap.context(() => {
       const cards = cardsRef.current;
 
-      // initial states
       gsap.set(cards, { yPercent: 30, opacity: 0 });
       gsap.set(cards[0], { yPercent: 0, opacity: 1 });
 
-      // timeline for card reveal
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: cardsContainerRef.current,
@@ -27,7 +25,6 @@ export default function Review() {
         },
       });
 
-      // Animate each card one by one
       cards.forEach((card, i) => {
         if (i === 0) return;
         tl.to(cards[i], { opacity: 1, yPercent: 0, duration: 1 }, i * 0.5);
@@ -71,9 +68,10 @@ export default function Review() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black text-white overflow-hidden" id="testimonials"
+      className="relative bg-black text-white overflow-hidden"
+      id="testimonials"
     >
-      {/* === Background image scrolls normally === */}
+      {/* Background */}
       <div className="absolute inset-0">
         <img
           src="review.png"
@@ -83,24 +81,24 @@ export default function Review() {
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
-      {/* === Heading === */}
+      {/* Heading */}
       <div className="relative z-10 text-center pt-32 pb-12">
         <h2 className="text-4xl md:text-5xl font-semibold text-[#861918]">
           Hear it from our clients
         </h2>
       </div>
 
-      {/* === Cards container === */}
+      {/* Testimonials */}
       <div
         ref={cardsContainerRef}
-        className="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-8 pb-32"
+        className="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-8 pb-20"
       >
         {testimonials.map((item, i) => (
           <div
             key={i}
             ref={(el) => (cardsRef.current[i] = el)}
             className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
-                       shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
+            shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
           >
             <p className="text-lg md:text-xl font-semibold mb-3">{item.title}</p>
             <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
@@ -115,6 +113,19 @@ export default function Review() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* === CTA BUTTON TO GOOGLE REVIEWS === */}
+      <div className="relative z-10 pb-28 text-center">
+        <a
+          href="https://www.google.com/search?sca_esv=ed6f5ed44ddb5799&rlz=1C5CHFA_enCA1132CA1132&sxsrf=AE3TifOMlVkfgl6g94Y3N7QumBIpwA7SJA:1764250091876&si=AMgyJEvkVjFQtirYNBhM3ZJIRTaSJ6PxY6y1_6WZHGInbzDnMV-C-ub2DN_QnSmfnFcKK9elcNvczQND3G8GiFWgSZnjz23ooVPsa1VOkcIKUKWge_4UxHYimfaWAHqKxdBxxfpmfGLRD7LOOhS8qgen9kbfTnArYw%3D%3D&q=T+T+Autos+Leicester+Ltd+Reviews&sa=X&ved=2ahUKEwiVq5Xgt5KRAxVSsK8BHcYFEE4Q0bkNegQIHxAD&biw=1366&bih=633&dpr=1" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-10 py-3 text-lg font-semibold rounded-full 
+          bg-[#861918] hover:bg-[#a31f1d] transition-all duration-300 shadow-lg"
+        >
+          Google Review
+        </a>
       </div>
     </section>
   );

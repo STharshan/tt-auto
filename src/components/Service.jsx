@@ -1,21 +1,22 @@
 "use client";
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-// ✅ Lucide icons
+// Icons
 import {
-  FileCheck2,       // MOT
-  Disc,             // Brakes
-  Clock,            // Timing Belts
-  Battery,          // Batteries
-  ActivitySquare,   // Suspension
-  Settings,         // Servicing
-  Cable,            // Clutches
-  Cpu,              // Diagnostics
-  Snowflake,        // Aircon
-  Car,              // Customisation
+  FileCheck2,
+  Disc,
+  Clock,
+  Battery,
+  ActivitySquare,
+  Settings,
+  Cable,
+  Cpu,
+  Snowflake,
+  Car,
 } from "lucide-react";
 
 export default function AutomotiveServicesSection() {
@@ -33,67 +34,58 @@ export default function AutomotiveServicesSection() {
       className="relative bg-black text-white py-28 overflow-hidden flex flex-col items-center justify-center"
       id="service"
     >
-      {/* === Background Layers === */}
+      {/* === Background === */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-[65%] h-[420px] bg-gradient-to-tr from-[#1a0000] via-[#0a0000] to-transparent rounded-tr-[140px]" />
-        <div className="absolute top-0 right-0 w-[65%] h-[420px] bg-gradient-to-tl from-[#1a0000] via-[#0a0000] to-transparent rounded-tl-[140px]" />
-        <div className="absolute top-[-150px] left-[-150px] w-[800px] h-[800px] bg-gradient-to-br from-red-700/25 to-red-900/15 blur-[180px] rounded-full" />
-        <div className="absolute bottom-[-200px] right-[-150px] w-[700px] h-[700px] bg-gradient-to-tr from-red-600/20 to-black/30 blur-[160px] rounded-full" />
+        <div className="absolute top-0 left-0 w-[65%] h-[420px] bg-linear-to-tr from-[#1a0000] via-[#0a0000] to-transparent rounded-tr-[140px]" />
+        <div className="absolute top-0 right-0 w-[65%] h-[420px] bg-linear-to-tl from-[#1a0000] via-[#0a0000] to-transparent rounded-tl-[140px]" />
+        <div className="absolute top-[-150px] left-[-150px] w-[800px] h-[800px] bg-linear-to-br from-red-700/25 to-red-900/15 blur-[180px] rounded-full" />
+        <div className="absolute bottom-[-200px] right-[-150px] w-[700px] h-[700px] bg-linear-to-tr from-red-600/20 to-black/30 blur-[160px] rounded-full" />
       </div>
 
-      {/* === Section Header === */}
+      {/* === Header === */}
       <div
         className="relative z-10 text-center max-w-4xl mb-20 px-6"
         data-aos="fade-up"
       >
         <h1
-          className="text-5xl md:text-6xl font-bold mb-2 leading-tight bg-gradient-to-r from-red-500 via-red-300 to-red-500 bg-clip-text text-transparent"
-          data-aos="fade-up"
+          className="text-5xl md:text-6xl font-bold mb-2 leading-tight bg-linear-to-r from-red-500 via-red-300 to-red-500 bg-clip-text text-transparent"
           data-aos-delay="100"
         >
           Our Automotive Services
         </h1>
-        <h2
-          className="text-5xl md:text-6xl font-semibold text-gray-400 mb-6"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          Expert Care For Every Vehicle
-        </h2>
+
         <p
           className="text-gray-400 text-lg leading-relaxed mb-12"
-          data-aos="fade-up"
           data-aos-delay="300"
         >
           Explore our range of car services designed to keep your vehicle
           performing safely and efficiently.
         </p>
 
-        {/* === Updated: Call Button === */}
         <a
           href="tel:+447976246720"
-          className="inline-block px-10 py-3 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 
-                     text-white font-medium text-lg rounded-xl border-[3px] border-white/15 
-                     shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300"
+          className="inline-block px-10 py-3 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900
+          text-white font-medium text-lg rounded-xl border-[3px] border-white/15
+          shadow-[0_8px_40px_rgba(255,0,0,0.5)] transition-all duration-300"
           data-aos="zoom-in"
           data-aos-delay="400"
         >
-           Get in Touch
+          Get in Touch
         </a>
       </div>
 
-      {/* === Cards === */}
+      {/* === Cards Grid (Equal Height Enabled) === */}
       <div
-        className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full px-6"
+        className="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl w-full px-6 items-stretch"
         data-aos="fade-up"
         data-aos-delay="500"
       >
         {cards.map((card, i) => (
           <div
             key={i}
+            className="h-full"
             data-aos="zoom-in-up"
             data-aos-delay={100 * i}
-            data-aos-anchor-placement="top-bottom"
           >
             <ServiceCard {...card} />
           </div>
@@ -103,7 +95,7 @@ export default function AutomotiveServicesSection() {
   );
 }
 
-/* === Card Data (with icons) === */
+/* === Card Data === */
 const cards = [
   {
     path: "/services/mot",
@@ -202,30 +194,35 @@ function ServiceCard({ path, iconBg, icon, tag, title, subtitle, body }) {
   return (
     <Link
       to={path}
-      className="group relative block rounded-3xl border border-white/10 bg-[rgba(255,255,255,0.04)] backdrop-blur-sm p-10 
-                 shadow-[0_10px_60px_rgba(0,0,0,0.7)] hover:-translate-y-1 transition-transform duration-300"
+      className="group relative block h-full rounded-3xl border border-white/10 
+      bg-[rgba(255,255,255,0.04)] backdrop-blur-sm p-10
+      shadow-[0_10px_60px_rgba(0,0,0,0.7)]
+      hover:-translate-y-1 transition-transform duration-300 flex-col"
     >
-      {/* red top glow */}
-      <div className="absolute -top-px left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
+      {/* Top Line */}
+      <div className="absolute -top-px left-0 right-0 h-0.5 bg-linear-to-r from-transparent via-red-500 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
 
       {/* Icon + Tag */}
       <div className="flex items-center justify-between mb-6">
-        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#1f1f1f] to-[#0d0d0d] flex items-center justify-center">
+        <div className="w-16 h-16 rounded-full bg-linear-to-br from-[#1f1f1f] to-[#0d0d0d] flex items-center justify-center">
           <div
-            className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-gradient-to-br ${iconBg}`}
+            className={`w-12 h-12 rounded-full flex items-center justify-center text-2xl bg-linear-to-br ${iconBg}`}
           >
             {icon}
           </div>
         </div>
-        <span className="text-[11px] font-semibold px-3 py-1 rounded-md bg-gradient-to-r from-red-600 to-red-800 border border-white/20 shadow-[0_0_10px_rgba(255,0,0,0.5)]">
+
+        <span className="text-[11px] font-semibold px-3 py-1 rounded-md bg-linear-to-r from-red-600 to-red-800 border border-white/20 shadow-[0_0_10px_rgba(255,0,0,0.5)]">
           {tag}
         </span>
       </div>
 
       <h3 className="text-2xl font-semibold mb-1">{title}</h3>
       <p className="text-sm text-white/60 mb-4">{subtitle}</p>
-      <div className="h-px bg-gradient-to-r from-transparent via-white/20 to-transparent mb-4" />
-      <p className="text-base text-white/70 leading-relaxed">{body}</p>
+
+      <div className="h-px bg-linear-to-r from-transparent via-white/20 to-transparent mb-4" />
+
+      <p className="text-base text-white/70 leading-relaxed grow">{body}</p>
     </Link>
   );
 }
