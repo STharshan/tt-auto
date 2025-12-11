@@ -29,9 +29,9 @@ export default function CreditSection() {
           data-aos-delay="200"
         >
           <img
-            src="/image.png"
+            src="/logo-white.png"
             alt="Car interior"
-            className="w-full h-auto rounded-lg object-cover shadow-[0_0_25px_rgba(255,77,36,0.2)]"
+            className="w-full h-50 rounded-lg object-cover shadow-[0_0_25px_rgba(255,77,36,0.2)]"
           />
         </div>
 
