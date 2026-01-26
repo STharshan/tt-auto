@@ -8,12 +8,15 @@ export default function HeroSection() {
       {/* Background Video */}
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="vedio.mp4"
+        src="/bg.mp4"
         autoPlay
         loop
         muted
         playsInline
-      ></video>
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
+      >
+      </video>
 
       {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/60"></div>

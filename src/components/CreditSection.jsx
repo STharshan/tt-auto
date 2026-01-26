@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -29,9 +28,9 @@ export default function CreditSection() {
           data-aos-delay="200"
         >
           <img
-            src="/logo-white.png"
+            src="/about.png"
             alt="Car interior"
-            className="w-full h-50 rounded-lg object-cover shadow-[0_0_25px_rgba(255,77,36,0.2)]"
+            className="w-full h-90 rounded-lg object-cover shadow-[0_0_25px_rgba(255,77,36,0.2)]"
           />
         </div>
 

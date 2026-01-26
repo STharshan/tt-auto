@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Check, X, Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 
@@ -64,7 +63,7 @@ export default function CarCarePackages() {
       <div className="max-w-7xl mx-auto flex flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr] gap-12">
 
         {/* LEFT COLUMN */}
-        <div className="space-y-8 lg:sticky lg:top-24 self-start">
+        <div className="space-y-8 lg:sticky lg:top-24 lg:h-fit self-start">
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="h-0.5 w-12 bg-[#861918]"></div>
@@ -101,32 +100,26 @@ export default function CarCarePackages() {
               </a>
             ))}
           </div>
+
+          {/* Scroll Hint - Only visible on desktop when packages section is long */}
+          <div className="hidden lg:flex items-center gap-2 text-gray-500 text-sm">
+            <svg className="h-4 w-4 animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+            <span>Scroll down to see all packages</span>
+          </div>
         </div>
 
         {/* RIGHT COLUMN */}
-        <div
-          className="flex flex-col gap-10 mt-10 lg:mt-0 overflow-visible lg:overflow-y-auto lg:max-h-[80vh] lg:pr-2 hide-scrollbar"
-          style={{ WebkitOverflowScrolling: "touch", overscrollBehavior: "contain", scrollbarGutter: "stable" }}
-        >
-          <style jsx>{`
-            .hide-scrollbar::-webkit-scrollbar {
-              display: none;
-            }
-            .hide-scrollbar {
-              scrollbar-width: none;
-            }
-          `}</style>
-
+        <div className="flex flex-col gap-10 mt-10 lg:mt-0">
           {/* Packages */}
           {packages.map((pkg, idx) => (
             <div
               key={idx}
-              className="border border-white/10 rounded-2xl bg-linear-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-[#861918]/40 hover:shadow-[0_0_25px_rgba(255,77,36,0.25)] transition-all duration-500"
+              className="border border-white/10 rounded-2xl bg-linear-to-br from-[#151515] to-[#0b0b0b] backdrop-blur-lg p-6 sm:p-8 hover:border-[#861918]/40 hover:shadow-[0_0_25px_rgba(134,25,24,0.25)] transition-all duration-500"
             >
               <div className="flex flex-wrap items-center gap-3 mb-6">
                 <h6 className="text-sm font-semibold text-gray-400">{pkg.type}</h6>
-                {/* <div className="h-3 w-3 bg-[#861918] rounded-full"></div> */}
-                {/* <h6 className="text-sm font-semibold">CARE PACKAGE</h6> */}
               </div>
 
               <div className="border border-white/10 rounded-lg p-5 mb-6 flex flex-wrap items-center justify-between bg-[#111]">
@@ -150,7 +143,7 @@ export default function CarCarePackages() {
                 ))}
               </div>
 
-              <button className="w-full bg-[#861918] hover:bg-[#070981] text-white font-semibold py-3 rounded-full transition-all border-2 border-[#861918] shadow-lg shadow-[#861918]/40 text-sm sm:text-base">
+              <button className="w-full bg-[#861918] hover:bg-[#a51f1e] text-white font-semibold py-3 rounded-full transition-all duration-300 border-2 border-[#861918] hover:border-[#a51f1e] shadow-lg shadow-[#861918]/40 hover:shadow-[#861918]/60 text-sm sm:text-base">
                 {pkg.btnText}
               </button>
             </div>

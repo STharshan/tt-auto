@@ -4,11 +4,11 @@ import HeroSection from "../components/HeroSection"
 import PartnersCarousel from "../components/Partner"
 import ProductSection from "../components/Product"
 import ProcessSection from "../components/Service"
-import Testimonials from "../components/Testimonial"
 import ContactSection from "../components/ContactSection"
 import MapSection from "../components/MapSection"
 import Review from '../components/Review'
 import GallerySection from "../components/GallerySection"
+
 const Home = () => {
     return (
         <div>
@@ -17,7 +17,6 @@ const Home = () => {
             <CreditSection />
             <ProcessSection />
             <ProductSection />
-            {/* <Testimonials /> */}
             <GallerySection />
             <Review />
             <ContactSection />
