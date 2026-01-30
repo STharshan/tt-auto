@@ -31,8 +31,8 @@ export default function CarCarePackages() {
 
   // Contact links
   const contactLinks = [
-    { icon: <Phone className="h-6 w-6" />, title: "+44 7976 246720", href: "tel:+447976246720" },
-    { icon: <Mail className="h-6 w-6" />, title: "info@sample.co.uk", href: "mailto:info@ttauto.co.uk" },
+    { icon: <Phone className="h-6 w-6" />, title: "+44 116 253 0770", href: "tel:01162530770" },
+    { icon: <Mail className="h-6 w-6" />, title: "ttautosgarage@gmail.com", href: "mailto:ttautosgarage@gmail.com" },
     { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://www.google.com/maps/dir//34+Rowsley+St,+Leicester+LE5+5JJ,+United+Kingdom/@52.6264902,-1.1898754,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x48776146e6f563e9:0x205103aac7960b1d!2m2!1d-1.1074655!2d52.6265152?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" },
   ];
 

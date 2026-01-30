@@ -33,7 +33,7 @@ export default function HeroSection() {
         {/* Subheading + Button Row */}
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 sm:gap-10">
           {/* Text */}
-          <div className="space-y-2 sm:space-y-3 text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl">
+          {/* <div className="space-y-2 sm:space-y-3 text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl">
             <p className="flex items-center gap-2">
               <span className="text-[#861918] text-lg sm:text-xl">
                 <FaCircleDot />
@@ -41,14 +41,14 @@ export default function HeroSection() {
               The UK’s largest independent
             </p>
             <span className="text-[#861918]">diesel engine specialist </span>
-          </div>
+          </div> */}
 
           {/* Buttons */}
           <div className="group flex items-center shrink-0">
             {/* Primary Button */}
-            <a href="tel:+447976246720">
+            <a href="tel:01162530770">
               <button className="border border-[#861918] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]">
-                +44 7976 246720
+                +44 116 253 0770
               </button>
             </a>
 

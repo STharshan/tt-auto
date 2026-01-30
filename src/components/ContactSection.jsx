@@ -18,7 +18,7 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const phoneNumber = "447976246720"; // your WhatsApp number (no +)
+    const phoneNumber = "447783367501"; // your WhatsApp number (no +)
 
     const message = `New enquiry from TT Autos Website
 
@@ -47,14 +47,14 @@ Please follow up with this customer.`;
           <ul className="space-y-4 text-gray-300">
             <li>
               <span className="font-semibold text-white">General inquiries:</span>{" "}
-              <a href="tel:+447976246720" className="hover:underline text-[#861918]">
-                +44 7976 246720
+              <a href="tel:01162530770" className="hover:underline text-[#861918]">
+                +44 116 253 0770
               </a>
             </li>
             <li>
               <span className="font-semibold text-white">Email:</span>{" "}
-              <a href="mailto:info@ttauto.co.uk" className="hover:underline text-[#861918]">
-                info@sample.co.uk
+              <a href="mailto:ttautosgarage@gmail.com" className="hover:underline text-[#861918]">
+                ttautosgarage@gmail.com
               </a>
             </li>
             <li>

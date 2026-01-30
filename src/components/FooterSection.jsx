@@ -11,11 +11,7 @@ export default function FooterSection() {
           {/* Column 1 */}
           <div>
             <h2 className="text-2xl font-bold text-white mb-3">TT Autos Leicester LTD</h2>
-            <p className="text-gray-400 mb-4">
-              Your one-stop-shop for{" "}
-              <span className="text-[#861918]">Choice, Value, Efficiency</span>, and
-              Technical Expertise. Next day delivery, genuine spares, and professional service.
-            </p>
+            
 
             {/* Social Media Icons */}
             <div className="flex items-center gap-4 mt-2">
@@ -59,14 +55,14 @@ export default function FooterSection() {
               <li><span className="text-white font-semibold">Opening Hours:</span><span className="text-lg"> 9:00 AM – 5:00 PM (Mon–Fri)</span> </li>
               <li>
                 <span className="text-white font-semibold">Phone:</span>{" "}
-                <a href="tel:+447976246720" className="hover:underline text-lg hover:text-[#861918]">
-                  +44 7976 246720
+                <a href="tel:01162530770" className="hover:underline text-lg hover:text-[#861918]">
+                  +44 116 253 0770
                 </a>
               </li>
               <li>
                 <span className="text-white font-semibold">Email:</span>{" "}
-                <a href="mailto:info@ttauto.co.uk" className="hover:underline text-lg hover:text-[#861918]">
-                  info@sample.co.uk
+                <a href="mailto:ttautosgarage@gmail.com" className="hover:underline text-lg hover:text-[#861918]">
+                  ttautosgarage@gmail.com
                 </a>
               </li>
             </ul>

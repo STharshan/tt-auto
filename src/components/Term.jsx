@@ -78,7 +78,7 @@ const TermsConditions = () => {
                       </p>
                       <div className="text-white">
                           <p><strong>TT Automotive</strong></p>
-                          <p>Email: <a href="mailto: info@ttauto.co.uk" className="text-[#861918] hover:underline"> info@ttauto.co.uk</a></p>
+                          <p>Email: <a href="mailto: ttautosgarage@gmail.com" className="text-[#861918] hover:underline"> ttautosgarage@gmail.com</a></p>
                           <p>Phone: 01509 633300</p>
                           <p>Address: Unit 6, Royal Way, Off Belton Road, Loughborough, Leicestershire, LE11 5XR</p>
                       </div>
