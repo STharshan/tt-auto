@@ -30,14 +30,12 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-black shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "bg-black shadow-md" : "bg-transparent"
+        }`}
     >
       <div
-        className={`max-w-7xl mx-auto px-6 py-2 flex justify-between items-center transition-colors duration-500 ${
-          scrolled ? "text-white" : "text-white"
-        }`}
+        className={`max-w-7xl mx-auto px-6 py-2 flex justify-between items-center transition-colors duration-500 ${scrolled ? "text-white" : "text-white"
+          }`}
       >
         {/* Logo */}
         <div className="flex items-center">
@@ -70,9 +68,8 @@ export default function Navbar() {
               <HashLink to="/#service">Services</HashLink>
               <FiChevronDown
                 size={16}
-                className={`transition-transform duration-300 ${
-                  showDropdown ? "rotate-180" : ""
-                }`}
+                className={`transition-transform duration-300 ${showDropdown ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
@@ -108,13 +105,15 @@ export default function Navbar() {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:flex items-center">
-          <button
-            className="px-7 py-2.5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-[2px] border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300"
-            data-aos="zoom-in"
-            data-aos-delay="400"
-          >
-            Get a Quote
-          </button>
+          <a href="#contact">
+            <button
+              className="px-7 py-2.5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-[2px] border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+            >
+              Get a Quote
+            </button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -135,9 +134,8 @@ export default function Navbar() {
       {/* Mobile Dropdown */}
       {isOpen && (
         <div
-          className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${
-            scrolled ? "bg-black text-white" : "bg-black/80 text-white"
-          }`}
+          className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-black/80 text-white"
+            }`}
         >
           <HashLink to="/#home" className="block hover:text-[#861918]">
             Home
@@ -155,9 +153,8 @@ export default function Navbar() {
               Services
               <FiChevronDown
                 size={16}
-                className={`transition-transform duration-300 ${
-                  showDropdown ? "rotate-180" : ""
-                }`}
+                className={`transition-transform duration-300 ${showDropdown ? "rotate-180" : ""
+                  }`}
               />
             </button>
             {showDropdown && (
