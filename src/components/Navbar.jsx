@@ -98,6 +98,9 @@ export default function Navbar() {
           >
             Testimonials
           </HashLink>
+          <HashLink to="/review" className="hover:text-[#861918] transition">
+            Review
+          </HashLink>
           <HashLink to="/#contact" className="hover:text-[#861918] transition">
             Contact Us
           </HashLink>
@@ -107,7 +110,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center">
           <a href="#contact">
             <button
-              className="px-7 py-2.5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-[2px] border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300"
+              className="px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300"
               data-aos="zoom-in"
               data-aos-delay="400"
             >
@@ -178,13 +181,16 @@ export default function Navbar() {
           <HashLink to="/#testimonials" className="block hover:text-[#861918]">
             Testimonials
           </HashLink>
+          <HashLink to="/review" className="block hover:text-[#861918]">
+            Review
+          </HashLink>
           <HashLink to="/#contact" className="block hover:text-[#861918]">
             Contact Us
           </HashLink>
 
           {/* Mobile CTA Button */}
           <div className="pt-4">
-            <button className="w-full px-7 py-2.5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-[2px] border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
+            <button className="w-full px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
               Get a Quote
             </button>
           </div>

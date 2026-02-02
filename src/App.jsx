@@ -16,6 +16,7 @@ import Clutches from "./page/Services/Clutches";
 import Diagnostics from "./page/Services/Diagnostics";
 import Aircon from "./page/Services/Aircon";
 import Customisation from "./page/Services/Customisation";
+import ReviewPage from "./page/ReviewPage";
 function App() {
   return (
     <Router>
@@ -23,6 +24,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/review" element={<ReviewPage />} />
         <Route path="/services/mot" element={<Mot />} />  
         <Route path="/services/brake" element={<Brake />} />
         <Route path="/services/time-belts" element={<TimeBelts />} />
