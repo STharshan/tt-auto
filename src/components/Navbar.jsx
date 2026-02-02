@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
@@ -7,6 +7,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const dropdownRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -14,7 +15,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Services list
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [dropdownRef]);
+
   const services = [
     { name: "MOT", path: "/services/mot" },
     { name: "Brakes", path: "/services/brake" },
@@ -30,12 +41,14 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "bg-black shadow-md" : "bg-transparent"
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+        scrolled ? "bg-black shadow-md" : "bg-transparent"
+      }`}
     >
       <div
-        className={`max-w-7xl mx-auto px-6 py-2 flex justify-between items-center transition-colors duration-500 ${scrolled ? "text-white" : "text-white"
-          }`}
+        className={`max-w-7xl mx-auto px-6 py-2 flex justify-between items-center transition-colors duration-500 ${
+          scrolled ? "text-white" : "text-white"
+        }`}
       >
         {/* Logo */}
         <div className="flex items-center">
@@ -48,32 +61,28 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-8 font-semibold relative">
-          <HashLink to="/#home" className="hover:text-[#861918] transition">
+          <HashLink to="/#" className="hover:text-[#861918] transition">
             Home
           </HashLink>
           <HashLink to="/#about" className="hover:text-[#861918] transition">
             About Us
           </HashLink>
 
-          {/* Services with dropdown */}
-          <div
-            className="relative group"
-            onMouseEnter={() => setShowDropdown(true)}
-            onMouseLeave={() => setShowDropdown(false)}
-          >
+          {/* Services Dropdown */}
+          <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setShowDropdown(!showDropdown)}
               className="flex items-center gap-1 hover:text-[#861918] transition"
             >
-              <HashLink to="/#service">Services</HashLink>
+              Services
               <FiChevronDown
                 size={16}
-                className={`transition-transform duration-300 ${showDropdown ? "rotate-180" : ""
-                  }`}
+                className={`transition-transform duration-300 ${
+                  showDropdown ? "rotate-180" : ""
+                }`}
               />
             </button>
 
-            {/* Dropdown list */}
             {showDropdown && (
               <div className="absolute left-0 top-full mt-2 bg-black border border-gray-700 rounded-md shadow-lg w-48 py-2 z-50">
                 {services.map((item, index) => (
@@ -106,25 +115,18 @@ export default function Navbar() {
           </HashLink>
         </nav>
 
-        {/* Desktop CTA Button */}
+        {/* Desktop CTA */}
         <div className="hidden md:flex items-center">
           <a href="#contact">
-            <button
-              className="px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              Get a Quote
+            <button className="px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
+              Get In Touch
             </button>
           </a>
         </div>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className={`${scrolled ? "text-white" : "text-white"}`}
-          >
+          <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <FiX size={26} className="hover:text-[#861918]" />
             ) : (
@@ -134,20 +136,21 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Menu */}
       {isOpen && (
         <div
-          className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-black/80 text-white"
-            }`}
+          className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${
+            scrolled ? "bg-black text-white" : "bg-black/80 text-white"
+          }`}
         >
-          <HashLink to="/#home" className="block hover:text-[#861918]">
+          <HashLink to="/#" className="block hover:text-[#861918]">
             Home
           </HashLink>
           <HashLink to="/#about" className="block hover:text-[#861918]">
             About Us
           </HashLink>
 
-          {/* Mobile Services dropdown */}
+          {/* Mobile Services */}
           <div className="border-t border-gray-700 pt-2">
             <button
               onClick={() => setShowDropdown(!showDropdown)}
@@ -156,8 +159,9 @@ export default function Navbar() {
               Services
               <FiChevronDown
                 size={16}
-                className={`transition-transform duration-300 ${showDropdown ? "rotate-180" : ""
-                  }`}
+                className={`transition-transform duration-300 ${
+                  showDropdown ? "rotate-180" : ""
+                }`}
               />
             </button>
             {showDropdown && (
@@ -188,7 +192,6 @@ export default function Navbar() {
             Contact Us
           </HashLink>
 
-          {/* Mobile CTA Button */}
           <div className="pt-4">
             <button className="w-full px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
               Get a Quote

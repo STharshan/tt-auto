@@ -11,7 +11,7 @@ export default function FooterSection() {
           {/* Column 1 */}
           <div>
             <h2 className="text-2xl font-bold text-white mb-3">TT Autos Leicester LTD</h2>
-            
+
 
             {/* Social Media Icons */}
             <div className="flex items-center gap-4 mt-2">
@@ -38,10 +38,10 @@ export default function FooterSection() {
           <div>
             <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
             <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="hover:text-[#861918] transition">Home</a></li>
+              <li><a href="#" className="hover:text-[#861918] transition">Home</a></li>
               <li><a href="#about" className="hover:text-[#861918] transition">About Us</a></li>
               <li><a href="#service" className="hover:text-[#861918] transition">Service</a></li>
-              <li><a href="#product" className="hover:text-[#861918] transition">Products</a></li>
+              <li><a href="#package" className="hover:text-[#861918] transition">Package</a></li>
               <li><a href="#contact" className="hover:text-[#861918] transition">Contact</a></li>
             </ul>
           </div>
@@ -71,7 +71,7 @@ export default function FooterSection() {
 
         {/* Bottom Divider */}
         <div className="text-center text-gray-400">
-          <p>&copy; 2025 TT Automotive. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TT Autos Leicester LTD. All rights reserved.</p>
         </div>
 
         {/* Bottom Bar */}

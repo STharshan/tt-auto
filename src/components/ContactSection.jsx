@@ -33,12 +33,22 @@ Please follow up with this customer.`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
+
+    // Reset the form after submission
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      message: "",
+    });
   };
+
 
   return (
     <section
       id="contact"
-      className="scroll-m-10 bg-black text-white py-20 px-6 lg:px-16 font-[Inter]"
+      className="scroll-m-10 bg-black text-white py-20 px-6 lg:px-16"
     >
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* LEFT COLUMN */}
@@ -47,17 +57,17 @@ Please follow up with this customer.`;
           <ul className="space-y-4 text-gray-300">
             <li>
               <span className="font-semibold text-white">General inquiries:</span>{" "}
-              <a href="tel:01162530770" className="hover:underline text-[#861918]">
+              <a href="tel:+441162530770" className="hover:underline text-[#861918]">
                 +44 116 253 0770
               </a>
             </li>
             <li>
               <span className="font-semibold text-white">Email:</span>{" "}
-              <a href="mailto:ttautosgarage@gmail.com" className="hover:underline text-[#861918]">
+              <a href="mailto:ttautosgarage@gmail.com" className="hover:underline font-sans text-[#861918]">
                 ttautosgarage@gmail.com
               </a>
             </li>
-            <li>
+            {/* <li>
               <span className="font-semibold text-white">Website:</span>{" "}
               <a
                 href="https://www.ttauto.co.uk"
@@ -67,16 +77,16 @@ Please follow up with this customer.`;
               >
                 www.sample.co.uk
               </a>
-            </li>
+            </li> */}
             <li>
               <span className="font-semibold text-white">Address:</span>{" "}
               <a
-                href="https://maps.app.goo.gl/VGiSQzQgnAgJodiy6"
+                href="https://maps.app.goo.gl/4ytEwh7M5M9Cn73U9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline text-[#861918]"
               >
-                34 Rowsley St, Leicester LE5 5JJ, United Kingdom
+                Unit 1, 76 Nedham St, Leicester LE2 0HA, United Kingdom
               </a>
             </li>
             <li>

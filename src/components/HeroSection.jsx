@@ -25,7 +25,7 @@ export default function HeroSection() {
       <div className="relative z-10 w-full max-w-7xl px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 flex flex-col justify-center space-y-8 py-24 sm:py-32">
         {/* Heading */}
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-xl">
-          Diesel System Specialist{" "}
+          Built On Skill. Backed By Experience{" "}
           <br className="hidden sm:block" />
 
         </h1>
@@ -46,7 +46,7 @@ export default function HeroSection() {
           {/* Buttons */}
           <div className="group flex items-center shrink-0">
             {/* Primary Button */}
-            <a href="tel:01162530770">
+            <a href="tel:+441162530770">
               <button className="border border-[#861918] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]">
                 +44 116 253 0770
               </button>

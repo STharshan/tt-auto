@@ -1,5 +1,6 @@
 import React from "react";
 import { Check, X, Phone, Mail, MessageCircle, MapPin } from "lucide-react";
+import { HashLink } from "react-router-hash-link";
 
 export default function CarCarePackages() {
   // Feature data
@@ -33,7 +34,7 @@ export default function CarCarePackages() {
   const contactLinks = [
     { icon: <Phone className="h-6 w-6" />, title: "+44 116 253 0770", href: "tel:01162530770" },
     { icon: <Mail className="h-6 w-6" />, title: "ttautosgarage@gmail.com", href: "mailto:ttautosgarage@gmail.com" },
-    { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://www.google.com/maps/dir//34+Rowsley+St,+Leicester+LE5+5JJ,+United+Kingdom/@52.6264902,-1.1898754,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x48776146e6f563e9:0x205103aac7960b1d!2m2!1d-1.1074655!2d52.6265152?entry=ttu&g_ep=EgoyMDI1MTEwNS4wIKXMDSoASAFQAw%3D%3D" },
+    { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://maps.app.goo.gl/Q15XjM78uKPFrWrS6" },
   ];
 
   // Package data
@@ -93,7 +94,7 @@ export default function CarCarePackages() {
                   {link.icon}
                 </div>
                 <div>
-                  <h6 className="text-sm sm:text-base font-semibold group-hover:text-[#861918] transition-colors">
+                  <h6 className="text-base font-semibold group-hover:text-[#861918] transition-colors">
                     {link.title}
                   </h6>
                 </div>
@@ -143,9 +144,13 @@ export default function CarCarePackages() {
                 ))}
               </div>
 
-              <button className="w-full bg-[#861918] hover:bg-[#a51f1e] text-white font-semibold py-3 rounded-full transition-all duration-300 border-2 border-[#861918] hover:border-[#a51f1e] shadow-lg shadow-[#861918]/40 hover:shadow-[#861918]/60 text-sm sm:text-base">
+              <HashLink
+                to="/#contact"
+                smooth
+                className="w-full block bg-[#861918] hover:bg-[#a51f1e] text-white font-semibold py-3 rounded-full transition-all duration-300 border-2 border-[#861918] hover:border-[#a51f1e] shadow-lg shadow-[#861918]/40 hover:shadow-[#861918]/60 text-sm sm:text-base text-center"
+              >
                 {pkg.btnText}
-              </button>
+              </HashLink>
             </div>
           ))}
         </div>
