@@ -26,6 +26,12 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [dropdownRef]);
 
+  // Handler to close both mobile menu and dropdown
+  const handleMobileMenuClick = () => {
+    setShowDropdown(false);
+    setIsOpen(false);
+  };
+
   const services = [
     { name: "MOT", path: "/services/mot" },
     { name: "Brakes", path: "/services/brake" },
@@ -58,7 +64,7 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8 font-semibold relative">
+        <nav className="hidden xl:flex items-center gap-8 font-semibold relative">
           <HashLink to="/#" className="hover:text-[#861918] transition">
             Home
           </HashLink>
@@ -87,7 +93,7 @@ export default function Navbar() {
                     key={index}
                     to={item.path}
                     className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#861918]/80 transition"
-                    onClick={() => setShowDropdown(false)} // close dropdown on click
+                    onClick={() => setShowDropdown(false)}
                   >
                     {item.name}
                   </Link>
@@ -115,7 +121,7 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex items-center">
+        <div className="hidden xl:flex items-center">
           <a href="#contact">
             <button className="px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
               Get In Touch
@@ -124,7 +130,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden">
+        <div className="xl:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
               <FiX size={26} className="hover:text-[#861918]" />
@@ -138,13 +144,21 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div
-          className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-black/80 text-white"
+          className={`xl:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-black/80 text-white"
             }`}
         >
-          <HashLink to="/#" className="block hover:text-[#861918]">
+          <HashLink 
+            to="/#" 
+            className="block hover:text-[#861918]"
+            onClick={handleMobileMenuClick}
+          >
             Home
           </HashLink>
-          <HashLink to="/#about" className="block hover:text-[#861918]">
+          <HashLink 
+            to="/#about" 
+            className="block hover:text-[#861918]"
+            onClick={handleMobileMenuClick}
+          >
             About Us
           </HashLink>
 
@@ -168,10 +182,7 @@ export default function Navbar() {
                     key={index}
                     to={item.path}
                     className="block text-sm text-gray-300 hover:text-white transition"
-                    onClick={() => {
-                      setShowDropdown(false); // Close dropdown on click
-                      setIsOpen(false);        // Optionally close mobile menu too
-                    }}
+                    onClick={handleMobileMenuClick}
                   >
                     {item.name}
                   </Link>
@@ -181,23 +192,44 @@ export default function Navbar() {
 
           </div>
 
-          <HashLink to="/#package" className="block hover:text-[#861918]">
+          <HashLink 
+            to="/#package" 
+            className="block hover:text-[#861918]"
+            onClick={handleMobileMenuClick}
+          >
             Package
           </HashLink>
-          <HashLink to="/#testimonials" className="block hover:text-[#861918]">
+          <HashLink 
+            to="/#testimonials" 
+            className="block hover:text-[#861918]"
+            onClick={handleMobileMenuClick}
+          >
             Testimonials
           </HashLink>
-          <HashLink to="/review" className="block hover:text-[#861918]">
+          <HashLink 
+            to="/review" 
+            className="block hover:text-[#861918]"
+            onClick={handleMobileMenuClick}
+          >
             Review
           </HashLink>
-          <HashLink to="/#contact" className="block hover:text-[#861918]">
+          <HashLink 
+            to="/#contact" 
+            className="block hover:text-[#861918]"
+            onClick={handleMobileMenuClick}
+          >
             Contact Us
           </HashLink>
 
           <div className="pt-4">
-            <button className="w-full px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
-              Get a Quote
-            </button>
+            <a href="#contact">
+              <button 
+                className="w-full px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300"
+                onClick={handleMobileMenuClick}
+              >
+                Get a Quote
+              </button>
+            </a>
           </div>
         </div>
       )}

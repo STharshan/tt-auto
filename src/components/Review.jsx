@@ -68,22 +68,25 @@ export default function Review() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-black text-white overflow-hidden"
+      className="relative bg-black text-white overflow-hidden min-h-screen"
       id="testimonials"
     >
-      {/* Background */}
+      {/* Background - Fixed with responsive positioning */}
       <div className="absolute inset-0">
         <img
           src="review.png"
           alt="Hear it from our clients"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-top sm:object-center md:object-center"
+          style={{
+            objectPosition: 'center center'
+          }}
         />
         <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Heading */}
-      <div className="relative z-10 text-center pt-32 pb-12">
-        <h2 className="text-4xl md:text-5xl font-semibold text-[#861918]">
+      <div className="relative z-10 text-center pt-20 sm:pt-24 md:pt-32 pb-8 sm:pb-10 md:pb-12 px-4">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#861918]">
           Hear it from our clients
         </h2>
       </div>
@@ -91,37 +94,37 @@ export default function Review() {
       {/* Testimonials */}
       <div
         ref={cardsContainerRef}
-        className="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-8 pb-20"
+        className="relative z-10 max-w-xl mx-auto flex flex-col items-center gap-6 sm:gap-8 pb-16 sm:pb-20 px-4 sm:px-6"
       >
         {testimonials.map((item, i) => (
           <div
             key={i}
             ref={(el) => (cardsRef.current[i] = el)}
             className="w-full bg-white/10 backdrop-blur-md rounded-2xl border border-white/10 
-            shadow-[0_0_20px_rgba(0,0,0,0.3)] p-6 md:p-8 opacity-0 transform translate-y-8"
+            shadow-[0_0_20px_rgba(0,0,0,0.3)] p-5 sm:p-6 md:p-8 opacity-0 transform translate-y-8"
           >
-            <p className="text-lg md:text-xl font-semibold mb-3">{item.title}</p>
-            <p className="text-sm md:text-base opacity-80 mb-4">{item.text}</p>
+            <p className="text-base sm:text-lg md:text-xl font-semibold mb-2 sm:mb-3">{item.title}</p>
+            <p className="text-sm md:text-base opacity-80 mb-3 sm:mb-4 leading-relaxed">{item.text}</p>
             <div className="flex items-center gap-3">
               <span
-                className="w-10 h-10 rounded-full flex items-center justify-center font-semibold"
+                className="w-10 h-10 rounded-full flex items-center justify-center font-semibold text-sm"
                 style={{ backgroundColor: item.bg, color: "#360802" }}
               >
                 {item.initials}
               </span>
-              <span>{item.name}</span>
+              <span className="text-sm sm:text-base">{item.name}</span>
             </div>
           </div>
         ))}
       </div>
 
       {/* === CTA BUTTON TO GOOGLE REVIEWS === */}
-      <div className="relative z-10 pb-28 text-center">
+      <div className="relative z-10 pb-20 sm:pb-24 md:pb-28 text-center px-4">
         <a
           href="https://www.google.com/search?sca_esv=0cca2ee0e671afa3&rlz=1C1KNTJ_enLK1089LK1089&sxsrf=ANbL-n7WIJZwBQNu_qH3DMHp4etM__VzYQ:1770053718396&si=AL3DRZFIhG6pAqfNLal55wUTwygCG0fClF3UxiOmgw9Hq7nbWWvnlxyOtSbAodJocC3AZ7djdMLPvp1Ctj8ib8Ht94tYz-_tSKcdX1gQEKf14KIZlioCF97M0diIsgLsSNjFiIGyM5-Thur0U9tzj_6uXeIPQREhtQ%3D%3D&q=T+T+Autos+Leicester+Ltd+Reviews&sa=X&ved=2ahUKEwi29fj4q7uSAxU5m68BHZIyJH4Q0bkNegQIMhAF&biw=1366&bih=633&dpr=1&aic=0" 
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-10 py-3 text-lg font-semibold rounded-full 
+          className="inline-block px-8 sm:px-10 py-2.5 sm:py-3 text-base sm:text-lg font-semibold rounded-full 
           bg-[#861918] hover:bg-[#a31f1d] transition-all duration-300 shadow-lg"
         >
           Google Review
