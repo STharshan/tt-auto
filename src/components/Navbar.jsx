@@ -41,14 +41,12 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "bg-black shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${scrolled ? "bg-black shadow-md" : "bg-transparent"
+        }`}
     >
       <div
-        className={`max-w-7xl mx-auto px-6 py-2 flex justify-between items-center transition-colors duration-500 ${
-          scrolled ? "text-white" : "text-white"
-        }`}
+        className={`max-w-7xl mx-auto px-6 py-2 flex justify-between items-center transition-colors duration-500 ${scrolled ? "text-white" : "text-white"
+          }`}
       >
         {/* Logo */}
         <div className="flex items-center">
@@ -77,9 +75,8 @@ export default function Navbar() {
               Services
               <FiChevronDown
                 size={16}
-                className={`transition-transform duration-300 ${
-                  showDropdown ? "rotate-180" : ""
-                }`}
+                className={`transition-transform duration-300 ${showDropdown ? "rotate-180" : ""
+                  }`}
               />
             </button>
 
@@ -90,12 +87,14 @@ export default function Navbar() {
                     key={index}
                     to={item.path}
                     className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-[#861918]/80 transition"
+                    onClick={() => setShowDropdown(false)} // close dropdown on click
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
             )}
+
           </div>
 
           <HashLink to="/#package" className="hover:text-[#861918] transition">
@@ -139,9 +138,8 @@ export default function Navbar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div
-          className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${
-            scrolled ? "bg-black text-white" : "bg-black/80 text-white"
-          }`}
+          className={`md:hidden absolute top-full left-0 w-full px-6 pb-4 space-y-3 backdrop-blur-md transition-all duration-300 ${scrolled ? "bg-black text-white" : "bg-black/80 text-white"
+            }`}
         >
           <HashLink to="/#" className="block hover:text-[#861918]">
             Home
@@ -159,9 +157,8 @@ export default function Navbar() {
               Services
               <FiChevronDown
                 size={16}
-                className={`transition-transform duration-300 ${
-                  showDropdown ? "rotate-180" : ""
-                }`}
+                className={`transition-transform duration-300 ${showDropdown ? "rotate-180" : ""
+                  }`}
               />
             </button>
             {showDropdown && (
@@ -171,12 +168,17 @@ export default function Navbar() {
                     key={index}
                     to={item.path}
                     className="block text-sm text-gray-300 hover:text-white transition"
+                    onClick={() => {
+                      setShowDropdown(false); // Close dropdown on click
+                      setIsOpen(false);        // Optionally close mobile menu too
+                    }}
                   >
                     {item.name}
                   </Link>
                 ))}
               </div>
             )}
+
           </div>
 
           <HashLink to="/#package" className="block hover:text-[#861918]">
