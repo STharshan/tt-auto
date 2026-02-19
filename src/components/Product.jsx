@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Check, X, Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
 

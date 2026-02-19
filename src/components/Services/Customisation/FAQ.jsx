@@ -1,16 +1,16 @@
-"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import { Plus, X } from "lucide-react";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // ✅ Customisation-specific FAQs
+  // Customisation-specific FAQs
   const faqs = [
     {
       question: "What kind of customisation services do you offer?",
       answer:
-        "We provide a wide range of vehicle styling and performance upgrades, including vinyl wraps, alloy wheel upgrades, spoilers, body kits, exhaust systems, remaps, and interior styling. Whether you want a unique look or improved performance, we can tailor everything to your goals.",
+        "We provide a wide range of vehicle styling and performance upgrades, including alloy wheel upgrades, spoilers, body kits, exhaust systems and interior styling. Whether you want a unique look or improved performance, we can tailor everything to your goals.",
     },
     {
       question: "Can you customise any make or model?",
@@ -25,12 +25,12 @@ export default function FAQSection() {
     {
       question: "What performance upgrades make the biggest difference?",
       answer:
-        "Popular upgrades include ECU remapping, sports exhausts, air intakes, suspension tuning, and lightweight wheels. These improvements can deliver noticeable gains in power, torque, handling, and throttle response.",
+        "Popular upgrades include sports exhausts, air intakes, suspension tuning, and lightweight wheels. These improvements can deliver noticeable gains in power, torque, handling, and throttle response.",
     },
     {
       question: "How long do customisation projects take?",
       answer:
-        "It depends on the scope — simple styling mods like tints or wraps can be done in a day, while complex builds or performance projects may take several days. We’ll always provide a clear timescale before starting any work.",
+        "It depends on the scope — simple styling mods like tints can be done in a day, while complex builds or performance projects may take several days. We’ll always provide a clear timescale before starting any work.",
     },
     {
       question: "Do you provide bespoke designs and consultations?",

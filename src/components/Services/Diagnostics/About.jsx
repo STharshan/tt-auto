@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+
+
 
 export default function AboutSection() {
   return (
@@ -18,39 +18,42 @@ export default function AboutSection() {
       {/* Text Section */}
       <div className="max-w-4xl text-center md:text-left">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-      Analysis – Accuracy and Speed
+          Analysis – Accuracy and Speed
         </h2>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-       Using advanced diagnostic software, we read and interpret fault codes from your ECU to identify problems before they worsen. Our precise approach saves time and repair costs.
+          We carry out thorough vehicle inspections to identify mechanical and visible issues before they become major problems. Our experienced technicians assess key components to ensure your vehicle remains safe, reliable, and roadworthy—helping you avoid costly repairs and unexpected breakdowns.
         </p>
         {/* Subsection: Performance */}
-       <div className="text-left mb-6">
-  <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-    Performance{" "}
-    <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
-      TT Auto
-    </span>
-  </h3>
+        <div className="text-left mb-6">
+          <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+            Performance{" "}
+            <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
+              TT Auto
+            </span>
+          </h3>
 
-  <ul className="text-gray-300 leading-relaxed list-disc list-inside space-y-1">
-    <li>
-      Advanced car diagnostics in Leicester and Midlands.
-    </li>
-    <li>
-     ECU scanning and live data testing.
-    </li>
-    <li>
-    Quick fault detection and repair recommendations.
-     </li>
-  </ul>
-</div>
+          <ul className="text-gray-300 leading-relaxed list-disc list-inside space-y-1">
+            <li>
+              Reliable vehicle diagnostics and inspections in Leicester and the Midlands.
+            </li>
+            <li>
+              Mechanical fault checks and visual inspections.
+            </li>
+            <li>
+              Brake, suspension, and steering system assessments.
+            </li>
+            <li>
+              Engine performance and general vehicle health checks
+            </li>
+          </ul>
+        </div>
 
         {/* Subsection: Responsiveness */}
         <div className="text-left">
           <h3 className="text-lg font-semibold mb-2">Responsiveness</h3>
           <p className="text-gray-300 leading-relaxed">
-           We ensure efficient turnaround and full transparency. Your vehicle will run smoother, with issues identified and resolved before they cause breakdowns.
+            We provide fast and transparent inspections, explaining any issues clearly and recommending the most effective repair solutions. Our efficient service ensures minimal downtime and maximum peace of mind.
           </p>
         </div>
       </div>

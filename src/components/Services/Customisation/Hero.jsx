@@ -51,13 +51,14 @@ export default function HeroSection() {
           {/* Title */}
           <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
             <span className="block bg-linear-to-r from-red-500 via-white to-gray-400 bg-clip-text text-transparent">
-              Analysis – Style and Performance
+              Customisation
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-            We specialise in full vehicle styling and body customisation — transforming cars through precision body kits, exterior styling, detailing, and aesthetic upgrades. Every project is tailored to match your vision, enhancing both presence and personality on the road.
+            Performance and styling upgrades tailored to enhance your vehicle’s
+            unique look.
           </p>
 
           {/* Tags */}

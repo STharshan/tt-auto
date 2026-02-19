@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useState, useRef, useEffect } from "react";
 import { Plus, X } from "lucide-react";
 
@@ -20,7 +20,7 @@ export default function FAQSection() {
     {
       question: "What does a diagnostic check include?",
       answer:
-        "Our diagnostics service includes scanning the vehicle’s ECU (Engine Control Unit), reading and interpreting error codes, and providing a detailed report on any faults detected. We also advise on the best repair or reset options for long-term reliability.",
+        "Our diagnostics service includes scanning the vehicle’s reading and interpreting error codes, and providing a detailed report on any faults detected. We also advise on the best repair or reset options for long-term reliability.",
     },
     {
       question: "How long does a diagnostic test take?",

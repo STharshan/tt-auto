@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+
+
 
 export default function ProblemSection() {
   return (
@@ -35,18 +35,18 @@ export default function ProblemSection() {
       <div className="max-w-4xl text-center md:text-left space-y-6">
         <div className="text-left">
           <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-         Diagnostics{" "}
+            Diagnostics{" "}
             <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
               TT Auto
             </span>
           </h3>
 
           <p className="text-gray-300 leading-relaxed">
-          Modern vehicles rely on complex electronics — so when a warning light appears, you need experts who can decode it fast. Our car diagnostics service in Leicester uses cutting-edge equipment to read fault codes, analyse live data, and pinpoint problems accurately.
+            Modern vehicles require regular inspections to maintain performance and safety. When something doesn’t feel right, our expert technicians carry out detailed checks to identify mechanical faults, wear and tear, and safety concerns.
           </p>
 
           <p className="text-gray-300 leading-relaxed mt-4">
-          From engine management to ABS and airbag systems, we find and fix issues efficiently. Our team combines advanced technology with mechanical experience to provide quick, reliable diagnostics and repairs, saving you time and unnecessary expense.
+            From engine and transmission checks to brakes, suspension, and exhaust systems, we diagnose issues accurately and provide professional repair recommendations. Our hands-on experience and attention to detail ensure reliable results—saving you time, stress, and unnecessary costs.
           </p>
         </div>
       </div>

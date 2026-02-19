@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+
+
 
 export default function AboutSection() {
   return (
@@ -22,7 +22,7 @@ export default function AboutSection() {
         </h2>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-          We offer full vehicle customisation — from tuning and body kits to wraps, detailing, and exhaust upgrades. Every project is personalised for your style and performance goals.
+          We specialise in full vehicle styling and body customisation — transforming cars through precision body kits, exterior styling, detailing, and aesthetic upgrades. Every project is tailored to match your vision, enhancing both presence and personality on the road.
         </p>
 
         {/* Subsection: Performance */}
