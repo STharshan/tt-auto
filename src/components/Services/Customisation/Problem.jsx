@@ -42,11 +42,11 @@ export default function ProblemSection() {
           </h3>
 
           <p className="text-gray-300 leading-relaxed">
-         Stand out from the crowd with our car customisation and performance upgrades in Leicester. Whether you’re after a bold new look or enhanced power, we deliver tailored solutions — from exhaust systems and remaps to styling, wrapping, and detailing
+            Stand out from the crowd with professional car styling and body customisation in Leicester. Whether you're looking for a subtle exterior refresh or a full custom body transformation, our expert team delivers tailored solutions that reflect your style and elevate your vehicle’s presence on the road.
           </p>
 
           <p className="text-gray-300 leading-relaxed mt-4">
-         Every modification is carried out by skilled specialists using premium materials and precise workmanship. Whether you drive a daily car or a performance vehicle, we turn ideas into reality with professional automotive customisation services across the Midlands.
+            Every modification is carried out by skilled specialists using premium materials and precise workmanship. Whether you drive a daily car or a performance vehicle, we turn ideas into reality with professional automotive customisation services across the Midlands.
           </p>
         </div>
       </div>

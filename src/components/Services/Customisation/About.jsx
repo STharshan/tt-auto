@@ -18,40 +18,43 @@ export default function AboutSection() {
       {/* Text Section */}
       <div className="max-w-4xl text-center md:text-left">
         <h2 className="text-2xl md:text-3xl font-semibold mb-4">
-        Analysis – Style and Performance
+          Analysis – Style and Performance
         </h2>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-    We offer full vehicle customisation — from tuning and body kits to wraps, detailing, and exhaust upgrades. Every project is personalised for your style and performance goals.
+          We offer full vehicle customisation — from tuning and body kits to wraps, detailing, and exhaust upgrades. Every project is personalised for your style and performance goals.
         </p>
 
         {/* Subsection: Performance */}
-       <div className="text-left mb-6">
-  <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-    Performance{" "}
-    <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
-      TT Auto
-    </span>
-  </h3>
+        <div className="text-left mb-6">
+          <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
+            Performance{" "}
+            <span className="bg-blue-600 text-xs text-white font-medium px-2 py-0.5 rounded-md">
+              TT Auto
+            </span>
+          </h3>
 
-  <ul className="text-gray-300 leading-relaxed list-disc list-inside space-y-1">
-    <li>
-   Leicester’s leading car customisation and tuning experts.
-    </li>
-    <li>
-    Performance upgrades including ECU remaps and exhausts.
-    </li>
-    <li>
-   Premium wraps, detailing, and body styling options.
-    </li>
-  </ul>
-</div>
+          <ul className="text-gray-300 leading-relaxed list-disc list-inside space-y-1">
+            <li>
+              Leicester’s leading vehicle styling and body customisation specialists.
+            </li>
+            <li>
+              Professional body kit installation and styling upgrades.
+            </li>
+            <li>
+              Exterior enhancements designed for aggressive, refined aesthetics.
+            </li>
+            <li>
+              Premium detailing and finishing for a showroom-quality result.
+            </li>
+          </ul>
+        </div>
 
         {/* Subsection: Responsiveness */}
         <div className="text-left">
           <h3 className="text-lg font-semibold mb-2">Responsiveness</h3>
           <p className="text-gray-300 leading-relaxed">
-        Every upgrade integrates seamlessly with your vehicle, improving both looks and drivability without compromising comfort or reliability
+            Every upgrade integrates seamlessly with your vehicle’s original design, improving visual impact while maintaining comfort, practicality, and everyday usability.
           </p>
         </div>
       </div>

@@ -50,30 +50,29 @@ export default function HeroSection() {
         <div className="flex flex-col justify-center space-y-6">
           {/* Title */}
           <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
-            <span className="block bg-gradient-to-r from-red-500 via-white to-gray-400 bg-clip-text text-transparent">
-              Customisation
+            <span className="block bg-linear-to-r from-red-500 via-white to-gray-400 bg-clip-text text-transparent">
+              Analysis – Style and Performance
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-            Performance and styling upgrades tailored to enhance your vehicle’s
-            unique look.
+            We specialise in full vehicle styling and body customisation — transforming cars through precision body kits, exterior styling, detailing, and aesthetic upgrades. Every project is tailored to match your vision, enhancing both presence and personality on the road.
           </p>
 
           {/* Tags */}
           <div className="flex gap-4 pt-4">
-            <div className="px-5 py-2 bg-gradient-to-t from-[#ff003333] to-[#9999991a] border border-white/10 rounded-lg backdrop-blur-sm">
+            <div className="px-5 py-2 bg-linear-to-t from-[#ff003333] to-[#9999991a] border border-white/10 rounded-lg backdrop-blur-sm">
               <p className="text-white text-sm font-medium">Customisation</p>
             </div>
-            <div className="px-5 py-2 bg-gradient-to-t from-[#003cff33] to-[#9999991a] border border-white/10 rounded-lg backdrop-blur-sm">
+            <div className="px-5 py-2 bg-linear-to-t from-[#003cff33] to-[#9999991a] border border-white/10 rounded-lg backdrop-blur-sm">
               <p className="text-white text-sm font-medium">Service</p>
             </div>
           </div>
         </div>
 
         {/* ===== Right Card ===== */}
-        <div className="relative bg-gradient-to-br from-[#1a0000] via-[#0a0a0a] to-[#001b3f] rounded-2xl p-10 border border-white/10 shadow-[0_0_80px_-20px_rgba(255,0,0,0.5)] overflow-hidden">
+        <div className="relative bg-linear-to-br from-[#1a0000] via-[#0a0a0a] to-[#001b3f] rounded-2xl p-10 border border-white/10 shadow-[0_0_80px_-20px_rgba(255,0,0,0.5)] overflow-hidden">
           {/* Background pattern */}
           <img
             src="https://framerusercontent.com/images/QMirkdl4WPEe5bmSFhvVcssWj4.svg"
