@@ -45,12 +45,12 @@ export default function HeroSection() {
         <div className="absolute w-[500px] h-[500px] bg-[#003cff]/25 blur-[120px] rounded-full glowTwo bottom-1/3 right-1/4"></div>
       </div>
 
-      <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 relative z-10">
+      <div className="max-w-7xl w-full grid grid-cols-1 xl:grid-cols-2 gap-10 relative z-10">
         {/* ===== Left Section ===== */}
         <div className="flex flex-col justify-center space-y-6">
           {/* Title */}
-          <h1 className="text-5xl sm:text-6xl font-bold leading-tight">
-            <span className="block bg-linear-to-r from-red-500 via-white to-gray-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl sm:text-6xl font-bold leading-tight">
+            <span className="block mt-10 bg-linear-to-r from-red-500 via-white to-gray-400 bg-clip-text text-transparent">
               Customisation
             </span>
           </h1>
