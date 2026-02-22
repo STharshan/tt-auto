@@ -10,8 +10,7 @@ const Customisation = () => {
         <div>
             <HeroSection />
             <AboutSection />
-            <ProblemSection />
-          
+            <ProblemSection /> 
             <FAQSection />
         </div>
     )
