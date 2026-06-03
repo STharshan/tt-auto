@@ -105,7 +105,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden xl:flex items-center">
           <HashLink to="/#contact">
-            <button className="px-7 py-2.5 bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
+            <button className="px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
               Get In Touch
             </button>
           </HashLink>
@@ -161,7 +161,7 @@ export default function Navbar() {
 
           <div className="pt-4">
             <HashLink to="/#contact" onClick={handleMobileMenuClick}>
-              <button className="w-full px-7 py-3 bg-gradient-to-r from-red-600 to-red-800 text-white font-bold rounded-lg">
+              <button className="w-full px-7 py-3 bg-linear-to-r from-red-600 to-red-800 text-white font-bold rounded-lg">
                 Get a Quote
               </button>
             </HashLink>
