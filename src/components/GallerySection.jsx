@@ -53,6 +53,12 @@ export default function GallerySection() {
   }, []);
 
   const galleryItems = [
+    { type: "image", src: "g1.png", text: "Diagnostic Equipment" },
+    { type: "image", src: "g2.png", text: "Diagnostic Equipment" },
+    { type: "image", src: "g3.png", text: "Diagnostic Equipment" },
+    { type: "image", src: "g4.png", text: "Diagnostic Equipment" },
+    { type: "image", src: "g5.png", text: "Diagnostic Equipment" },
+    { type: "image", src: "g6.png", text: "Diagnostic Equipment" },
     { type: "video", src: "v1.mp4", text: "Engine Diagnostics" },
     { type: "video", src: "v2.mp4", text: "Electrical Systems" },
     { type: "video", src: "v3.mp4", text: "Auto Repair" },
