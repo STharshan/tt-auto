@@ -32,11 +32,6 @@ export default function FAQSection() {
       answer:
         "Yes. Worn suspension parts can cause uneven tyre wear, increased rolling resistance, and reduced fuel efficiency. Proper suspension maintenance helps extend tyre life and ensures smoother, more efficient driving.",
     },
-    {
-      question: "Do you offer wheel alignment with suspension repairs?",
-      answer:
-        "Yes. After suspension work, we always recommend a wheel alignment to ensure correct tracking and handling. This helps protect your tyres and maintain safe, stable performance.",
-    },
   ];
 
   const toggleFAQ = (index) => {
