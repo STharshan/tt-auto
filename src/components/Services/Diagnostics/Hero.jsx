@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-       Advanced fault-finding technology to quickly identify and fix vehicle issues.
+            We use advanced diagnostic equipment to identify vehicle faults quickly and accurately. Our technicians investigate warning lights and performance issues with precision. Fast diagnosis helps reduce downtime and unnecessary repairs.
           </p>
 
           {/* Tags */}

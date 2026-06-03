@@ -41,7 +41,6 @@ export default function FooterSection() {
               <li><a href="#" className="hover:text-[#861918] transition">Home</a></li>
               <li><a href="#about" className="hover:text-[#861918] transition">About Us</a></li>
               <li><a href="#service" className="hover:text-[#861918] transition">Service</a></li>
-              <li><a href="#package" className="hover:text-[#861918] transition">Package</a></li>
               <li><a href="#contact" className="hover:text-[#861918] transition">Contact</a></li>
             </ul>
           </div>

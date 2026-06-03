@@ -5,7 +5,7 @@ import { Plus, X } from "lucide-react";
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState(null);
 
-  // ✅ Suspension-specific FAQs
+  // Suspension-specific FAQs
   const faqs = [
     {
       question: "What does the suspension system do?",
@@ -25,7 +25,7 @@ export default function FAQSection() {
     {
       question: "What’s included in a suspension service?",
       answer:
-        "Our suspension service includes a comprehensive check of shocks, struts, springs, control arms, and bushes. We assess wear, leaks, and alignment, then repair or replace any damaged parts to restore ride quality and safety.",
+        "Our suspension service includes a comprehensive check of shocks, struts, springs, control arms, and bushes. We assess wear and leaks then repair or replace any damaged parts to restore ride quality and safety.",
     },
     {
       question: "Can bad suspension affect tyre wear or fuel economy?",

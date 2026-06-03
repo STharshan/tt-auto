@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-           Regular maintenance keeping your vehicle running smoothly, efficiently, and reliably all year.
+            Regular servicing helps maintain your vehicle's performance, efficiency, and reliability. We carry out thorough maintenance checks based on your vehicle's requirements. Keep your car in excellent condition throughout the year.
           </p>
 
           {/* Tags */}

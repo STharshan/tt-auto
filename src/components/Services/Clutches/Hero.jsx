@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-            Expert clutch repairs and replacements for smooth gear shifting and performance.
+            Our clutch repair and replacement services help restore smooth and reliable gear changes. We diagnose clutch issues accurately and provide effective solutions. Enjoy improved driving comfort and vehicle performance.
           </p>
 
           {/* Tags */}

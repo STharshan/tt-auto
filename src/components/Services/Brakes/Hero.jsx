@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-          Comprehensive brake inspection, repair, and replacement for safe, responsive stopping.
+            We provide professional brake inspections, repairs, and replacements for all vehicle types. Our technicians ensure your braking system performs safely and effectively. Stay confident on the road with reliable stopping power.
           </p>
 
           {/* Tags */}

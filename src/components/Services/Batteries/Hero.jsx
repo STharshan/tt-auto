@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-           Testing, replacement, and charging system checks to keep your car starting reliably.
+            We offer battery testing, replacement, and charging system inspections for dependable vehicle performance. Our technicians identify issues quickly and recommend the right solution. Keep your vehicle starting reliably in all conditions.
           </p>
 
           {/* Tags */}

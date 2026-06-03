@@ -57,8 +57,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-            Performance and styling upgrades tailored to enhance your vehicle’s
-            unique look.
+            Personalise your vehicle with custom styling and performance enhancements. We offer a range of upgrades tailored to your preferences and requirements. Create a vehicle that reflects your style while improving its presence on the road.
           </p>
 
           {/* Tags */}

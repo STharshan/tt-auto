@@ -97,8 +97,6 @@ export default function Navbar() {
               </div>
             )}
           </div>
-
-          <HashLink to="/#package" className="hover:text-[#861918] transition">Package</HashLink>
           <HashLink to="/#testimonials" className="hover:text-[#861918] transition">Testimonials</HashLink>
           <HashLink to="/review" className="hover:text-[#861918] transition">Review</HashLink>
           <HashLink to="/#contact" className="hover:text-[#861918] transition">Contact Us</HashLink>
@@ -157,8 +155,6 @@ export default function Navbar() {
               </div>
             )}
           </div>
-
-          <HashLink to="/#package" className="block text-lg font-medium" onClick={handleMobileMenuClick}>Package</HashLink>
           <HashLink to="/#testimonials" className="block text-lg font-medium" onClick={handleMobileMenuClick}>Testimonials</HashLink>
           <HashLink to="/review" className="block text-lg font-medium" onClick={handleMobileMenuClick}>Review</HashLink>
           <HashLink to="/#contact" className="block text-lg font-medium" onClick={handleMobileMenuClick}>Contact Us</HashLink>

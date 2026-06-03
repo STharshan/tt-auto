@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-         Air conditioning re-gas, cleaning, and repairs to keep your cabin cool.
+            Stay comfortable throughout the year with our air conditioning services. We provide system inspections, re-gassing, cleaning, and repairs as needed. Enjoy clean, efficient cooling and improved cabin comfort.
           </p>
 
           {/* Tags */}

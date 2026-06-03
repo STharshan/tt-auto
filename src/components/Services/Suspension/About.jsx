@@ -22,7 +22,7 @@ export default function AboutSection() {
         </h2>
 
         <p className="text-gray-300 leading-relaxed mb-6">
-        We inspect shocks, springs, bushes, and joints to restore comfort, stability, and cornering confidence. Our advanced testing ensures precise alignment and optimal road contact.
+        We inspect shocks, springs, bushes, and joints to restore comfort, stability, and cornering confidence. Our advanced testing ensures precise optimal road contact.
         </p>
 
         {/* Subsection: Performance */}
@@ -41,9 +41,6 @@ export default function AboutSection() {
     <li>
       Replacement of worn shocks, struts, and mounts.
     </li>
-    <li>
-     Wheel alignment for improved handling and tyre life.
-     </li>
   </ul>
 </div>
 

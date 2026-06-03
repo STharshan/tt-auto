@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-            Annual safety and emissions check ensuring your vehicle meets legal road standards.
+            Our MOT service helps ensure your vehicle meets all required safety and environmental standards. Experienced technicians carry out thorough inspections using approved testing procedures. Drive with confidence knowing your vehicle is roadworthy and compliant.
           </p>
 
           {/* Tags */}

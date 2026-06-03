@@ -58,7 +58,7 @@ export default function HeroSection() {
 
           {/* Description */}
           <p className="text-gray-300 text-lg leading-relaxed max-w-xl">
-            Replacement and inspection to prevent costly engine damage and maintain performance.
+            Timing belt maintenance is essential for protecting your engine and maintaining performance. We inspect and replace worn belts using quality components. Prevent unexpected breakdowns and costly repairs with timely servicing.
           </p>
 
           {/* Tags */}
