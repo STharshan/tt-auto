@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
@@ -103,12 +104,31 @@ export default function Navbar() {
         </nav>
 
         {/* Desktop CTA */}
-        <div className="hidden xl:flex items-center">
+        <div className="hidden xl:flex items-center gap-6">
           <HashLink to="/#contact">
             <button className="px-7 py-2.5 bg-linear-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white font-medium text-base rounded-lg border-2 border-white/15 shadow-[0_6px_25px_rgba(255,0,0,0.4)] transition-all duration-300">
               Get In Touch
             </button>
           </HashLink>
+          <div className="flex items-center gap-3 whitespace-nowrap">
+            <a
+              href="https://wa.me/447783367501"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:border-[#25D366] hover:bg-[#25D366] hover:text-black"
+            >
+              <FaWhatsapp size={20} />
+            </a>
+            <a
+              href="https://wa.me/447783367501"
+              target="_blank"
+              rel="noreferrer"
+              className="text-sm font-semibold tracking-wide text-white hover:text-[#861918] transition"
+            >
+              +44 7783367501
+            </a>
+          </div>
         </div>
 
         {/* Mobile Menu Button */}
@@ -158,6 +178,27 @@ export default function Navbar() {
           <HashLink to="/#testimonials" className="block text-lg font-medium" onClick={handleMobileMenuClick}>Testimonials</HashLink>
           <HashLink to="/review" className="block text-lg font-medium" onClick={handleMobileMenuClick}>Review</HashLink>
           <HashLink to="/#contact" className="block text-lg font-medium" onClick={handleMobileMenuClick}>Contact Us</HashLink>
+
+          <div className="flex items-center gap-3 pt-2">
+            <a
+              href="https://wa.me/447783367501"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Chat on WhatsApp"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-white/10 text-white transition hover:border-[#25D366] hover:bg-[#25D366] hover:text-black"
+            >
+              <FaWhatsapp size={22} />
+            </a>
+            <a
+              href="https://wa.me/447783367501"
+              target="_blank"
+              rel="noreferrer"
+              onClick={handleMobileMenuClick}
+              className="text-base font-semibold tracking-wide text-white hover:text-[#861918] transition"
+            >
+              +44 7783367501
+            </a>
+          </div>
 
           <div className="pt-4">
             <HashLink to="/#contact" onClick={handleMobileMenuClick}>
