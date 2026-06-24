@@ -23,7 +23,7 @@ export default function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-24 sm:py-28 lg:py-32">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
+        <div className="flex flex-col gap-10">
           {/* Left Content */}
           <div className="max-w-2xl space-y-6">
             <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight">
@@ -52,17 +52,22 @@ export default function HeroSection() {
                 />
               </button>
             </div>
-          </div>
 
-          {/* DVSA Badge */}
-          <div className="flex justify-start lg:justify-end">
-            <img
-              src="/driver.jpg"
-              alt="DVSA logo"
-              className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto pointer-events-none select-none opacity-95"
-            />
+            <div className="flex flex-col sm:flex-row sm:items-end gap-5 sm:gap-12 lg:gap-16">
+              <img
+                src="/driver.jpg"
+                alt="DVSA logo"
+                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto pointer-events-none select-none opacity-95"
+              />
+              <img
+                src="/dvla.jpg"
+                alt="DVLA logo"
+                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto pointer-events-none select-none opacity-95 sm:ml-10 lg:ml-80"
+              />
+            </div>
           </div>
-        </div>  </div>
+        </div>
+      </div>
     </section>
   );
 }
