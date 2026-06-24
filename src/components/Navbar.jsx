@@ -55,13 +55,32 @@ export default function Navbar() {
         scrolled ? "bg-black shadow-md" : "bg-transparent"
       }`}
     >
+      <div className="bg-black/85 text-white border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-5 text-center text-[11px] sm:text-sm font-medium leading-relaxed">
+          <span>Need assistance? Call us on </span>
+          <a href="tel:+441162530770" className="hover:text-[#861918] transition">
+            +44 116 253 0770
+          </a>
+          <span> or send us a WhatsApp message on </span>
+          <a
+            href="https://wa.me/447783367501"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-[#861918] transition"
+          >
+            +44 7783 367501
+          </a>
+          <span>. We're here to help.</span>
+        </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center text-white">
         {/* Logo */}
         <div className="flex items-center">
           <img
             src="/logo-white.png"
             alt="TT Automotive Logo"
-            className="h-14 w-auto object-contain"
+            className="h-10 sm:h-14 w-auto object-contain"
           />
         </div>
 

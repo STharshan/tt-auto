@@ -22,7 +22,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
-      <div className="relative z-10 w-full max-w-7xl px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 py-24 sm:py-28 lg:py-32">
+      <div className="relative z-10 w-full max-w-7xl px-6 sm:px-10 md:px-16 lg:px-24 xl:px-32 pt-44 pb-24 sm:py-28 lg:py-32">
         <div className="flex flex-col gap-10">
           {/* Left Content */}
           <div className="max-w-2xl space-y-6">
