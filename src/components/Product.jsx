@@ -1,6 +1,7 @@
 
 import { Check, X, Phone, Mail, MessageCircle, MapPin } from "lucide-react";
 import { HashLink } from "react-router-hash-link";
+import { CONTACT } from "../constants/contact";
 
 export default function CarCarePackages() {
   // Feature data
@@ -32,8 +33,8 @@ export default function CarCarePackages() {
 
   // Contact links
   const contactLinks = [
-    { icon: <Phone className="h-6 w-6" />, title: "+44 116 253 0770", href: "tel:01162530770" },
-    { icon: <Mail className="h-6 w-6" />, title: "ttautosgarage@gmail.com", href: "mailto:ttautosgarage@gmail.com" },
+    { icon: <Phone className="h-6 w-6" />, title: CONTACT.phoneDisplay, href: CONTACT.phoneHref },
+    { icon: <Mail className="h-6 w-6" />, title: CONTACT.email, href: `mailto:${CONTACT.email}` },
     { icon: <MapPin className="h-6 w-6" />, title: "Our Location", href: "https://maps.app.goo.gl/Q15XjM78uKPFrWrS6" },
   ];
 

@@ -3,6 +3,7 @@ import { FiMenu, FiX, FiChevronDown } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import { CONTACT } from "../constants/contact";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // Mobile Menu State
@@ -58,17 +59,17 @@ export default function Navbar() {
       <div className="bg-black/85 text-white border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-5 text-center text-[11px] sm:text-sm font-medium leading-relaxed">
           <span>Need assistance? Call us on </span>
-          <a href="tel:+441162530770" className="hover:text-[#861918] transition">
-            +44 116 253 0770
+          <a href={CONTACT.phoneHref} className="hover:text-[#861918] transition">
+            {CONTACT.phoneDisplay}
           </a>
           <span> or send us a WhatsApp message on </span>
           <a
-            href="https://wa.me/447783367501"
+            href={CONTACT.whatsappHref}
             target="_blank"
             rel="noreferrer"
             className="hover:text-[#861918] transition"
           >
-            +44 7783 367501
+            {CONTACT.whatsappDisplay}
           </a>
           <span>. We're here to help.</span>
         </div>
@@ -131,7 +132,7 @@ export default function Navbar() {
           </HashLink>
           <div className="flex items-center gap-3 whitespace-nowrap">
             <a
-              href="https://wa.me/447783367501"
+              href={CONTACT.whatsappHref}
               target="_blank"
               rel="noreferrer"
               aria-label="Chat on WhatsApp"
@@ -140,12 +141,12 @@ export default function Navbar() {
               <FaWhatsapp size={20} />
             </a>
             <a
-              href="https://wa.me/447783367501"
+              href={CONTACT.whatsappHref}
               target="_blank"
               rel="noreferrer"
               className="text-sm font-semibold tracking-wide text-white hover:text-[#861918] transition"
             >
-              +44 7783367501
+              {CONTACT.whatsappDisplay}
             </a>
           </div>
         </div>
@@ -200,7 +201,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-3 pt-2">
             <a
-              href="https://wa.me/447783367501"
+              href={CONTACT.whatsappHref}
               target="_blank"
               rel="noreferrer"
               aria-label="Chat on WhatsApp"
@@ -209,13 +210,13 @@ export default function Navbar() {
               <FaWhatsapp size={22} />
             </a>
             <a
-              href="https://wa.me/447783367501"
+              href={CONTACT.whatsappHref}
               target="_blank"
               rel="noreferrer"
               onClick={handleMobileMenuClick}
               className="text-base font-semibold tracking-wide text-white hover:text-[#861918] transition"
             >
-              +44 7783367501
+              {CONTACT.whatsappDisplay}
             </a>
           </div>
 

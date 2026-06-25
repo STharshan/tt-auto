@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { CONTACT } from "../constants/contact";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -18,8 +19,6 @@ export default function ContactSection() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const phoneNumber = "447783367501"; // your WhatsApp number (no +)
-
     const message = `New enquiry from TT Autos Website
 
 Name: ${formData.name}
@@ -31,7 +30,7 @@ Message: ${formData.message}
 Please follow up with this customer.`;
 
     const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/${CONTACT.whatsappNumber}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
 
     // Reset the form after submission
@@ -57,14 +56,14 @@ Please follow up with this customer.`;
           <ul className="space-y-4 text-gray-300">
             <li>
               <span className="font-semibold text-white">General inquiries:</span>{" "}
-              <a href="tel:+441162530770" className="hover:underline text-[#861918]">
-                +44 116 253 0770
+              <a href={CONTACT.phoneHref} className="hover:underline text-[#861918]">
+                {CONTACT.phoneDisplay}
               </a>
             </li>
             <li>
               <span className="font-semibold text-white">Email:</span>{" "}
-              <a href="mailto:ttautosgarage@gmail.com" className="hover:underline font-sans text-[#861918]">
-                ttautosgarage@gmail.com
+              <a href={`mailto:${CONTACT.email}`} className="hover:underline font-sans text-[#861918]">
+                {CONTACT.email}
               </a>
             </li>
             {/* <li>
@@ -81,12 +80,12 @@ Please follow up with this customer.`;
             <li>
               <span className="font-semibold text-white">Address:</span>{" "}
               <a
-                href="https://maps.app.goo.gl/4ytEwh7M5M9Cn73U9"
+                href={CONTACT.mapsHref}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline text-[#861918]"
               >
-                Unit 1, 76 Nedham St, Leicester LE2 0HA, United Kingdom
+                {CONTACT.address}
               </a>
             </li>
             <li>

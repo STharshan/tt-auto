@@ -1,4 +1,6 @@
 
+import { CONTACT } from "../constants/contact";
+
 export default function HeroSection() {
   return (
     <section
@@ -38,9 +40,9 @@ export default function HeroSection() {
 
             {/* Buttons */}
             <div className="group flex flex-wrap items-center justify-center lg:justify-start gap-3 sm:gap-0">
-              <a href="tel:+441162530770">
+              <a href={CONTACT.phoneHref}>
                 <button className="border border-[#861918] rounded-full px-6 sm:px-8 py-2 sm:py-3 text-sm sm:text-base md:text-[15px] font-medium transition-all duration-300 group-hover:bg-[#861918]">
-                  +44 116 253 0770
+                  {CONTACT.phoneDisplay}
                 </button>
               </a>
 

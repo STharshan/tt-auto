@@ -2,6 +2,8 @@
 import { Instagram } from "lucide-react";
 import { FaTiktok } from "react-icons/fa"; // ✅ TikTok icon
 
+import { CONTACT } from "../constants/contact";
+
 export default function FooterSection() {
   return (
     <footer className="bg-[#0B0B0B] text-gray-400 py-4">
@@ -54,14 +56,14 @@ export default function FooterSection() {
               <li><span className="text-white font-semibold">Opening Hours:</span><span className="text-lg"> 9:00 AM – 5:00 PM (Mon–Fri)</span> </li>
               <li>
                 <span className="text-white font-semibold">Phone:</span>{" "}
-                <a href="tel:01162530770" className="hover:underline text-lg hover:text-[#861918]">
-                  +44 116 253 0770
+                <a href={CONTACT.phoneHref} className="hover:underline text-lg hover:text-[#861918]">
+                  {CONTACT.phoneDisplay}
                 </a>
               </li>
               <li>
                 <span className="text-white font-semibold">Email:</span>{" "}
-                <a href="mailto:ttautosgarage@gmail.com" className="hover:underline text-lg hover:text-[#861918]">
-                  ttautosgarage@gmail.com
+                <a href={`mailto:${CONTACT.email}`} className="hover:underline text-lg hover:text-[#861918]">
+                  {CONTACT.email}
                 </a>
               </li>
             </ul>
