@@ -56,16 +56,20 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col items-center sm:flex-row sm:items-end sm:justify-center lg:justify-start gap-5 sm:gap-12 lg:gap-16">
-              <img
-                src="/driver.jpg"
-                alt="DVSA logo"
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto pointer-events-none select-none opacity-95"
-              />
-              <img
-                src="/dvla.jpg"
-                alt="DVLA logo"
-                className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto pointer-events-none select-none opacity-95 lg:ml-10"
-              />
+              <div className="rounded-2xl px-4 py-3">
+                <img
+                  src="/driver-white.png"
+                  alt="DVSA logo"
+                  className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto pointer-events-none select-none opacity-95"
+                />
+              </div>
+              <div className="rounded-2xl px-4 py-3 lg:ml-10">
+                <img
+                  src="/dvla.jpg"
+                  alt="DVLA logo"
+                  className="w-40 sm:w-48 md:w-56 lg:w-64 h-auto pointer-events-none select-none opacity-95 [clip-path:polygon(50%_0%,100%_100%,0%_100%)]"
+                />
+              </div>
             </div>
           </div>
         </div>
